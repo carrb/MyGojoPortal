@@ -1,0 +1,132 @@
+
+
+GOJO Corporate
+  *Officers
+    *Chairman/CEO
+    *President/COO
+  *Corporate Office Administration
+  
+  *Innovation KFE
+  
+  *R & D
+    *Administration
+    *Skin Care Science & New Technology
+      *Formulation
+      *Microbiology
+    *Base Business
+    *New Technology and Alliances
+    *Wipes
+    *New Systems Development
+  *Accounting/Reporting
+    *Accounts Payable
+    *Systems & Information
+    *Credit/Collections
+      *Sales Accounting
+    *Payroll
+  
+  *Strategic Management
+  
+  *ERP Project Team
+    *QA Compliance
+    *Product Management - Health Care
+    *Product Management - Emerging Markets
+    *Product Management - Commercial
+    *Sales Operations - Pricing Administration
+    *Trade Marketing
+  *Human Performance (HR)
+    *Learning & Development
+    *Workplaces
+    *Operations Administration
+    
+  *Collaboration & Data Services
+  *Business Application Services
+  *Corporate Legal
+  *IT Core Services
+  *IT Support Services
+  
+  *Supply Chain
+    *Global Sourcing
+      *Sales & Operations Planning
+    *Operations Administration
+      *Assembly Facility
+        *Packaging
+        *Assembly Direct Labor
+      *Quality Control
+      *Planning/Scheduling
+      *Cleaning & Sanitization
+      *Mixing
+      *Maintenance
+    *Quality Assurance
+      *Global Quality
+        *Technical Services
+        *Technical Specifications
+        *Incoming Components
+        *Change Management
+        *Global Operations
+        *Consumer Packaging
+    *Value Chain Improvement
+      *Operational Excellence
+      *Engineering Supply Chaing
+      *Formulation
+    *Shipping
+  
+  *Professional Markets Group
+    *Analysis - Professional Markets Group
+    *Marketing - Professional Markets Group
+      *Marketing Services
+      *Product Management
+        *Administration
+        *Wipes
+        *Systems
+        *International
+        *Auto/Industrial
+      *Market Research
+    *Administration - Professional Markets Group
+      *Sales - Office Channel
+      *Sales - Government
+      *Marketing Developement Healthcare
+        *Acute Care
+        *Sales - Medical Supply
+        *Healthcare Leadership
+        *Long Term
+      *Emerging Market Development
+      *Emerging Market Development II
+      *Sales - Foodservice
+      *Professional Market
+        *Sales - Sanitary Supply
+        *Push to Pull
+        *Commercial Sales Support
+        *Sales - Canada
+        *Sales - Corporate Accounts
+        *Administration
+      *Marketing Development Manufacturing
+        *Sales - Industrial Supply
+        *Sales - Textile
+        *Sales - Automotive
+  *PURRELL Consumer
+    *Market Development 
+    *Sales
+  *Trade Marketing
+  *Global Business Development
+    *Sales & Marketing
+    *Latin America
+      *Sales & Marketing
+    *Australia
+      *GOJO Australasia
+        *Sales & Marketing
+        *Administration
+    *Europe
+      *Sales & Marketing
+      *Administration
+    *Japan 
+      *Sales & Marketing
+      *Administration
+    
+  
+
+
+*Science & Technology
+  *Regulatory Affairs
+  *Compliance
+
+*Community Affairs

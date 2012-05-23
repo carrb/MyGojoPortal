@@ -1,0 +1,343 @@
+@charset "utf-8";
+/*
+Stylesheet for oli.jp
+created: 2009-12-05
+changed: 2011-12-12
+version: 1.33
+made by: Oli Studholme
+contact: http://twitter.com/boblet
+
+Color:
+#222    text
+#444    table background (=thead background), a:hover color/border-bottom
+#999    table border-bottom, .highlight-block.callout, img border, blockquote opening, th border-top
+#ddd    vertical border (.meta, blockquote), th background, td border-top/left, a border-bottom
+#eee    a:hover border-bottom
+#f1f1f1 background
+#fff    .callout, img background, thead color, td background
+
+#47ad09 .changed-block.callout [green] (20%: #daefce rgba(71,173,9,.2))
+#c11100 .warning-block.callout [red] (20%: #f3cfcc rgba(193,17,0,.2))
+#d4af37 .highlight-block.callout [gold] (20%: #f6efd7 rgba(212,175,55,.2))
+#ffe    table row hover [off-white]
+#f9fda2 a background = rgb(249,253,162) [yellow highlight]
+#f5f6d2 a:visited background, table td hover = rgba(249,253,162,.4)/rgb(245,246,210) [beige]
+#8b1109 a:active [dark red]
+
+Grid:
+24 48 72 96 120 144 168 192 216 240 264 288 312 336 360 384 408 432 456 480 504 528 552 576 600 624 648 672
+Block-level img have 6px on each side, so above size-12=height if possible
+Min-width = 400px (667px), max-width = 672px (1120px)
+*/
+/* Fonts:
+	File variations/subsetting thanks to fontsquirrel.com
+	http://www.thecssninja.com/demo/css_fontface/ */
+	/* Museo Slab 500 by Jos Buivenga (exljbris) -> www.exljbris.com */
+@font-face {
+	font-family: 'MuseoSlab500';
+	font-weight: normal;
+	font-style: normal;
+	src: url('/fonts/Museo_Slab_500.eot');
+	src: url('/fonts/Museo_Slab_500.eot?') format('☺'), local('Museo Slab 500'), local('MuseoSlab-500'), url('/fonts/Museo_Slab_500.woff') format('woff'), url('/fonts/Museo_Slab_500.otf') format('opentype');
+} /* , url('/fonts/Museo_Slab_500.svg#MuseoSlab-500') format('svg') */
+	/* DejaVu Sans */
+@font-face {
+	font-family: 'DejaVuSansMono';
+	font-weight: normal;
+	font-style: normal;
+	src: url('/fonts/DejaVuSansMono-webfont.eot');
+	src: url('/fonts/DejaVuSansMono-webfont.eot?') format('☺'), local('DejaVu Sans Mono'), local('DejaVuSansMono'), url('/fonts/DejaVuSansMono-webfont.woff') format('woff'), url('/fonts/DejaVuSansMono-webfont.ttf') format('truetype');
+} /* , url('/fonts/DejaVuSansMono-webfont.svg#webfont8w685tJi') format('svg') */
+@font-face {
+	font-family: 'DejaVuSansMono';
+	font-weight: bold;
+	font-style: normal;
+	src: url('/fonts/DejaVuSansMono-Bold-webfont.eot');
+	src: url('/fonts/DejaVuSansMono-Bold-webfont.eot?') format('☺'), local('DejaVu Sans Mono Bold'), local('DejaVuSansMono-Bold'), url('/fonts/DejaVuSansMono-Bold-webfont.woff') format('woff'), url('/fonts/DejaVuSansMono-Bold-webfont.ttf') format('truetype');
+}/* , url('/fonts/DejaVuSansMono-Bold-webfont.svg#webfontp7pgybuh') format('svg')*/
+
+/* HTML5 elements */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}
+/* reset.css incorporated into styles—no more spam in FireBug */
+/* @group defaults */
+	/* typography, titles */
+html {margin: 0; padding: 0; background: #f1f1f1; background-image: -moz-radial-gradient(50% 50.5%, circle farthest-corner, #f1f1f1 0%, #f1f1f1 90%, #ddd 97%, #ccc 98.5%, #aaa 100%); background-image: radial-gradient(50% 50.5%, circle farthest-corner, #f1f1f1 0%, #f1f1f1 90%, #ddd 97%, #ccc 98.5%, #aaa 100%); color: #222;} /* todo: needed? */
+body {width: 60%; max-width: 42em; min-width: 400px; margin: 0 auto; padding: 0 1.5em;}
+body, pre {font: 1em/1.5 Georgia,"Times New Roman",Times,serif;}
+h1, .branding h2 {margin: .75em 0 .75em -.75em; border-left: 1px solid #ddd; padding-left: .75em; font-size: 2em; line-height: 1.5;}
+h2 {margin: 1.5833em 0 .6667em; font-size: 1.5em; line-height: 1.25;} /* 24/30px with 38/16px margin (=3.5*leading, to avoid descender clipping :| ) */
+h1, h2 {text-shadow: 0 1px 0 rgb(255,255,255);}
+h3 {margin: 1.8em 0 .6em; font-size: 1.25em; line-height: 1.2;} /* 20/24px with 36/12px margin */
+h4 {margin: 2em 0 .66667em; font-size: 1.125em; line-height: 1.3333;} /* 18/24px with 36px/12px margin */
+h5, h6 {margin: 1.5em 0 0; font-size: 1em; line-height: 1.5;}
+h5 {font-weight: bold;}
+h1, h2, h3, .museo {font-family: MuseoSlab500,"Helvetica Neue","Bitstream Vera Sans",Arial,sans-serif; font-style: normal;}
+h4, h5, h6, dt {font-family: "Helvetica Neue","Bitstream Vera Sans",Arial,sans-serif;}
+h1, h2, h3, h4, h6, .in-page h2 {font-weight: normal;}
+	/* block spacing */
+p, ol, ul, dl, pre, figure, footer {margin: 1.5em 0;}
+header + *, hgroup + *, h2 + *, h3 + *, h4 + *, h5 + *, h6 + *, header + div > *:first-child, hgroup + div > *:first-child, h2 + div > *:first-child, h3 + div > *:first-child, h4 + div > *:first-child, h5 + div > *:first-child, h6 + div > *:first-child, header + aside + *, hgroup + aside + *, h2 + aside + *, h3 + aside + *, h4 + aside + *, h5 + aside + *, h6 + aside + *, header + div > aside + *, hgroup + div > aside + *, h2 + div > aside + *, h3 + div > aside + *, h4 + div > aside + *, h5 + div > aside + *, h6 + div > aside + * {margin-top: .5em;} /* incredibly crap attempt to tweak margins after headers fixme */
+aside > h2:first-child {margin-top: .8333em;} /* 20px todo: check */
+aside > h3:first-child {margin-top: .6em;} /* 12px */
+article hgroup h1 {margin-bottom: .5em;}
+article hgroup h2 {margin: .6667em 0 1.5em;}
+li, li section {margin: 0; padding: 0;}
+	/* lists */
+ol, ul, dl {/*position: relative; wtf? this kills float:right blocks ahead of it in source order */padding: 0;}
+ul {list-style-type: disc;}
+ul ul {list-style-type: circle;}
+li {margin: 0; padding: 0;}
+li p {margin: 0;}
+li p + p {margin-top: 1.5em;}
+dt {font-weight: normal;}
+li ul, li ol, li dl {margin: 0 0 0 1.5em;}
+dd ul, dd ol, dd dl {margin: 0;}
+pre {white-space: pre;}
+	/* code */
+code, samp, kbd, var, .pastels_on_dark {font-family: "DejaVuSansMono",Consolas,monospace; white-space: pre; word-wrap: break-word; white-space: -moz-pre-wrap; white-space: -o-pre-wrap; white-space: -pre-wrap; white-space: -hp-pre-wrap; white-space: pre-wrap;} /* http://perishablepress.com/press/2010/06/01/wrapping-content/ */
+code, samp, kbd, var {font-size: .875em; line-height: 1.42857; color: #000; background-color: #fff;} /* 14px/20px; matches 24px line-height every 6 lines */
+code samp, code kbd, code var {font-size: 1em; line-height: 1.5;}
+kbd {padding: 1px 2px; border: 1px solid #ddd;}
+a kbd {-webkit-transition: border-bottom-color .2s ease-in; -moz-transition: border-bottom-color .2s ease-in; -o-transition: border-bottom-color .2s ease-in; transition: border-bottom-color .2s ease-in;}
+a:hover kbd, a:active kbd, a:focus kbd {background-color: transparent; border: 1px solid transparent; border-bottom-color: #444;}
+code b, code strong, code mark {font-weight: bold;}
+.pastels_on_dark {padding: .75em 1em; color: #fff; font-size: 1em; line-height: 1.5;
+	-moz-tab-size: 2;
+	-o-tab-size: 2;
+	tab-size: 2;
+}
+strong code {padding: 1px;}
+thead code, a code, mark code {background: transparent;}
+thead code {color: #fff;}
+	/* ins/del */
+ins {border-bottom: 1px dotted #47ad09; text-decoration: none;} /* ref .changed-block */
+del {text-decoration: line-through; color: #777;}
+	/* figure */
+figure {position: relative;}
+figure dt {margin-top: .75em;} /* to check: ?? do I mean dl? */
+figure dd {margin-left: 0; padding-left: 0;}
+figure img {margin: .75em auto;}
+figure blockquote {margin: 1.5em 0 .75em -1.5em;}
+figure ul, figure ol {margin: .75em 0 .75em 2em;}
+figure li ul, figure li ol {margin: 0 0 0 1.5em;}
+figure p {margin-top: .75em; margin-bottom: .75em;}
+figure p+p {margin-top: 1.5em;}
+figcaption {clear: left; margin: 0 0 1.5em; text-align: center; font-style: italic;}
+figure figcaption:first-child {margin: 1.5em 0 0;}
+	/* other */
+img {display: block; max-width: 97%; margin: 0; border: 1px solid #999; padding: 5px; background: #fff;} /* max-width:12px/400px */
+img.wide {width: auto; max-width: none;}
+p img {display: inline; border: none; padding: 0 .25em; vertical-align: middle; background: transparent;}
+address + p {margin-top: 0;}
+sup {line-height: 0;}
+strong, b, figcaption em, figcaption i, caption em, caption i {font-weight: bold;}
+em, i {font-style: italic;}
+mark {padding: 0 2px; background: #f1c6df; font-weight: normal;}
+small, .small {font-size: .875em;}
+	/* @group Quotes (see object:.callout for blockquote box) */
+blockquote {border-left: .5em solid #ddd;}
+li blockquote {margin-left: 0;}
+blockquote p, blockquote ol, blockquote ul, blockquote>blockquote, blockquote>pre {margin-top: 0; margin-bottom: 0;}
+blockquote ol, blockquote ul {margin-left: 1.5em;}
+blockquote footer {margin-bottom: 0;}
+blockquote p+p {margin-top: 1.5em;}
+blockquote blockquote, .callout blockquote {margin-left: 1.5em; margin-right: .75em;}
+.note-block blockquote {font-style: normal;}
+/*blockquote mark {font-weight: bold;}
+blockquote strong mark, blockquote mark strong {font-style: italic;}→needed?*/
+	/* via http://yuilibrary.com/projects/yui3/ticket/2528708 */
+q {quotes: '“' '”' '‘' '’' '“' '”' '‘' '’';}
+:lang(ja) > q {quotes: '「' '」' '『' '』';}
+/* over-specified due to webkit bugs #6503 & #3234 */
+q:before {content: '“'; content: open-quote;}
+q:after {content: '”'; content: close-quote;}
+q q:before {content: '‘'; content: open-quote;}
+q q:after {content: '’'; content: close-quote;}
+q q q:before {content: '“'; content: open-quote;}
+q q q:after {content: '”'; content: close-quote;}
+	/* blockquotes */
+blockquote q:before {content: '‘'; content: open-quote;}
+blockquote q:after {content: '’'; content: close-quote;}
+blockquote q q:before {content: '“'; content: open-quote;}
+blockquote q q:after {content: '”'; content: close-quote;}
+		/* hanging opening quote */
+blockquote:before {display: block; height: 0; content: "“"; margin-left: -.95em; font: italic 4em/.8125 Cochin,Georgia,"Times New Roman",serif; color: #999;}
+	/* @end quotes */
+	/* tables */
+table {margin: 1.5em auto; border-bottom: 1px solid #999; border-collapse: collapse; -webkit-border-top-left-radius: 8px; -webkit-border-top-right-radius: 8px; -moz-border-radius: 8px 8px 0 0; border-radius: 8px 8px 0 0; background: #444;}
+caption {text-align: center; font-style: italic;}
+tbody {background-color: #fff;}
+th,  td {padding: 0.41667em 0.4em 0.3333em; vertical-align: top; -webkit-transition: background 0.2s linear; -moz-transition: background 0.2s linear; -ms-transition: background 0.2s linear; -o-transition: background 0.2s linear; transition: background 0.2s linear;}
+th {border-top: 1px solid #999; padding: 0.4em; color: #444; background: #ddd; text-align: left; font-weight: normal;}
+td {border-top: 1px solid #ddd; border-left: 1px solid #ddd; padding: 0.2em 0.8em; background: #fff;}
+thead th {border: none; background: transparent; color: #fff; text-align: center;}
+thead a, article:hover thead a {color: #eee;}
+thead a:visited {color: #ddd;}
+thead a, thead a:visited {background: transparent;}
+thead a:hover, article thead a:hover, thead a:focus, article thead a:focus {color: #222; background: #f5f5f5; border-bottom: 1px solid #f5f5f5;}
+thead a:active, article thead a:active {color: #8b1109;}
+tfoot {border-top: 3px double #999; font-weight: bold;}
+		/* row and cell hover effects */
+tbody tr:hover th, tbody tr:hover td {background: #ffe;}
+tbody tr td:hover {background: #f5f6d2;}
+			/* table contents */
+td ul {position: relative; list-style: none; margin: 0; padding: 0;}
+td ul li {margin: 0 0 0.5em 1.5em;}
+td ul li img {float: left; margin: 0.2em 0 0 -1.5em;}
+	/* forms */
+fieldset {margin: 0; border: 0; padding: 0;}
+	/* linkage */
+a {border-bottom: 1px solid #ddd; background: rgb(249,253,162); /* highlight yellow */ color: #222; text-decoration: none;}
+article:hover a {border-bottom: 1px solid #eee; color: #444; -webkit-transition: all .2s ease-in; -moz-transition: all .2s ease-in; -o-transition: all .2s ease-in; transition: all .2s ease-in;}
+a:visited {background: rgb(245,246,210); background: rgba(249,253,162,.4); color: #222;}
+a:hover, article a:hover, a:focus, article a:focus {color: #222; background: #f5f5f5; border-bottom: 1px solid #444;} /* background should be transparent (damn spec) */
+a:active, article a:active {color: #8b1109;}
+a img {border: none;}
+	/* permalinkage #s */
+/* old */
+h2 mark, h3 mark, h4 mark, h5 mark, h6 mark {opacity: 0;  padding-left: 0.5em; line-height: 1; font-size: .8333em; -webkit-transition: all .25s ease-in; -moz-transition: all .25s ease-in; -o-transition: all .25s ease-in; transition: all .25s ease-in;}
+h2:hover mark, h3:hover mark, h4:hover mark, h5:hover mark, h6:hover mark {opacity: 1;}
+mark a {color: #8b1109;} /* ? */
+/* new */
+h2 .permalink, h3 .permalink, h4 .permalink, h5 .permalink, h6 .permalink {opacity: 0;  padding-left: 0.5em; line-height: 1; font-size: .8333em; -webkit-transition: all .25s ease-in; -moz-transition: all .25s ease-in; -o-transition: all .25s ease-in; transition: all .25s ease-in;}
+h2:hover .permalink, h3:hover .permalink, h4:hover .permalink, h5:hover .permalink, h6:hover .permalink, .permalink:focus {opacity: 1;}
+/* @end default */
+/* @group Layout */
+.column {-webkit-column-count: 2; -moz-column-count: 2; column-count: 2;}
+.columns {-webkit-column-count: 3; -moz-column-count: 3; column-count: 3;}
+.column, .column ol, .column ul, .columns, .columns ol, .columns ul {list-style-position: inside;} /* hack for Webkit bug 23053 */
+	/* .branding */
+.branding {position: relative; margin-top: 3em;}
+.branding h1, .branding h2 {border: 0; padding: 0 0 .75em; line-height: 2.25;}
+.branding h1 {position: relative; float: left; width: 27%; margin: -28px 0 0 -33%; font-size: 32px; text-align: right; white-space: nowrap;}
+.branding h1 a {position: absolute; top: 28px; right: 2px;}
+.branding h1 a, .branding h1 a:hover, .branding h1 a:focus {background: transparent; border: 0;}
+.branding img {display: inline; border: 0; background: transparent; /*vertical-align: -30%;*/}
+.branding a img {padding: 0 8px; vertical-align: -20px;}
+.branding .logo-rays {opacity: .6; border-bottom: 1px solid #ddd; padding: 0 0 3px 5px; -webkit-transform: scale(.7); -moz-transform: scale(.7); -ms-transform: scale(.7); -o-transform: scale(.7); transform: scale(.7); -webkit-transform-origin: 50% 100%; -moz-transform-origin: 50% 100%; -ms-transform-origin: 50% 100%; -o-transform-origin: 50% 100%; transform-origin: 50% 100%; -webkit-transition: all .3s ease-in; -moz-transition: all .3s ease-in; -ms-transition: all .3s ease-in; -o-transition: all .3s ease-in; transition: all .3s ease-in;}
+.branding:hover .logo-rays {opacity: 1; border-bottom: 1px solid #444; -webkit-transform: scale(1); -moz-transform: scale(1); -ms-transform: scale(1); -o-transform: scale(1); transform: scale(1);}
+article header, .recent-articles li {position: relative;}
+.branding h2 {margin: 0;}
+		/* .page-home .branding */
+.page-home .branding h1 {float: none; width: auto; margin: 0 auto; padding-bottom: 0; text-align: center;}
+.page-home .branding h1 a {position: absolute; top: 28px; left: 0;}
+.page-home .branding h2 {font: italic 1em/1.5 Cochin,Georgia,"Times New Roman",serif; text-align: center;}
+.semantic-list {list-style-type: none;}
+.page-home .semantic-list {margin-top: 3em;}
+.featured-article footer {margin-top: 1.5em;}
+.recent-articles h1 {margin-top: 3em;}
+		/* #page-footer */
+#page-footer {margin: 4.5em 0 3em; font-family: Cochin,Georgia,"Times New Roman",serif; font-style: italic; color: #444; text-align: center;}
+#page-footer a {background: rgb(245,246,210); background: rgba(249,253,162,.4); color: #444;} /* fade */
+/* @end Layout*/
+/* @group basic classes */
+.left {float: left;}
+.right {float: right;}
+.half {width: 45%;}
+.right.half {margin-left: 1.5em; border-left: 1px solid #999;}
+.aside.img {float: right; clear: both;}
+.right.img {margin-left: 1em;}
+#changes ol {list-style-type: none;}
+.warning {color: #c11100;}
+.warning-bg {background-color: #f3cfcc; background-color: rgba(193,17,0,.2);} /* 20% #c11100 */
+.highlight-bg {background-color: #f6efd7; background-color: rgba(212,175,55,.2);} /* 20% #d4af37 */
+.good-bg {background-color: #daefce; background-color: rgba(71,173,9,.2);} /* 20% #47ad09 */
+.warning-bg code, .highlight-bg code, .good-bg code {background-color: transparent;}
+.indent {margin-left: 1.5em;}
+/* @end basic classes */
+
+/* @group objects */
+	/* ampersandwich */
+.amp, abbr[title="and"] {font-family: Cochin,Baskerville,Palatino,"Book Antiqua",serif; font-style: italic;}
+	/* .sharing */
+.sharing {margin-top: 1.5em}
+.sharing.sidenote {margin-top: .2143em;}
+	/* nav.in-page */
+.in-page {float: right; width: 40%; border: 1px solid #ddd; margin: 0 0 0 1.5em; padding: .375em .375em .375em 2em; background: #fff;}
+#article-nav {margin: 0 0 0 1.5em;} /* for specifity */
+.in-page ol {margin: .75em 0;}
+.in-page h2 {margin: 0 0 .75em; font-size: 1em; font-style: normal;}
+.in-page li {font-size: .875em; line-height: 1.42857;} /* 14px/20px; matches 24px line-height every 6 lines */
+
+	/* highlights and changes */
+.changed {border-bottom: 1px dotted #47AD09; padding: 2px 1px; background: #fff;} /* inline changes */
+		/* set up .callout box */
+blockquote, .callout {margin: 1.5em 0 1.5em -1.5em; padding: .75em .5em .75em 1em; background: #fff;}
+.column, .columns {margin: 1.5em 0 1.5em -1.5em; padding: .75em .5em .75em 1em; border-left: .5em solid transparent;}
+.callout {border-left: .5em solid #fff;} /* overridden by other styles */
+.callout .callout {margin-left: 0;}
+			/* fix content margins as required */
+.callout h2:first-child, blockquote h2:first-child {margin: 0 0 1em;}
+.callout h3:first-child, blockquote h3:first-child {margin: 0 0 1.2em;}
+.callout h4:first-child, blockquote h4:first-child {margin: 0 0 1.3333em;}
+.callout h5:first-child, .callout h6:first-child, blockquote h5:first-child, blockquote h6:first-child {margin: 0 0 1.5em;}
+.callout p/*, .callout + figure, .callout + section*/ {margin: 0;}
+.callout ol, .callout ul, .column ol, .column ul, .columns ol, .columns ul {margin: .75em 0 .75em 1.5em;}
+.callout p+p {margin-top: 1.5em;}
+.callout a:hover, .callout a:focus {background: #fff;}
+		/* borders to combine with .callout */
+.changed-block {border-left: .5em solid #47ad09;} /* for block-level changes */
+.highlight-block {/*border: 1px solid #999;*/ border-left: .5em solid #d4af37;} /* for block-level highlights */
+.note-block {border-left: .5em solid hsl(5,50%,70%); background: hsla(5,70%,70%,.15); font-style: italic;} /* for block-level author notes */
+.warning-block {border-left: .5em solid #c11100;} /* for block-level warnings */
+	/* .browser-support table */
+.browser-support td code {font-size: .75em; color: #555;}
+.browser-support .warning code {color: #555;}
+.browser-support.wide tbody th {width: 30%;}
+	/* key (eg for table.browser-support) */
+.key {margin-top: -.75em; margin-bottom: 2.25em; font-style: italic;}
+	/* box shadow */
+table, blockquote, .callout, .pastels_on_dark {-webkit-box-shadow: 0 0 6px rgba(0,0,0,0.5); -moz-box-shadow: 0 0 6px rgba(0,0,0,0.5); box-shadow: 0 0 6px rgba(0,0,0,0.5);}
+article img {-webkit-box-shadow: 0 0 5px rgba(0,0,0,0.5); -moz-box-shadow: 0 0 5px rgba(0,0,0,0.5); box-shadow: 0 0 5px rgba(0,0,0,0.5);}
+p img, .clean, .cleaner, .clean-img img {-webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none;}
+.cleaner {border: 0; padding: 0;}
+	/* big content (WARNING! kills marginalia) */
+.wide {width: 99%;}
+.wider {width: 130%;}
+.widest {width: 160%; margin-left: -30%;}
+	/* marginalia */
+		/* hang right */
+.sidenote {float: right; width: 29%; margin: .2143em -33% 0 0; /*padding-top: .75em;*/ font-size: .875em; line-height: 1.42857;} /* 14/20px (matches 24px line-height every 6 lines) with 3px to match baselines */
+.sidenote > * {margin-top: 0; margin-bottom: 0;}
+.sidenote p+p {margin-top: 1.5em;}
+figure .sidenote {}
+		/* .vendor-prefix (becide .browser-support table) */
+.vendor-prefix {float: right; margin-left: .75em; margin-right: -33%;}
+.tumblr {position: absolute; top: 0; right: 0; width: 29%;  margin: 0 -33% 0 0; padding: 1.42857em 0 0; /* 20px=match h1 baseline */ font-size: .875em; line-height: 1.42857; font-style: italic; color: #999;}
+		/* hang left */
+#changes time {float: left; width: 29%; margin: 0 0 0 -33%; outline: 1px solid #f2f2f2; border-right: 1px solid #47ad09; padding-right: .5em; text-align: right; color: #999;} /* outline to visually separate 1-line change notes */
+		/* hang left beside preceding block-level element */
+.meta {position: absolute; left: 0; top: 0; width: 27%; margin: 0 0 0 -33%; /*border-right: 1px solid #ddd;*/ padding: 1.42857em 0 .57143em; /* 20px+8px=match h1 baseline */ font-size: .875em; line-height: 1.42857; text-align: right; color: #999;} /* side padding ignored; use width instead*/
+.relative {position: relative;} /* for .meta container */
+.meta a, .meta a:visited {background-color: transparent; color: #999;}
+article:hover .meta a {color: #999;}
+.recent-articles .meta, .page-home .meta {padding: .42857em 0 0;} /* padding to make border-right same height as h2 */
+.recent-articles h1 {border: 0;}
+.recent-articles h2, .page-home .semantic-list h2 {margin-left: -1em; border-left: 1px solid #ddd; padding-left: 1em;}
+		/* #html-switcher display */
+body .xhtml, body.html .xhtml, body.xhtml .html {display: none;}
+body.xhtml .xhtml {display: inherit;}
+	/* @script (for modified elements article) */
+.script li {margin-left: 4em; text-indent: -4em;}
+.script b {font-weight: normal; text-transform: uppercase;}
+.script .action {margin: .75em 0; text-align: center; text-indent: 0; font-weight: bold; font-style: italic;}
+.script .voiceover {font-style: italic;}
+	/* side-by-side img wrapper */
+.side-by-side {min-width: 542px; overflow: auto; margin-top: 1em; padding: 6px;}
+.side-by-side .left {margin-top: 0;}
+/* @end objects */
+
+/* custom tables */
+#charset-warning-reqs .col1 {width: 30%;}
+#testing-results .col1, #testing-results .col2 {width: 33%;}
+#charset-warning-reqs img, #testing-results img {border: 0; padding: 0;}
+#testing-results tbody th {background: #fff; color: #000;}
+#testing-results tbody tr:hover th, #testing-results tbody tr:hover td {background: #ffe;}
+#testing-results td {border-left: 0;}
+
+/* @group easy clearing */
+.group:after {content: "."; display: block; height: 0; visibility: hidden; clear: both;}
+	/* IE pretty stick (via @simplebits) */
+* html .group {height: 1%;} /* IE6 */
+*:first-child+html .group {min-height: 1px;} /* IE7 */
+/* @end easy clearing */

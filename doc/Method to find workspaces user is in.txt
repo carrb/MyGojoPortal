@@ -1,0 +1,3 @@
+Method to find workspaces user is in.
+
+c:\Workspaces.exe | grep -Fi --before-context=20 arquett > Results.ArquettC.txt

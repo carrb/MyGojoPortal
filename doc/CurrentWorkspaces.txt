@@ -1,0 +1,474 @@
+
+myGOJO	          http://spprod
+calendars	          http://spprod/calendars
+Document Center	          http://spprod/Docs
+ittest1	          http://spprod/ittest1
+News	          http://spprod/News
+Reports	          http://spprod/Reports
+Search	          http://spprod/SearchCenter
+Sites	          http://spprod/SiteDirectory
+Dispenser Reporting	          http://spprod/isignol
+Press Releases	          http://spprod/isignol/PressReleases
+Search	          http://spprod/isignol/Search
+MySite Host	          http://spprod/mysite
+Project Workspaces	          http://spprod/pw
+Projects 2010	          http://spprod/pw/2010
+Test	          http://spprod/pw/2010/19
+Test NonProd 3 Stage	          http://spprod/pw/2010/27
+GOW - Supply Chain	          http://spprod/pw/2010/GOW - Supply Chain
+Japanese Foreign Material Reduction	          http://spprod/pw/2010/Japanese Foreign Material Reduction
+Phoenix Transition Team	          http://spprod/pw/2010/Phoenix Transition Team
+Project Workspaces	          http://spprod/pw/2010/Project Workspaces
+Purell.com	          http://spprod/pw/2010/Purell
+Return Optimization	          http://spprod/pw/2010/Return Optimization
+Shadow	          http://spprod/pw/2010/Shadow
+Test Non-Prod Stage 5	          http://spprod/pw/2010/Test NonProd Stage 5
+Projects 2011	          http://spprod/pw/2011
+2L FMX PET	          http://spprod/pw/2011/2L FMX PET
+3Stage New Prod Test	          http://spprod/pw/2011/3Stage New Prod Test
+401K Provider Conversion	          http://spprod/pw/2011/401K Provider Conversion
+5SNonProd Test	          http://spprod/pw/2011/5SNonProd Test
+5Stage Non Prod Test	          http://spprod/pw/2011/5Stage Non Prod Test
+800mL Accent Output Optimization	          http://spprod/pw/2011/800mL Accent Output Optimization
+9118 Wipes Stand Team	          http://spprod/pw/2011/9118 Wipes Stand Team
+Accent Output Optimization	          http://spprod/pw/2011/Accent Output Optimization
+AddieTest	          http://spprod/pw/2011/AddieTest
+AutoCad 2010 Upgrade	          http://spprod/pw/2011/AutoCad 2010 Upgrade
+Backorder Service Levels	          http://spprod/pw/2011/Backorder Service Levels
+BIB Formula Yield Improvement	          http://spprod/pw/2011/BIB Formula Yield Improvement
+Bid Process improvement	          http://spprod/pw/2011/Bid Process improvement
+Bid Quote SFDC Full Integration	          http://spprod/pw/2011/Bid Quote SFDC Full Integration
+Bioneutral Walk-in	          http://spprod/pw/2011/Bioneutral Walk-in
+Capacity	          http://spprod/pw/2011/Capacity
+Carrier Negotiations	          http://spprod/pw/2011/Carrier Negotiations
+CE1 line productivity improvement	          http://spprod/pw/2011/CE1 line productivity improvement
+Change Management Consulting	          http://spprod/pw/2011/Change Management Consulting
+CHG 2 and 4 Soap Project	          http://spprod/pw/2011/CHG 2 and 4 Soap Project
+CnS Cycle Time Reduction	          http://spprod/pw/2011/CnS Cycle Time Reduction
+Collaborative Workspaces Training	          http://spprod/pw/2011/Collaborative Workspaces Training
+Community Hand Soap Contamination Research	          http://spprod/pw/2011/Community Hand Soap Contamination Research
+Consumer Advanced Formulation Products	          http://spprod/pw/2011/Consumer Advanced Formulation Products
+Consumer SAVVY SELLER Website	          http://spprod/pw/2011/Consumer SAVVY SELLER Website
+Controlling Residue Build-up of Soap on Foamer Production Lines	          http://spprod/pw/2011/Controlling Residue Build-up of Soap on Foamer Production Lines
+Customer Maintenance Process Improvement	          http://spprod/pw/2011/Customer Maintenance Process Improvement
+CX Refill Efficiency	          http://spprod/pw/2011/CX Refill Efficiency
+Development Lab Test Management Optimization	          http://spprod/pw/2011/Development Lab Test Management Optimization
+Development Laboratories Portfolio Eval	          http://spprod/pw/2011/Development Laboratories Portfolio Eval
+----------------
+Development Labs Portfolio Evaluation	          http://spprod/pw/2011/Development Labs Portfolio Evaluation
+Developmental Labs Sample Request Cycle Time Reduction	          http://spprod/pw/2011/Developmental Labs Sample Request Cycle Time Reduction
+Dispenser Installation Optimization	          http://spprod/pw/2011/Dispenser Installation Optimization
+Display-Less Bag in the Box	          http://spprod/pw/2011/Display-Less Bag in the Box
+D-Lim Conversion	          http://spprod/pw/2011/D-Lim Conversion
+Document Work flow	          http://spprod/pw/2011/Document Work flow
+Dosing Strategy	          http://spprod/pw/2011/Dosing Strategy
+DTO Productivity	          http://spprod/pw/2011/DTO Productivity
+Email Notification Upon Project Provisioned Test	          http://spprod/pw/2011/Email Notification Upon Project Provisioned Test
+ENOX Walk- In	          http://spprod/pw/2011/ENOX Walk- In
+Enterprise Logistics Support	          http://spprod/pw/2011/Enterprise Logistics Support
+Enterprise Strategy	          http://spprod/pw/2011/Enterprise Strategy
+EPA Cat. IV Wipes	          http://spprod/pw/2011/EPA Cat. IV Wipes
+ERP Core Project Team	          http://spprod/pw/2011/ERP Core Project Team
+Expiry Risk Logistics Ops Sub Team	          http://spprod/pw/2011/Expiry Risk Logistics Ops Sub Team
+Financial Forecasting Alignment	          http://spprod/pw/2011/Financial Forecasting Alignment
+Finished Goods Claim Reductions	          http://spprod/pw/2011/Finished Goods Claim Reductions
+FL2 Productivity Improvement	          http://spprod/pw/2011/FL2 Productivity Improvement
+FMX Filler	          http://spprod/pw/2011/FMX Filler
+Formula Cost Optimization	          http://spprod/pw/2011/Formula Cost Optimization
+GJE ECO SOY DPX Launch	          http://spprod/pw/2011/GJE ECO SOY DPX Launch
+GLC Kiosks Implementation	          http://spprod/pw/2011/GLC Kiosks Implementation
+Globalize myGOJO Portal	          http://spprod/pw/2011/Globalize myGOJO Portal
+GOJO Culture - Communication	          http://spprod/pw/2011/GOJO Culture - Communication
+GOJO Culture - Data	          http://spprod/pw/2011/GOJO Culture - Data
+GOJO Culture - Discovery	          http://spprod/pw/2011/GOJO Culture - Discovery
+GOJO Culture - Strategy	          http://spprod/pw/2011/GOJO Culture - Strategy
+GOJO Learn Center Implementation	          http://spprod/pw/2011/GOJO Learn Center Implementation
+GOJO Lippman Campus Water Reduction Team	          http://spprod/pw/2011/GOJO Lippman Campus Water Reduction Team
+Hand Medic Product Refresh	          http://spprod/pw/2011/Hand Medic Product Refresh
+Heavy Duty Wipes Cost Reductions	          http://spprod/pw/2011/Heavy Duty Wipes Cost Reductions
+Horix Filler	          http://spprod/pw/2011/Horix Filler
+Hulk	          http://spprod/pw/2011/Hulk
+ICP Implementation	          http://spprod/pw/2011/ICP Implementation
+Idea Management	          http://spprod/pw/2011/Idea Management
+IDP Quick-hit	          http://spprod/pw/2011/IDP Quick-hit
+Innovation Fair Team - 2011	          http://spprod/pw/2011/Innovation Fair Team - 2011
+Innovation Strategy	          http://spprod/pw/2011/Innovation Strategy
+KRONOS Upgrade	          http://spprod/pw/2011/KRONOS Upgrade
+LCDP IM Dome	          http://spprod/pw/2011/LCDP IM Dome
+Leadership System Implementation	          http://spprod/pw/2011/Leadership System Implementation
+Lean Six Sigma Greenbelt - Meeting Efficiency	          http://spprod/pw/2011/Lean Six Sigma Greenbelt - Meeting Efficiency
+Liquid Nitrogen Refill Pressurization	          http://spprod/pw/2011/Liquid Nitrogen Refill Pressurization
+LSS GB Film Consolidation Project	          http://spprod/pw/2011/LSS GB Film Consolidation Project
+LSS GB GJJ Artwork Process	          http://spprod/pw/2011/LSS GB GJJ Artwork Process
+LSS GB Picker Accuracy	          http://spprod/pw/2011/LSS GB Picker Accuracy
+LSS GB Tote Cleaning Water Reduction	          http://spprod/pw/2011/LSS GB Tote Cleaning Water Reduction
+Marketing Communications Excellence	          http://spprod/pw/2011/Marketing Communications Excellence
+Mechanical Integrity	          http://spprod/pw/2011/Mechanical Integrity
+Mobile Device Empowerment Proof of Concept	          http://spprod/pw/2011/Mobile Device Empowerment Proof of Concept
+Monograph Compliant Wipes (sHE PURELL and BAK)	          http://spprod/pw/2011/Monograph Compliant Wipes (sHE PURELL   BAK)
+Monograph Context	          http://spprod/pw/2011/Monograph Context
+MRO and Supplies Cost Savings Initiative	          http://spprod/pw/2011/MRO and Supplies Cost Savings Initiative
+MS Project and Visio Upgrade	          http://spprod/pw/2011/MS Project and Visio Upgrade
+NPD DFX	          http://spprod/pw/2011/NPD DFX
+NPD Gate 0 to Gate 2	          http://spprod/pw/2011/NPD Gate 0 to Gate 2
+NPD Gate 2 to Post Launch	          http://spprod/pw/2011/NPD Gate 2 to Post Launch
+Odor Control	          http://spprod/pw/2011/Odor Control
+Optimized Material Flow	          http://spprod/pw/2011/Optimized Material Flow
+Out-of-Spec Chemical Returns	          http://spprod/pw/2011/Out-of-Spec Chemical Returns
+Pacific line Dial In time reduction	          http://spprod/pw/2011/Pacific line Dial In time reduction
+Pack out Facility 2012	          http://spprod/pw/2011/Pack out Facility 2012
+Packaging Cost Optimization	          http://spprod/pw/2011/Packaging Cost Optimization
+Pretreatment for USP Water System	          http://spprod/pw/2011/Pretreatment for USP Water System
+Pricing PAWs	          http://spprod/pw/2011/Pricing PAWs
+Project All-Star	          http://spprod/pw/2011/Project All-Star
+Project Colt (Wipes Nozzle Optimization)	          http://spprod/pw/2011/Project Colt (Wipes Nozzle Optimization)
+Project Durbin	          http://spprod/pw/2011/Project Durbin
+Project FCRS (Financial Consolidation and Reporting Solution) - Scope and Define	          http://spprod/pw/2011/Project FCRS (Financial Consolidation and Reporting Solution) - Scope and Define
+Project Leckrone	          http://spprod/pw/2011/Project Leckrone
+Project Portfolio Management	          http://spprod/pw/2011/Project Portfolio Management
+Project Whitney	          http://spprod/pw/2011/Project Whitney
+PROVON Antimicrobial  Skin Cleanser with CHG in TW-PET Bottles	          http://spprod/pw/2011/PROVON Antimicrobial  Skin Cleanser with CHG in TW-PET Bottles
+PT Due Diligence Team	          http://spprod/pw/2011/PT Due Diligence Team
+Pump Output Project	          http://spprod/pw/2011/Pump Output Project
+PURELL BAK SF607	          http://spprod/pw/2011/PURELL BAK SF607
+PURELL Iconic Portables	          http://spprod/pw/2011/PURELL Iconic Portables
+Purge Reduction - Bottle Lines	          http://spprod/pw/2011/Purge Reduction - Bottle Lines
+Quality Documentation	          http://spprod/pw/2011/Quality Documentation
+Quality Leadership Workspaces Training	          http://spprod/pw/2011/Quality Leadership Workspaces Training
+QualPak Move - Supply Chain	          http://spprod/pw/2011/QualPak Move - Supply Chain
+Quarantine Inventory Management	          http://spprod/pw/2011/Quarantine Inventory Management
+R-and-D Collaboration	          http://spprod/pw/2011/R-and-D Collaboration
+Rebate Process Review	          http://spprod/pw/2011/Rebate Process Review
+Records Management including eRecords	          http://spprod/pw/2011/Records Management including eRecords
+Reduce Multi-Count Wipes Roping	          http://spprod/pw/2011/Reduce Multi-Count Wipes Roping
+Regulatory Affairs Landscape Mapping	          http://spprod/pw/2011/Regulatory Affairs Landscape Mapping
+Regulatory Raw Material Database URS	          http://spprod/pw/2011/Regulatory Raw Material Database URS
+SAPL Fill Capability	          http://spprod/pw/2011/SAPL Fill Capability
+SD2  - added capacity LTX SD pumps - conversion of FMX to SD pumps	          http://spprod/pw/2011/SD2  - added capacity LTX SD pumps - conversion of FMX to SD pumps
+Services Business	          http://spprod/pw/2011/Services Business
+SMS Redesign 90 DayProject	          http://spprod/pw/2011/SMS Redesign 90 DayProject
+SMS Wrap Up	          http://spprod/pw/2011/SMS Wrap Up
+Supply Chain - Master Production Record	          http://spprod/pw/2011/Supply Chain - Master Production Record
+Synthetic Ethanol System	          http://spprod/pw/2011/Synthetic Ethanol System
+Tank 137 Controleed Environment	          http://spprod/pw/2011/Tank 137 Controleed Environment
+TestingLearningsAgain	          http://spprod/pw/2011/TestingLearningsAgain
+TestSigma	          http://spprod/pw/2011/TestSigma
+Unit Dosing	          http://spprod/pw/2011/Unit Dosing
+VOLCANO	          http://spprod/pw/2011/VOLCANO
+VSE Project	          http://spprod/pw/2011/VSE Project
+Water Reduction	          http://spprod/pw/2011/Water Reduction
+Windows 7/Office 2010 Upgrade	          http://spprod/pw/2011/Win7
+WOW Venture Collaboration	          http://spprod/pw/2011/WOW Venture Collaboration
+xpedx EDI Integration	          http://spprod/pw/2011/xpedx EDI Integration
+Yield Improvement	          http://spprod/pw/2011/Yield Improvement
+Projects 2012	          http://spprod/pw/2012
+AeroScout RTLS Project	          http://spprod/pw/2012/AeroScout RTLS Project
+APL-FL2-FL3 Overfill Reduction	          http://spprod/pw/2012/APL-FL2-FL3 Overfill Reduction
+BBT	          http://spprod/pw/2012/BBT
+BUCKEYE	          http://spprod/pw/2012/BUCKEYE
+BUCKEYE II Project	          http://spprod/pw/2012/BUCKEYE II Project
+Claims Process Development Team	          http://spprod/pw/2012/Claims Process Development Team
+EDI Translator Upgrade	          http://spprod/pw/2012/EDI Translator Upgrade
+EkaHau RTLS Project	          http://spprod/pw/2012/EkaHau RTLS Project
+Fall Protection	          http://spprod/pw/2012/Fall Protection
+Finish to Order	          http://spprod/pw/2012/Finish to Order
+First Experimental Production Run Process	          http://spprod/pw/2012/First Experimental Production Run Process
+Global GMP	          http://spprod/pw/2012/Global GMP
+GOJO Pump Assembly Facility	          http://spprod/pw/2012/GOJO Pump Assembly Facility
+L and Q	          http://spprod/pw/2012/L and Q
+Low Cost Wash Counter Project	          http://spprod/pw/2012/Low Cost Wash Counter Project
+LTX Cost Optimization	          http://spprod/pw/2012/LTX Cost Optimization
+LTX SmartLink Project	          http://spprod/pw/2012/LTX SmartLink Project
+Mexico Infrastructure	          http://spprod/pw/2012/Mexico Infrastructure
+Next Gen Chick-Fil-A Display	          http://spprod/pw/2012/Next Gen Chick-Fil-A Display
+Next Gen Refill	          http://spprod/pw/2012/Next Gen Refill
+Packaging Transportation Development	          http://spprod/pw/2012/Packaging Transportation Development
+Pilot Plant Capital Improvement Project	          http://spprod/pw/2012/Pilot Plant Capital Improvement Project
+Point of Care Data Gathering Project	          http://spprod/pw/2012/Point of Care Data Gathering Project
+PoleStar	          http://spprod/pw/2012/PoleStar
+Request For Credits	          http://spprod/pw/2012/Request For Credits
+Roadmap	          http://spprod/pw/2012/Roadmap
+Safety eLearning Implementation at Plaza	          http://spprod/pw/2012/Safety eLearning Implementation at Plaza
+Sensory Spectrum	          http://spprod/pw/2012/Sensory Spectrum
+Service Excellence	          http://spprod/pw/2012/Service Excellence
+SMS - 2012 Commercial	          http://spprod/pw/2012/SMS - 2012 Commercial
+Stability Chamber	          http://spprod/pw/2012/Stability Chamber
+TFX Smartlink	          http://spprod/pw/2012/TFX Smartlink
+Tough Soils	          http://spprod/pw/2012/Tough Soils
+Search	          http://spprod/pw/Search
+Project Workspaces	          http://spprod/sites/pw
+Strategy Status Dashboard	          http://spprod/sites/pw/dashboard
+Press Releases	          http://spprod/sites/pw/PressReleases
+Project Workspaces Project	          http://spprod/sites/pw/pwproject
+Search	          http://spprod/sites/pw/Search
+Home	          http://spprod/sites/techknow
+Press Releases	          http://spprod/sites/techknow/PressReleases
+Search	          http://spprod/sites/techknow/Search
+TechKnow team meeting	          http://spprod/sites/techknow/TechKnow team meeting
+Team Workspaces	          http://spprod/tw
+Acute Care Marketing Team	          http://spprod/tw/Acute Care Marketing Team
+Adding Actions to Home Page Test	          http://spprod/tw/Adding Actions to Home Page Test
+Analytical and Drug Stability	          http://spprod/tw/Analytical and Drug Stability
+Bunzl Global Team	          http://spprod/tw/Bunzl Global Team
+Cleanser Category Review	          http://spprod/tw/Cleanser Category Review
+Collaborative Tools Advisory Team	          http://spprod/tw/Collaborative Tools Advisory Team
+Commercial SMS	          http://spprod/tw/Commercial SMS
+Compliance Systems	          http://spprod/tw/Compliance Systems
+Controls Engineering	          http://spprod/tw/Controls Engineering
+Demand Generation	          http://spprod/tw/Demand Generation
+Energy Management Tech Platform	          http://spprod/tw/Energy Management Tech Platform
+Enterprise Monograph Readiness	          http://spprod/tw/Enterprise Monograph Readiness
+Enterprise Product Architecture	          http://spprod/tw/Enterprise Product Architecture
+ERP Steering Team	          http://spprod/tw/ERP Steering Team
+EST	          http://spprod/tw/EST
+FAST - Financial Analysis Steering Team	          http://spprod/tw/FAST - Financial Analysis Steering Team
+Giannetti Feldman Team	          http://spprod/tw/Giannetti Feldman Team
+Global Business Development Team	          http://spprod/tw/Global Business Development Team
+Global Group Administration	          http://spprod/tw/Global Group Administration
+Global Leadership Team	          http://spprod/tw/Global Leadership Team
+Global Quality System	          http://spprod/tw/Global Quality System
+GOJO - SWT SRM Team	          http://spprod/tw/GOJO - SWT SRM Team
+GOJO Annual Business Meeting	          http://spprod/tw/GOJO Annual Business Meeting
+GOJO Australia Regulatory	          http://spprod/tw/GOJO Australia Regulatory
+GOJO Board	          http://spprod/tw/GOJO Board
+GOJO Board Management Team	          http://spprod/tw/GOJO Board Management Team
+GOJO Culture Team	          http://spprod/tw/GOJO Culture Team
+GOJO Employee Recognition Team	          http://spprod/tw/GOJO Employee Recognition Team
+GOJO EMS Team	          http://spprod/tw/GOJO EMS Team
+GOJO Europe	          http://spprod/tw/GOJO Europe
+GOJO Europe Clinical Science	          http://spprod/tw/GOJO Europe Clinical Science
+GOJO Mexico	          http://spprod/tw/GOJO Mexico
+GOW - RD	          http://spprod/tw/GOW - RD
+Grainger Global Team	          http://spprod/tw/Grainger Global Team
+Incubator	          http://spprod/tw/Incubator
+ISS	          http://spprod/tw/ISS
+IT Leadership Team	          http://spprod/tw/IT Leadership Team
+iTeam	          http://spprod/tw/iTeam
+Leadership System	          http://spprod/tw/Leadership System
+Lean Six Sigma	          http://spprod/tw/Lean Six Sigma
+LO	          http://spprod/tw/LO
+M3	          http://spprod/tw/M3
+Marketing Associates Community	          http://spprod/tw/Marketing Associates Community
+Marketing Management Team	          http://spprod/tw/Marketing Management Team
+Material Science and Predictive Performance	          http://spprod/tw/Material Science and Predictive Performance
+Microbiology	          http://spprod/tw/Microbiology
+MicroHUB	          http://spprod/tw/MicroHUB
+National Accounts Team	          http://spprod/tw/National Accounts Team
+New Concept Development and Collaboration	          http://spprod/tw/New Concept Development and Collaboration
+New Team Site From Wizard	          http://spprod/tw/New Team Site From Wizard
+North America Business Leadership	          http://spprod/tw/North America Business Leadership
+NPD DFX Steering Team	          http://spprod/tw/NPD DFX Steering Team
+NSD Man-Mob-CM	          http://spprod/tw/NSD Man-Mob-CM
+Office Blog	          http://spprod/tw/Office Blog
+One Last Test	          http://spprod/tw/One Last Test
+Operation Excellence	          http://spprod/tw/Operation Excellence
+P to P	          http://spprod/tw/P to P
+Plasma Technology	          http://spprod/tw/Plasma Technology
+Portfolio Management	          http://spprod/tw/Portfolio Management
+Preventive Maintenance Team	          http://spprod/tw/Preventive Maintenance Team
+Process Research - Pilot Plant	          http://spprod/tw/Process Research - Pilot Plant
+Process Safety Management Steering Team	          http://spprod/tw/Process Safety Management Steering Team
+Promotion Review Team	          http://spprod/tw/Promotion Review Team
+Purell CMR Review Meetings	          http://spprod/tw/Purell CMR Review Meetings
+PURELL Consumer	          http://spprod/tw/PURELL Consumer
+QA Validation	          http://spprod/tw/QA Validation
+Quality Control Management	          http://spprod/tw/Quality Control Management
+Quality Documentation Team	          http://spprod/tw/Quality Documentation Team
+Quality Leadership Team Workspace	          http://spprod/tw/Quality Leadership Team Workspace
+R and D Metrics	          http://spprod/tw/R and D Metrics
+RD Global Technical Information Process	          http://spprod/tw/RD Global Technical Information Process
+Regulatory - GOJO America Latina	          http://spprod/tw/Regulatory - GOJO America Latina
+Regulatory - GOJO Europe	          http://spprod/tw/Regulatory - GOJO Europe
+Request for Credits	          http://spprod/tw/Request for Credits
+Research and Development Discussions	          http://spprod/tw/Research and Development Discussions
+Safety Audits	          http://spprod/tw/Safety Audits
+Safety Team	          http://spprod/tw/Safety Team
+Safety Team Lippman	          http://spprod/tw/Safety Team Lippman
+Sales Operations	          http://spprod/tw/Sales Operations
+Sample Team Site	          http://spprod/tw/Sample Team Site
+Sensory Technical Platform	          http://spprod/tw/Sensory Technical Platform
+Skin and Sensory Science	          http://spprod/tw/Skin and Sensory Science
+Skin Science Consulting	          http://spprod/tw/Skin Science Consulting
+SMS	          http://spprod/tw/SMS
+Social Business	          http://spprod/tw/Social Business
+Strategic Project System	          http://spprod/tw/sps
+Stage-Gate Steering Team	          http://spprod/tw/Stage-Gate Steering Team
+Staples	          http://spprod/tw/Staples
+Staples Global Team	          http://spprod/tw/Staples Global Team
+Supply Chain Engineering	          http://spprod/tw/Supply Chain Engineering
+Supply Chain Finance	          http://spprod/tw/Supply Chain Finance
+Surge Planning Project	          http://spprod/tw/Surge Planning Project
+Sustainability Enterprise Team	          http://spprod/tw/Sustainability Enterprise Team
+Technical Platforms V2	          http://spprod/tw/Technical Platforms V2
+Testing Workspace Name	          http://spprod/tw/Testing Workspace Name
+Value Chain Improvement Team	          http://spprod/tw/Value Chain Improvement Team
+Yield and Productivity Improvement Program	          http://spprod/tw/Yield and Productivity Improvement Program
+Ultimate Hand Hygeine Plan	          http://spprod/uhhp
+Home	          http://spprod/collab
+Search	          http://spprod/collab/Search
+Test	          http://spprod/collab/Test
+Home	          http://spprod/fs
+AB Pharma	          http://spprod/fs/AB Pharma
+Agences Claude Bouchard	          http://spprod/fs/Agences Claude Bouchard
+Al-Hatim Impex-Pakistan	          http://spprod/fs/Al-Hatim Impex-Pakistan
+Al-Kamal	          http://spprod/fs/Al-Kamal
+Almirkab	          http://spprod/fs/Almirkab
+Artwork	          http://spprod/fs/artwork
+Ashraf Dist WLL-Bahrain	          http://spprod/fs/Ashraf Dist WLL-Bahrain
+Atlantic Medical Intl	          http://spprod/fs/Atlantic Medical Intl
+Australasia	          http://spprod/fs/Australasia
+Automated Plastics	          http://spprod/fs/Automated Plastics
+Bangladesh ftp site	          http://spprod/fs/Bangladesh ftp site
+Behzad Trading	          http://spprod/fs/Behzad Trading
+Bluestream	          http://spprod/fs/Bluestream
+Brian Johnson Collaboration Site	          http://spprod/fs/Brian Johnson Collaboration Site
+Brumei ftp site	          http://spprod/fs/Brumei ftp site
+Brydens Distribution	          http://spprod/fs/Brydens Distribution
+Canada Project	          http://spprod/fs/Canada Project
+CDS Test	          http://spprod/fs/CDS Test
+Certifications	          http://spprod/fs/Certifications
+Champion Global-Ghana	          http://spprod/fs/Champion Global-Ghana
+Chemical Advisory Data	          http://spprod/fs/Chemical Advisory Data
+Chemrite Copac	          http://spprod/fs/Chemrite Copac
+China FTP Site	          http://spprod/fs/China FTP Site
+Communication Planner - 2011	          http://spprod/fs/Communication Planner - 2011
+Communication Process Owners	          http://spprod/fs/Communication Process Owners
+Consumer Metrics	          http://spprod/fs/Consumer Metrics
+Core	          http://spprod/fs/Core
+Development Lab	          http://spprod/fs/Development Lab
+Deviation Information	          http://spprod/fs/Deviation Information
+Dosso-Nigeria	          http://spprod/fs/Dosso-Nigeria
+Eastgate Graphics	          http://spprod/fs/Eastgate Graphics
+Emirates Airlines	          http://spprod/fs/Emirates Airlines
+E-Technologies Group	          http://spprod/fs/E-Technologies Group
+Everest Trading-Bahrain	          http://spprod/fs/Everest Trading-Bahrain
+Expiry Extension Photographs	          http://spprod/fs/Expiry Extension Photographs
+Fairbank Corp	          http://spprod/fs/Fairbank Corp
+Frantz Medical	          http://spprod/fs/Frantz Medical
+FTM-Mauritius	          http://spprod/fs/FTM-Mauritius
+FTP site for Thailand	          http://spprod/fs/FTP site for Thailand
+Ginen Saipan	          http://spprod/fs/Ginen Saipan
+GJJ Quality	          http://spprod/fs/GJJ Quality
+GOJO - Compliance File Share Space	          http://spprod/fs/GOJO - Compliance File Share Space
+GOJO - Presentations	          http://spprod/fs/GOJO - Presentations
+GOJO America Latina	          http://spprod/fs/GOJO America Latina
+GOJO Australasia Pty Limited Finance	          http://spprod/fs/GOJO Australasia Pty Limited Finance
+GOJO Culture - Employee Meetings	          http://spprod/fs/GOJO Culture - Employee Meetings
+GOJO France	          http://spprod/fs/GOJO France
+GOJO Long-term care File Share	          http://spprod/fs/GOJO Long-term care File Share
+Golden Landseye-Nigeria	          http://spprod/fs/Golden Landseye-Nigeria
+Govi	          http://spprod/fs/Govi
+Gulf Mechanical	          http://spprod/fs/Gulf Mechanical
+HandWash Compliance Solutions	          http://spprod/fs/HandWash Compliance Solutions
+Healthcare Customer Service	          http://spprod/fs/Healthcare Customer Service
+Hilcom Trading	          http://spprod/fs/Hilcom Trading
+Hoffer Plastics	          http://spprod/fs/Hoffer Plastics
+Hygiene Cleaning	          http://spprod/fs/Hygiene Cleaning
+Impact Fulfillment Services	          http://spprod/fs/Impact Fulfillment Services
+India Regulatory site	          http://spprod/fs/India Regulatory site
+Indonesia ftp site	          http://spprod/fs/Indonesia ftp site
+Industrial Hygienic Solutions	          http://spprod/fs/Industrial Hygienic Solutions
+Injection - Blow Mold RFQ	          http://spprod/fs/Injection - Blow Mold RFQ
+Intelligent Hygiene Solutions	          http://spprod/fs/Intelligent Hygiene Solutions
+ISS Govt-UAE	          http://spprod/fs/ISS Govt-UAE
+IT Help Desk	          http://spprod/fs/IT Help Desk
+IT Training File Sharing	          http://spprod/fs/IT Training File Sharing
+J Museum	          http://spprod/fs/J Museum
+Jaco	          http://spprod/fs/Jaco
+Japan Regulatory	          http://spprod/fs/Japan Regulatory
+Jassim Trading	          http://spprod/fs/Jassim Trading
+JNP Enterprises Limited	          http://spprod/fs/JNP Enterprises Limited
+Kevin McLaughlin	          http://spprod/fs/Kevin McLaughlin
+Kleen-n-Fresh-Nigeria	          http://spprod/fs/Kleen-n-Fresh-Nigeria
+Korea ftp site	          http://spprod/fs/Korea ftp site
+Korea Regulatory	          http://spprod/fs/Korea Regulatory
+Kuts-n-Tuts	          http://spprod/fs/Kuts-n-Tuts
+Label RFQ	          http://spprod/fs/Label RFQ
+LaSzaray	          http://spprod/fs/LaSzaray
+Leo Patriotis-Cyprus	          http://spprod/fs/Leo Patriotis-Cyprus
+Living Fountain	          http://spprod/fs/Living Fountain
+Malaysia ftp site	          http://spprod/fs/Malaysia ftp site
+MDI	          http://spprod/fs/MDI
+Medi-Trading	          http://spprod/fs/Medi-Trading
+Menasha	          http://spprod/fs/Menasha
+Menasha FTP Site	          http://spprod/fs/Menasha FTP Site
+Mersaco	          http://spprod/fs/Mersaco
+MRO Inventory and Preventive Maintenance File Sharing	          http://spprod/fs/MRO Inventory and Preventive Maintenance File Sharing
+MullinS	          http://spprod/fs/MullinS
+Muscat Pharmacy	          http://spprod/fs/Muscat Pharmacy
+NADA Dairy-S Arabia	          http://spprod/fs/NADA Dairy-S Arabia
+Nascent	          http://spprod/fs/Nascent
+National Account Baseline Sales Project	          http://spprod/fs/National Account Baseline Sales Project
+National Medical-Kuwait	          http://spprod/fs/National Medical-Kuwait
+New File Sharing Space from Wizard	          http://spprod/fs/New File Sharing Space from Wizard
+Oukkal Brothers-Nigeria	          http://spprod/fs/Oukkal Brothers-Nigeria
+Paul Lenhart Collaboration Site	          http://spprod/fs/Paul Lenhart Collaboration Site
+Pharmasen-Senegal	          http://spprod/fs/Pharmasen-Senegal
+Phillippines ftp site	          http://spprod/fs/Phillippines ftp site
+PMC	          http://spprod/fs/PMC
+Polytop Corp	          http://spprod/fs/Polytop Corp
+Price and Cost Data	          http://spprod/fs/Price and Cost Data
+Pride Group	          http://spprod/fs/Pride Group
+Product Development	          http://spprod/fs/Product Development
+ProLim PRLM SA	          http://spprod/fs/ProLim PRLM SA
+Richmond	          http://spprod/fs/Richmond
+Rockline	          http://spprod/fs/Rockline
+Safety and Environmental Website	          http://spprod/fs/Safety and Environmental Website
+Safety Department	          http://spprod/fs/Safety Department
+Sayfee	          http://spprod/fs/Sayfee
+SC GOW Scorecards	          http://spprod/fs/SC GOW Scorecards
+Scrap Tickets	          http://spprod/fs/Scrap Tickets
+Sesneber-Saudi Arabia	          http://spprod/fs/Sesneber-Saudi Arabia
+Shadow 2	          http://spprod/fs/Shadow 2
+Singapore ftp site	          http://spprod/fs/Singapore ftp site
+SIS	          http://spprod/fs/SIS
+SKU Rationalization	          http://spprod/fs/SKU Rationalization
+SPRIM	          http://spprod/fs/SPRIM
+Sri Lanka ftp site	          http://spprod/fs/Sri Lanka ftp site
+Star Trivitron-UAE	          http://spprod/fs/Star Trivitron
+Stull Technologies	          http://spprod/fs/Stull Technologies
+Supply Chain Management	          http://spprod/fs/Supply Chain Management
+Technical Trading	          http://spprod/fs/Technical Trading
+Test Site Disregard	          http://spprod/fs/Test Site Disregard
+Tradeshow Management and Logistics	          http://spprod/fs/Tradeshow Management and Logistics
+Traesa	          http://spprod/fs/Traesa
+Training	          http://spprod/fs/Training
+Transmed	          http://spprod/fs/Transmed
+Transportation and Logistics Services RFQ	          http://spprod/fs/Transportation and Logistics Services RFQ
+Uniprom	          http://spprod/fs/Uniprom
+Vietnam ftp site	          http://spprod/fs/Vietnam ftp site
+VM Bros	          http://spprod/fs/VM Bros
+Wael Pharmacy	          http://spprod/fs/Wael Pharmacy
+Wihbaco	          http://spprod/fs/Wihbaco
+Winners	          http://spprod/fs/Winners
+Wisa	          http://spprod/fs/Wisa
+GOJO Ideas	          http://spprod/ideas
+Reports	          http://spprod/ideas/Reports
+Publishing Site	          http://spprod/ideas/repository
+myGOJO	          http://spprod/portal
+Communication	          http://spprod/portal/comm
+Content	          http://spprod/portal/content
+Communications	          http://spprod/portal/content/comm
+ERP	          http://spprod/portal/content/erp
+Next ERP Information team meeting	          http://spprod/portal/content/erp/Next ERP Information team meeting
+HROD	          http://spprod/portal/content/hrod
+International Travel	          http://spprod/portal/content/internat_travel
+IT	          http://spprod/portal/content/IT
+Safety	          http://spprod/portal/content/safety
+GOJO Safety Handbook	          http://spprod/portal/content/safety/gojo-safety-handbook
+SMS	          http://spprod/portal/content/SMS
+vbb	          http://spprod/portal/content/vbb
+Visitors	          http://spprod/portal/content/visitors
+Workplaces	          http://spprod/portal/content/workplaces
+External	          http://spprod/portal/ext
+ext2	          http://spprod/portal/ext2
+Forms	          http://spprod/portal/forms
+Idea Management Test	          http://spprod/portal/IdeaManagementTest
+Announcements	          http://spprod/portal/info
+Reports	          http://spprod/portal/Reports
+SWOW	          http://spprod/portal/swow
+HR/Safety & Environmental	          http://spprod/sites/hrsafetyenv
+Team Discussion	          http://spprod/sites/hrsafetyenv/blog
+Home	          http://spprod/sites/MarketingServices
+Press Releases	          http://spprod/sites/MarketingServices/PressReleases
+Search	          http://spprod/sites/MarketingServices/Search

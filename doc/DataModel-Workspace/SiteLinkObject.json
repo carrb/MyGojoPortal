@@ -1,0 +1,16 @@
+{ _id: ObjectID('4adfadfasdf9adsf8adfad7adfadf1bb'),
+  title: 'Project X',
+  url: 'http://www.mygojo.com/tw/Project X',
+  userLogin: 'GOJO-NET\\admsw',
+  priority: 1,
+  tags: [ 'test1', 'projects', 'mongodb'],
+  comment: [
+    { user: 'test',
+      xya: 2,
+      abc: 3456 },
+    { user: 'test2',
+      xya: 56,
+      abc: 34 }
+  ]
+}
+

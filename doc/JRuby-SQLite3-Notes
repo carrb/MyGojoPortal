@@ -1,0 +1,13 @@
+JRuby and SQLite3 -- make work together
+
+
+config/database.yml
+
+development:
+  adapter: jdbcsqlite3
+  database: db/development.sqlite3
+  timeout: 5000
+
+
+That eliminates the dreaded "no such file to load" errors.
+

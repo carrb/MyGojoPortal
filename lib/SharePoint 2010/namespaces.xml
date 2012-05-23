@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <members>
+    <member name="N:Microsoft.HtmlTrans"></member>
+    <member name="N:Microsoft.SharePoint">
+      <summary>Provides types and members for working with a top-level site and its subsites or lists.</summary>
+    </member>
+    <member name="N:Microsoft.SharePoint.Administration">
+      <summary>Provides administrative types and members for managing a Windows SharePoint Services deployment.</summary>
+    </member>
+    <member name="N:Microsoft.SharePoint.Administration.AccessControl"></member>
+    <member name="N:Microsoft.SharePoint.Administration.Backup">
+      <summary>Provides types and members for performing backup and restore operations on Windows SharePoint Services 3.0 sites.</summary>
+    </member>
+    <member name="N:Microsoft.SharePoint.Administration.Health"></member>
+    <member name="N:Microsoft.SharePoint.AdministrationOperation"></member>
+    <member name="N:Microsoft.SharePoint.Applications.GroupBoard.ApplicationPages"></member>
+    <member name="N:Microsoft.SharePoint.Applications.GroupBoard.MobileControls"></member>
+    <member name="N:Microsoft.SharePoint.Applications.GroupBoard.WebControls"></member>
+    <member name="N:Microsoft.SharePoint.Applications.GroupBoard.WebPartPages"></member>
+    <member name="N:Microsoft.SharePoint.BusinessData.Offlining"></member>
+    <member name="N:Microsoft.SharePoint.BusinessData.SystemSpecific"></member>
+    <member name="N:Microsoft.SharePoint.ClaimProviders"></member>
+    <member name="N:Microsoft.SharePoint.Deployment">
+      <summary>Provides types and members for importing and exporting content between Windows SharePoint Services Web sites.</summary>
+    </member>
+    <member name="N:Microsoft.SharePoint.Diagnostics"></member>
+    <member name="N:Microsoft.SharePoint.EmailIntegration">
+      <summary>Provides classes that enable you to integrate e-mail communication with users into your SharePoint sites.</summary>
+    </member>
+    <member name="N:Microsoft.SharePoint.IdentityModel"></member>
+    <member name="N:Microsoft.SharePoint.IdentityModel.Configuration"></member>
+    <member name="N:Microsoft.SharePoint.IdentityModel.Pages"></member>
+    <member name="N:Microsoft.SharePoint.IdentityModel.Services.SecurityTokenService"></member>
+    <member name="N:Microsoft.SharePoint.IdentityModel.WebControls"></member>
+    <member name="N:Microsoft.SharePoint.JSGrid">
+      <summary>Contains methods used to control the display and output format of data used within a grid control.</summary>
+    </member>
+    <member name="N:Microsoft.SharePoint.JsonUtilities">
+      <summary>Specifies methods used to encode, decode, and process ECMAScript operations involving the grid control.</summary>
+    </member>
+    <member name="N:Microsoft.SharePoint.Linq">
+      <summary>Provides the classes that implement the LINQ to SharePoint provider.</summary>
+    </member>
+    <member name="N:Microsoft.SharePoint.Meetings">
+      <summary>Provides an object model that can be used to customize Meeting Workspace sites.</summary>
+    </member>
+    <member name="N:Microsoft.SharePoint.MobileControls">
+      <summary>Provides server controls for rendering SharePoint sites, pages, forms, and lists that are accessible from mobile devices such as SmartPhones or Pocket PCs.</summary>
+    </member>
+    <member name="N:Microsoft.SharePoint.MobileMessage"></member>
+    <member name="N:Microsoft.SharePoint.Navigation">
+      <summary>Provides types and members for customizing the navigation structures and site maps of SharePoint sites.</summary>
+    </member>
+    <member name="N:Microsoft.SharePoint.PowerShell"></member>
+    <member name="N:Microsoft.SharePoint.Security">
+      <summary>Provides a set of code access permission and attribute classes designed to protect a specific set of resources and operations, such as access to the Windows SharePoint Services object model, the ability to do unsafe saving on HTTP Gets, and enabling Web Part to Web Part connections. The purpose of the attribute classes is to provide support for declarative security so that developers can specify the custom permission when using declarative syntax for security actions such as requests, demands, or assertions.</summary>
+    </member>
+    <member name="N:Microsoft.SharePoint.SoapServer">
+      <summary>Contains classes that implement the Windows SharePoint Services Web Service on the server. In most cases, the members of these classes are not designed to be called from the server, and are not tested in this configuration. The methods provided by a Web service are designed to be called remotely from client applications. For information about using the methods of a Web service implemented by one of these classes, click the appropriate link in the Class column of the following table.</summary>
+    </member>
+    <member name="N:Microsoft.SharePoint.StsAdmin">
+      <summary>Provides an interface for creating custom operations to run at the command prompt in STSADM.EXE.</summary>
+    </member>
+    <member name="N:Microsoft.SharePoint.Upgrade">
+      <summary>Provides types and members for upgrading a Windows SharePoint Services deployment.</summary>
+    </member>
+    <member name="N:Microsoft.SharePoint.Utilities">
+      <summary>Used for various utilities tasks, including encoding of strings and processing of user information.</summary>
+    </member>
+    <member name="N:Microsoft.SharePoint.Utilities.Win32"></member>
+    <member name="N:Microsoft.SharePoint.WebControls">
+      <summary>Contains ASP.NET server controls that are used on site and list pages in a SharePoint site.</summary>
+    </member>
+    <member name="N:Microsoft.SharePoint.WebPartPages">
+      <summary>Provides classes, interfaces, and members for creating custom Web Parts and Web Part pages.</summary>
+    </member>
+    <member name="N:Microsoft.SharePoint.WebPartPages.Communication">
+      <summary>Provides a set of interfaces and their supporting classes and members that can be implemented in the class of a custom Web Part to support creating connections with other Web Parts. A Web Part can implement one or more of these interfaces to allow it to receive or pass information to other connected Web Parts on a Web Part Page. A Microsoft.SharePoint.WebPartPages.Communication namespace interface is a set of events and event handlers for providing or consuming data from list, row, and cell data contained within a Web Part.</summary>
+    </member>
+    <member name="N:Microsoft.SharePoint.Workflow">
+      <summary>Represents the workflow functionality contained in Windows SharePoint Services.</summary>
+    </member>
+  </members>
+</doc>

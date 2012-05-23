@@ -1,0 +1,74 @@
+﻿/*	custom.less */
+
+/*  Created with: CSS 2 LESS convertor:  http://css2less.cc/ */
+
+
+body, p, textarea, .navbar-search .search-query { 
+	font-family: "Segoe UI", Candara, "Lucida Grande", "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", 
+				 Verdana, "Verdana Ref", sans-serif; 
+	*font-size:small;
+}
+
+/* see:  blog.kenneth.io/blog/  */
+p {
+    -ms-word-break: break-all;
+    word-break: break-all;
+    word-break: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+}
+
+
+/* Overrides - bootstrap.css */
+
+.nav-list {
+    .nav-header {
+        margin-left:0;
+        margin-right: -15px;
+        padding-left: 0;
+        text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    }
+    > {
+        li {
+            > {
+                a {
+                    padding: 2px 15px 2px 15px;
+                }
+            }
+        }
+    }
+}
+
+.navbar-inner {
+    background-color: #21374C;
+    background-image: none;
+}
+
+.nav {
+    .nav-header {
+        color: #555555;
+        text-transform: none;
+    }
+    > {
+        li {
+            > {
+                a {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+ul.nav-list {
+    + {
+        ul.nav-list {
+            margin-top: 18px;
+        }
+    }
+}
+
+.nav-list > li > a, a {
+    color: #0088CC;
+    text-decoration: none;
+}

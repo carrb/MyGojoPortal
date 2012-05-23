@@ -1,0 +1,281 @@
+
+
+Added 80 links.
+
+Site Collection: [http://vm-sphd-app]
+Site Collection Title: myGOJO
+*	Subweb accessible by GOJO-NET\wades: Actions Home Test  [http://vm-sphd-app/Actions Home Test]
+*	Subweb accessible by GOJO-NET\wades: Announcements  [http://vm-sphd-app/info]
+*	Subweb accessible by GOJO-NET\wades: Dashboard Projects Test  [http://vm-sphd-app/Dashboard Projects Test]
+*	Subweb accessible by GOJO-NET\wades: Dashboard Test 2  [http://vm-sphd-app/Dashboard Test 2]
+*	Subweb accessible by GOJO-NET\wades: Do you see this  [http://vm-sphd-app/Do you see this]
+*	Subweb accessible by GOJO-NET\wades: myGOJO Login  [http://vm-sphd-app/login]
+*	Subweb accessible by GOJO-NET\wades: swow  [http://vm-sphd-app/swow]
+*	Subweb accessible by GOJO-NET\wades: Testing GOJO Templates  [http://vm-sphd-app/Testing GOJO Templates]
+*	Subweb accessible by GOJO-NET\wades: Testing new wizard changes  [http://vm-sphd-app/Testing new wizard changes]
+*	Subweb accessible by GOJO-NET\wades: Testing Templates  [http://vm-sphd-app/Testing Templates]
+*	Subweb accessible by GOJO-NET\wades: Testing the wizard changes  [http://vm-sphd-app/Testing the wizard changes]
+*	Subweb accessible by GOJO-NET\wades: Testing wizard changes  [http://vm-sphd-app/Testing wizard changes]
+*	Subweb accessible by GOJO-NET\wades: testsub  [http://vm-sphd-app/testsub]
+
+Site Collection: [http://vm-sphd-app/collab]
+Site Collection Title: Home
+*	Subweb accessible by GOJO-NET\wades: Search  [http://vm-sphd-app/collab/Search]
+
+Site Collection: [http://vm-sphd-app/fs]
+Site Collection Title: Home
+*	Subweb accessible by GOJO-NET\wades: Blah  [http://vm-sphd-app/fs/Blah]
+*	Subweb accessible by GOJO-NET\wades: File Sharing Example Site  [http://vm-sphd-app/fs/test]
+*	Subweb accessible by GOJO-NET\wades: hello world  [http://vm-sphd-app/fs/hello world]
+*	Subweb accessible by GOJO-NET\wades: New File Sharing Site  [http://vm-sphd-app/fs/New File Sharing Site]
+*	Subweb accessible by GOJO-NET\wades: New File Sharing Site 2  [http://vm-sphd-app/fs/New File Sharing Site 2]
+*	Subweb accessible by GOJO-NET\wades: New File Sharing Site 3  [http://vm-sphd-app/fs/New File Sharing Site 3]
+*	Subweb accessible by GOJO-NET\wades: Press Releases  [http://vm-sphd-app/fs/PressReleases]
+*	Subweb accessible by GOJO-NET\wades: Search  [http://vm-sphd-app/fs/Search]
+*	Subweb accessible by GOJO-NET\wades: SW-Test-Site  [http://vm-sphd-app/fs/SW-Test-Site]
+*	Subweb accessible by GOJO-NET\wades: SW-TestSite-2  [http://vm-sphd-app/fs/SW-TestSite-2]
+*	Subweb accessible by GOJO-NET\wades: Test2  [http://vm-sphd-app/fs/Test2]
+
+Site Collection: [http://vm-sphd-app/portal]
+Site Collection Title: myGOJO.com
+
+Site Collection: [http://vm-sphd-app/projects/projectworkspaces]
+
+Site Collection: [http://vm-sphd-app/projects/spaces]
+
+Site Collection: [http://vm-sphd-app/pw]
+Site Collection Title: Home
+*	Subweb accessible by GOJO-NET\wades: Press Releases  [http://vm-sphd-app/pw/PressReleases]
+*	Subweb accessible by GOJO-NET\wades: Project Workspaces Project  [http://vm-sphd-app/pw/pwproject]
+*	Subweb accessible by GOJO-NET\wades: Search  [http://vm-sphd-app/pw/Search]
+*	Subweb accessible by GOJO-NET\wades: Strategy Status Dashboard  [http://vm-sphd-app/pw/dashboard]
+
+Site Collection: [http://vm-sphd-app/sites/analyticalchemistry]
+
+Site Collection: [http://vm-sphd-app/sites/bcarrtest]
+Site Collection Title: 
+
+Site Collection: [http://vm-sphd-app/sites/blank]
+
+Site Collection: [http://vm-sphd-app/sites/blog]
+Site Collection Title: blog
+
+Site Collection: [http://vm-sphd-app/sites/CMS]
+
+Site Collection: [http://vm-sphd-app/sites/detectalert]
+Site Collection Title: Detect & Alert
+*	Subweb accessible by GOJO-NET\wades: Search  [http://vm-sphd-app/sites/detectalert/Search]
+
+Site Collection: [http://vm-sphd-app/sites/dwa]
+
+Site Collection: [http://vm-sphd-app/sites/expiry]
+
+Site Collection: [http://vm-sphd-app/sites/friedhoff]
+
+Site Collection: [http://vm-sphd-app/sites/gojoblog]
+
+Site Collection: [http://vm-sphd-app/sites/helpdesk]
+
+Site Collection: [http://vm-sphd-app/sites/henry]
+
+Site Collection: [http://vm-sphd-app/sites/ideas]
+
+Site Collection: [http://vm-sphd-app/sites/identify]
+Site Collection Title: Home
+*	Subweb accessible by GOJO-NET\wades: Press Releases  [http://vm-sphd-app/sites/identify/PressReleases]
+*	Subweb accessible by GOJO-NET\wades: Search  [http://vm-sphd-app/sites/identify/Search]
+
+Site Collection: [http://vm-sphd-app/sites/infopath]
+
+Site Collection: [http://vm-sphd-app/sites/intranet]
+Site Collection Title: Corporate Intranet Site
+*	Subweb accessible by GOJO-NET\wades: Document Center  [http://vm-sphd-app/sites/intranet/Docs]
+*	Subweb accessible by GOJO-NET\wades: News  [http://vm-sphd-app/sites/intranet/News]
+*	Subweb accessible by GOJO-NET\wades: Reports  [http://vm-sphd-app/sites/intranet/Reports]
+*	Subweb accessible by GOJO-NET\wades: Search  [http://vm-sphd-app/sites/intranet/SearchCenter]
+*	Subweb accessible by GOJO-NET\wades: Sites  [http://vm-sphd-app/sites/intranet/SiteDirectory]
+*	Subweb accessible by GOJO-NET\wades: Test Meeting  [http://vm-sphd-app/sites/intranet/Test Meeting]
+*	Subweb accessible by GOJO-NET\wades: Test2  [http://vm-sphd-app/sites/intranet/Test2]
+
+Site Collection: [http://vm-sphd-app/sites/isignol]
+
+Site Collection: [http://vm-sphd-app/sites/IT_Integration]
+
+Site Collection: [http://vm-sphd-app/sites/levels]
+
+Site Collection: [http://vm-sphd-app/sites/mobile]
+
+Site Collection: [http://vm-sphd-app/sites/processdevelopment]
+
+Site Collection: [http://vm-sphd-app/sites/profitimprovement]
+
+Site Collection: [http://vm-sphd-app/sites/proto]
+
+Site Collection: [http://vm-sphd-app/sites/pw]
+Site Collection Title: myProjectWorkspaces
+*	Subweb accessible by GOJO-NET\wades: Publishing Site  [http://vm-sphd-app/sites/pw/dashboards]
+*	Subweb accessible by GOJO-NET\wades: Search  [http://vm-sphd-app/sites/pw/Search]
+
+Site Collection: [http://vm-sphd-app/sites/pwproto]
+Site Collection Title: Home
+*	Subweb accessible by GOJO-NET\wades: 2  [http://vm-sphd-app/sites/pwproto/2]
+*	Subweb accessible by GOJO-NET\wades: 3  [http://vm-sphd-app/sites/pwproto/3]
+*	Subweb accessible by GOJO-NET\wades: Bob Smith's Crazy Site  [http://vm-sphd-app/sites/pwproto/bobsmithcrazysite]
+*	Subweb accessible by GOJO-NET\wades: Project Workspaces Project  [http://vm-sphd-app/sites/pwproto/Brand New Site]
+*	Subweb accessible by GOJO-NET\wades: Projects 2010  [http://vm-sphd-app/sites/pwproto/2010]
+*	Subweb accessible by GOJO-NET\wades: Projects 2011  [http://vm-sphd-app/sites/pwproto/2011]
+*	Subweb accessible by GOJO-NET\wades: Search  [http://vm-sphd-app/sites/pwproto/Search]
+
+Site Collection: [http://vm-sphd-app/sites/ql]
+Site Collection Title: Quality Leadership
+*	Subweb accessible by GOJO-NET\wades: Coaches' Corner  [http://vm-sphd-app/sites/ql/corner]
+*	Subweb accessible by GOJO-NET\wades: QL 23  [http://vm-sphd-app/sites/ql/ql23]
+*	Subweb accessible by GOJO-NET\wades: Search  [http://vm-sphd-app/sites/ql/SearchCenter]
+*	Subweb accessible by GOJO-NET\wades: Sites  [http://vm-sphd-app/sites/ql/SiteDirectory]
+
+Site Collection: [http://vm-sphd-app/sites/qualpak]
+
+Site Collection: [http://vm-sphd-app/sites/search]
+
+Site Collection: [http://vm-sphd-app/sites/searchTest]
+
+Site Collection: [http://vm-sphd-app/sites/shma]
+
+Site Collection: [http://vm-sphd-app/sites/ss]
+
+Site Collection: [http://vm-sphd-app/sites/swow]
+
+Site Collection: [http://vm-sphd-app/sites/t3]
+
+Site Collection: [http://vm-sphd-app/sites/talk]
+Site Collection Title: GOJO Talk!
+*	Subweb accessible by GOJO-NET\wades: Search  [http://vm-sphd-app/sites/talk/Search]
+
+Site Collection: [http://vm-sphd-app/sites/techknow]
+
+Site Collection: [http://vm-sphd-app/sites/test]
+Site Collection Title: Test
+*	Subweb accessible by GOJO-NET\wades: Drivers  [http://vm-sphd-app/sites/test/drivers]
+*	Subweb accessible by GOJO-NET\wades: Excel  [http://vm-sphd-app/sites/test/excel]
+*	Subweb accessible by GOJO-NET\wades: Home  [http://vm-sphd-app/sites/test/ptest]
+*	Subweb accessible by GOJO-NET\wades: SearchCenter  [http://vm-sphd-app/sites/test/SearchCenter]
+*	Subweb accessible by GOJO-NET\wades: Team Discussion  [http://vm-sphd-app/sites/test/discussion]
+*	Subweb accessible by GOJO-NET\wades: Test Wiki  [http://vm-sphd-app/sites/test/wiki]
+*	Subweb accessible by GOJO-NET\wades: testblog  [http://vm-sphd-app/sites/test/testblog]
+
+Site Collection: [http://vm-sphd-app/sites/training]
+
+Site Collection: [http://vm-sphd-app/sites/twproto]
+Site Collection Title: Home
+*	Subweb accessible by GOJO-NET\wades: Actions Home Test  [http://vm-sphd-app/sites/twproto/Actions Home Test]
+*	Subweb accessible by GOJO-NET\wades: Actions Test  [http://vm-sphd-app/sites/twproto/Actions Test]
+*	Subweb accessible by GOJO-NET\wades: Another debug test  [http://vm-sphd-app/sites/twproto/Another debug test]
+*	Subweb accessible by GOJO-NET\wades: Completely Working I Hope  [http://vm-sphd-app/sites/twproto/Completely Working I Hope]
+*	Subweb accessible by GOJO-NET\wades: Craft Stores Are Awesome  [http://vm-sphd-app/sites/twproto/Craft Stores Are Awesome]
+*	Subweb accessible by GOJO-NET\wades: Dashboard Projects Test  [http://vm-sphd-app/sites/twproto/Dashboard Projects Test]
+*	Subweb accessible by GOJO-NET\wades: Debug Again  [http://vm-sphd-app/sites/twproto/Debug Again]
+*	Subweb accessible by GOJO-NET\wades: Do you see this  [http://vm-sphd-app/sites/twproto/Do you see this]
+*	Subweb accessible by GOJO-NET\wades: Issues Missing  [http://vm-sphd-app/sites/twproto/Issues Missing]
+*	Subweb accessible by GOJO-NET\wades: New Test Site  [http://vm-sphd-app/sites/twproto/newTest]
+*	Subweb accessible by GOJO-NET\wades: NoSpaces  [http://vm-sphd-app/sites/twproto/NoSpaces]
+*	Subweb accessible by GOJO-NET\wades: One More Test  [http://vm-sphd-app/sites/twproto/One More Test]
+*	Subweb accessible by GOJO-NET\wades: Projects 2010  [http://vm-sphd-app/sites/twproto/2010]
+*	Subweb accessible by GOJO-NET\wades: Rolling Doofus Team  [http://vm-sphd-app/sites/twproto/Rolling Doofus Team]
+*	Subweb accessible by GOJO-NET\wades: Search  [http://vm-sphd-app/sites/twproto/Search]
+*	Subweb accessible by GOJO-NET\wades: Site Created From Provisioning Engine  [http://vm-sphd-app/sites/twproto/provEngine]
+*	Subweb accessible by GOJO-NET\wades: Test 1 Site  [http://vm-sphd-app/sites/twproto/test1]
+*	Subweb accessible by GOJO-NET\wades: Testing Templates  [http://vm-sphd-app/sites/twproto/Testing Templates]
+*	Subweb accessible by GOJO-NET\wades: Testing the wizard changes  [http://vm-sphd-app/sites/twproto/Testing the wizard changes]
+*	Subweb accessible by GOJO-NET\wades: TestingWithNoSpaces  [http://vm-sphd-app/sites/twproto/TestingWithNoSpaces]
+
+Site Collection: [http://vm-sphd-app/sites/wowos]
+
+Site Collection: [http://vm-sphd-app/wg]
+
+Site Collection: [http://vm-sphd-app/wg/rnd/int]
+
+Site Collection: [http://vm-sphd-app/wg/rnd/int/tech]
+
+
+Writing the following links to the database...[NOT ACTUALLY SAVING!]
+********************************************************************
+Workspace Link: Actions Home Test - [http://vm-sphd-app/Actions Home Test]
+Workspace Link: Announcements - [http://vm-sphd-app/info]
+Workspace Link: Dashboard Projects Test - [http://vm-sphd-app/Dashboard Projects Test]
+Workspace Link: Dashboard Test 2 - [http://vm-sphd-app/Dashboard Test 2]
+Workspace Link: Do you see this - [http://vm-sphd-app/Do you see this]
+Workspace Link: myGOJO Login - [http://vm-sphd-app/login]
+Workspace Link: swow - [http://vm-sphd-app/swow]
+Workspace Link: Testing GOJO Templates - [http://vm-sphd-app/Testing GOJO Templates]
+Workspace Link: Testing new wizard changes - [http://vm-sphd-app/Testing new wizard changes]
+Workspace Link: Testing Templates - [http://vm-sphd-app/Testing Templates]
+Workspace Link: Testing the wizard changes - [http://vm-sphd-app/Testing the wizard changes]
+Workspace Link: Testing wizard changes - [http://vm-sphd-app/Testing wizard changes]
+Workspace Link: testsub - [http://vm-sphd-app/testsub]
+Workspace Link: Search - [http://vm-sphd-app/collab/Search]
+Workspace Link: Blah - [http://vm-sphd-app/fs/Blah]
+Workspace Link: File Sharing Example Site - [http://vm-sphd-app/fs/test]
+Workspace Link: hello world - [http://vm-sphd-app/fs/hello world]
+Workspace Link: New File Sharing Site - [http://vm-sphd-app/fs/New File Sharing Site]
+Workspace Link: New File Sharing Site 2 - [http://vm-sphd-app/fs/New File Sharing Site 2]
+Workspace Link: New File Sharing Site 3 - [http://vm-sphd-app/fs/New File Sharing Site 3]
+Workspace Link: Press Releases - [http://vm-sphd-app/fs/PressReleases]
+Workspace Link: Search - [http://vm-sphd-app/fs/Search]
+Workspace Link: SW-Test-Site - [http://vm-sphd-app/fs/SW-Test-Site]
+Workspace Link: SW-TestSite-2 - [http://vm-sphd-app/fs/SW-TestSite-2]
+Workspace Link: Test2 - [http://vm-sphd-app/fs/Test2]
+Workspace Link: Press Releases - [http://vm-sphd-app/pw/PressReleases]
+Workspace Link: Project Workspaces Project - [http://vm-sphd-app/pw/pwproject]
+Workspace Link: Search - [http://vm-sphd-app/pw/Search]
+Workspace Link: Strategy Status Dashboard - [http://vm-sphd-app/pw/dashboard]
+Workspace Link: Search - [http://vm-sphd-app/sites/detectalert/Search]
+Workspace Link: Press Releases - [http://vm-sphd-app/sites/identify/PressReleases]
+Workspace Link: Search - [http://vm-sphd-app/sites/identify/Search]
+Workspace Link: Document Center - [http://vm-sphd-app/sites/intranet/Docs]
+Workspace Link: News - [http://vm-sphd-app/sites/intranet/News]
+Workspace Link: Reports - [http://vm-sphd-app/sites/intranet/Reports]
+Workspace Link: Search - [http://vm-sphd-app/sites/intranet/SearchCenter]
+Workspace Link: Sites - [http://vm-sphd-app/sites/intranet/SiteDirectory]
+Workspace Link: Test Meeting - [http://vm-sphd-app/sites/intranet/Test Meeting]
+Workspace Link: Test2 - [http://vm-sphd-app/sites/intranet/Test2]
+Workspace Link: Publishing Site - [http://vm-sphd-app/sites/pw/dashboards]
+Workspace Link: Search - [http://vm-sphd-app/sites/pw/Search]
+Workspace Link: 2 - [http://vm-sphd-app/sites/pwproto/2]
+Workspace Link: 3 - [http://vm-sphd-app/sites/pwproto/3]
+Workspace Link: Bob Smith's Crazy Site - [http://vm-sphd-app/sites/pwproto/bobsmithcrazysite]
+Workspace Link: Project Workspaces Project - [http://vm-sphd-app/sites/pwproto/Brand New Site]
+Workspace Link: Projects 2010 - [http://vm-sphd-app/sites/pwproto/2010]
+Workspace Link: Projects 2011 - [http://vm-sphd-app/sites/pwproto/2011]
+Workspace Link: Search - [http://vm-sphd-app/sites/pwproto/Search]
+Workspace Link: Coaches' Corner - [http://vm-sphd-app/sites/ql/corner]
+Workspace Link: QL 23 - [http://vm-sphd-app/sites/ql/ql23]
+Workspace Link: Search - [http://vm-sphd-app/sites/ql/SearchCenter]
+Workspace Link: Sites - [http://vm-sphd-app/sites/ql/SiteDirectory]
+Workspace Link: Search - [http://vm-sphd-app/sites/talk/Search]
+Workspace Link: Drivers - [http://vm-sphd-app/sites/test/drivers]
+Workspace Link: Excel - [http://vm-sphd-app/sites/test/excel]
+Workspace Link: Home - [http://vm-sphd-app/sites/test/ptest]
+Workspace Link: SearchCenter - [http://vm-sphd-app/sites/test/SearchCenter]
+Workspace Link: Team Discussion - [http://vm-sphd-app/sites/test/discussion]
+Workspace Link: Test Wiki - [http://vm-sphd-app/sites/test/wiki]
+Workspace Link: testblog - [http://vm-sphd-app/sites/test/testblog]
+Workspace Link: Actions Home Test - [http://vm-sphd-app/sites/twproto/Actions Home Test]
+Workspace Link: Actions Test - [http://vm-sphd-app/sites/twproto/Actions Test]
+Workspace Link: Another debug test - [http://vm-sphd-app/sites/twproto/Another debug test]
+Workspace Link: Completely Working I Hope - [http://vm-sphd-app/sites/twproto/Completely Working I Hope]
+Workspace Link: Craft Stores Are Awesome - [http://vm-sphd-app/sites/twproto/Craft Stores Are Awesome]
+Workspace Link: Dashboard Projects Test - [http://vm-sphd-app/sites/twproto/Dashboard Projects Test]
+Workspace Link: Debug Again - [http://vm-sphd-app/sites/twproto/Debug Again]
+Workspace Link: Do you see this - [http://vm-sphd-app/sites/twproto/Do you see this]
+Workspace Link: Issues Missing - [http://vm-sphd-app/sites/twproto/Issues Missing]
+Workspace Link: New Test Site - [http://vm-sphd-app/sites/twproto/newTest]
+Workspace Link: NoSpaces - [http://vm-sphd-app/sites/twproto/NoSpaces]
+Workspace Link: One More Test - [http://vm-sphd-app/sites/twproto/One More Test]
+Workspace Link: Projects 2010 - [http://vm-sphd-app/sites/twproto/2010]
+Workspace Link: Rolling Doofus Team - [http://vm-sphd-app/sites/twproto/Rolling Doofus Team]
+Workspace Link: Search - [http://vm-sphd-app/sites/twproto/Search]
+Workspace Link: Site Created From Provisioning Engine - [http://vm-sphd-app/sites/twproto/provEngine]
+Workspace Link: Test 1 Site - [http://vm-sphd-app/sites/twproto/test1]
+Workspace Link: Testing Templates - [http://vm-sphd-app/sites/twproto/Testing Templates]
+Workspace Link: Testing the wizard changes - [http://vm-sphd-app/sites/twproto/Testing the wizard changes]
+Workspace Link: TestingWithNoSpaces - [http://vm-sphd-app/sites/twproto/TestingWithNoSpaces]

@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="MyGojo.Data.NHibernate" assembly="MyGojo.Data.NHibernate">
+	<class name="MyGojo.Data.NHibernate.Web, MyGojo.Data.NHibernate" table="[dbo].[Webs]" lazy="true">
+		<id name="Id" column="[Id]">
+		 	<generator class="assigned" />
+		</id>
+		<property name="SiteId" column="[SiteId]" />
+		<property name="FullUrl" column="[FullUrl]" />
+		<property name="ParentWebId" column="[ParentWebId]" />
+		<property name="ProductVersion" column="[ProductVersion]" />
+		<property name="TemplateVersion" column="[TemplateVersion]" />
+		<property name="FirstUniqueAncestorWebId" column="[FirstUniqueAncestorWebId]" />
+		<property name="Author" column="[Author]" />
+		<property name="Title" column="[Title]" />
+		<property name="TimeCreated" column="[TimeCreated]" />
+		<property name="CachedNavDirty" column="[CachedNavDirty]" />
+		<property name="CachedNav" column="[CachedNav]" length="2147483647"/>
+		<property name="CachedInheritedNav" column="[CachedInheritedNav]" length="2147483647"/>
+		<property name="CachedNavScope" column="[CachedNavScope]" type="StringClob"/>
+		<property name="CachedDataVersion" column="[CachedDataVersion]" />
+		<property name="Description" column="[Description]" type="StringClob"/>
+		<property name="ScopeId" column="[ScopeId]" />
+		<property name="SecurityProvider" column="[SecurityProvider]" />
+		<property name="MetaInfo" column="[MetaInfo]" length="2147483647"/>
+		<property name="MetaInfoVersion" column="[MetaInfoVersion]" />
+		<property name="LastMetadataChange" column="[LastMetadataChange]" />
+		<property name="NavStructNextEid" column="[NavStructNextEid]" />
+		<property name="NavParentWebId" column="[NavParentWebId]" />
+		<property name="NextWebGroupId" column="[NextWebGroupId]" />
+		<property name="DefTheme" column="[DefTheme]" />
+		<property name="AlternateCSSUrl" column="[AlternateCSSUrl]" />
+		<property name="CustomizedCss" column="[CustomizedCss]" />
+		<property name="CustomJSUrl" column="[CustomJSUrl]" />
+		<property name="AlternateHeaderUrl" column="[AlternateHeaderUrl]" />
+		<property name="DailyUsageData" column="[DailyUsageData]" length="2147483647"/>
+		<property name="DailyUsageDataVersion" column="[DailyUsageDataVersion]" />
+		<property name="MonthlyUsageData" column="[MonthlyUsageData]" length="2147483647"/>
+		<property name="MonthlyUsageDataVersion" column="[MonthlyUsageDataVersion]" />
+		<property name="DayLastAccessed" column="[DayLastAccessed]" />
+		<property name="WebTemplate" column="[WebTemplate]" />
+		<property name="Language" column="[Language]" />
+		<property name="Locale" column="[Locale]" />
+		<property name="TimeZone" column="[TimeZone]" />
+		<property name="Time24" column="[Time24]" />
+		<property name="CalendarType" column="[CalendarType]" />
+		<property name="AdjustHijriDays" column="[AdjustHijriDays]" />
+		<property name="MeetingCount" column="[MeetingCount]" />
+		<property name="ProvisionConfig" column="[ProvisionConfig]" />
+		<property name="Flags" column="[Flags]" />
+		<property name="Collation" column="[Collation]" />
+		<property name="RequestAccessEmail" column="[RequestAccessEmail]" />
+		<property name="MasterUrl" column="[MasterUrl]" />
+		<property name="CustomMasterUrl" column="[CustomMasterUrl]" />
+		<property name="SiteLogoUrl" column="[SiteLogoUrl]" />
+		<property name="SiteLogoDescription" column="[SiteLogoDescription]" />
+		<property name="AuditFlags" column="[AuditFlags]" />
+		<property name="InheritAuditFlags" column="[InheritAuditFlags]" />
+		<property name="Ancestry" column="[Ancestry]" length="2147483647"/>
+		<property name="AltCalendarType" column="[AltCalendarType]" />
+		<property name="CalendarViewOptions" column="[CalendarViewOptions]" />
+		<property name="WorkDays" column="[WorkDays]" />
+		<property name="WorkDayStartHour" column="[WorkDayStartHour]" />
+		<property name="WorkDayEndHour" column="[WorkDayEndHour]" />
+		<property name="EmailEnabled" column="[EmailEnabled]" />
+	</class>
+</hibernate-mapping>
+

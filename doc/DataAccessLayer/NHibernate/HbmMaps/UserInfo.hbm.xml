@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="MyGojo.Data.NHibernate" assembly="MyGojo.Data.NHibernate">
+	<class name="MyGojo.Data.NHibernate.UserInfo, MyGojo.Data.NHibernate" table="[dbo].[UserInfo]" lazy="true">
+		<composite-id>
+			<key-property name="TpSiteID" column="[tp_SiteID]" /> 
+			<key-property name="TpID" column="[tp_ID]" /> 
+		</composite-id>
+		<property name="TpDomainGroup" column="[tp_DomainGroup]" />
+		<property name="TpGUID" column="[tp_GUID]" />
+		<property name="TpSystemID" column="[tp_SystemID]" length="2147483647"/>
+		<property name="TpDeleted" column="[tp_Deleted]" />
+		<property name="TpSiteAdmin" column="[tp_SiteAdmin]" />
+		<property name="TpIsActive" column="[tp_IsActive]" />
+		<property name="TpLogin" column="[tp_Login]" />
+		<property name="TpTitle" column="[tp_Title]" />
+		<property name="TpEmail" column="[tp_Email]" />
+		<property name="TpNotes" column="[tp_Notes]" />
+		<property name="TpToken" column="[tp_Token]" length="2147483647"/>
+		<property name="TpExternalToken" column="[tp_ExternalToken]" length="2147483647"/>
+		<property name="TpExternalTokenLastUpdated" column="[tp_ExternalTokenLastUpdated]" />
+		<property name="TpLocale" column="[tp_Locale]" />
+		<property name="TpCalendarType" column="[tp_CalendarType]" />
+		<property name="TpAdjustHijriDays" column="[tp_AdjustHijriDays]" />
+		<property name="TpTimeZone" column="[tp_TimeZone]" />
+		<property name="TpTime24" column="[tp_Time24]" />
+		<property name="TpAltCalendarType" column="[tp_AltCalendarType]" />
+		<property name="TpCalendarViewOptions" column="[tp_CalendarViewOptions]" />
+		<property name="TpWorkDays" column="[tp_WorkDays]" />
+		<property name="TpWorkDayStartHour" column="[tp_WorkDayStartHour]" />
+		<property name="TpWorkDayEndHour" column="[tp_WorkDayEndHour]" />
+	</class>
+</hibernate-mapping>
+

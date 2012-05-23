@@ -1,0 +1,17 @@
+public class HelloWorldModule : IHttpModule
+{
+    void Init(HttpApplication application)
+    {
+        application.BeginRequest += 
+            (new EventHandler(this.Application_BeginRequest));
+        application.EndRequest += 
+            (new EventHandler(this.Application_EndRequest));
+        //this is it
+        applicaiton.Error +=
+            (new EventHandler(this.Application_Error));
+    }
+
+
+
+System.AppDomain.CurrentDomain.UnhandledException
+

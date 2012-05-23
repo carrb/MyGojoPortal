@@ -1,0 +1,594 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Server.Common</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Server.Common.TraceLevelHelper">
+            <remarks>
+            dmetzgar (11/15/10, CSDMain 194940) - Previously, this code first checked that the opcode was set to informational.  If not, it would check
+            the opcode name for start, stop, suspend, or resume and use that or return Information otherwise.  This does not work well with the latest 
+            ETW changes where almost every event has a task and opcode.  With the old logic, if an opcode is set on the event with a level such as 
+            warning or error, the level would be incorrectly reported in diagnostic tracing as informational.  Also, start/stop/suspend/resume events 
+            have an overloaded meaning in diagnostic tracing that the svctraceviewer would misinterpret.  To keep diagnostic tracing from breaking, this
+            class now checks for start/stop/suspend/resume opcodes and returns the level if any of those do not match.  Furthermore, any events defined 
+            that are shared between diagnostics and ETW should not use start/stop/suspend/resume opcodes unless explicitly intended for use in 
+            diagnostics tracing.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.Server.Common.TraceCore.AppDomainUnloadIsEnabled(Microsoft.Server.Common.Diagnostics.EtwDiagnosticTrace)">
+            <summary>
+            Check if trace definition is enabled
+            Event description ID=57393, Level=informational, Channel=Debug
+            </summary>
+            <param name="trace">The trace provider</param>
+        </member>
+        <member name="M:Microsoft.Server.Common.TraceCore.AppDomainUnload(Microsoft.Server.Common.Diagnostics.EtwDiagnosticTrace,System.String,System.String,System.String)">
+            <summary>
+            Gets trace definition like: AppDomain unloading. AppDomain.FriendlyName {0}, ProcessName {1}, ProcessId {2}.
+            Event description ID=57393, Level=informational, Channel=Debug
+            </summary>
+            <param name="trace">The trace provider</param>
+            <param name="appdomainName">Parameter 0 for event: AppDomain unloading. AppDomain.FriendlyName {0}, ProcessName {1}, ProcessId {2}.</param>
+            <param name="processName">Parameter 1 for event: AppDomain unloading. AppDomain.FriendlyName {0}, ProcessName {1}, ProcessId {2}.</param>
+            <param name="processId">Parameter 2 for event: AppDomain unloading. AppDomain.FriendlyName {0}, ProcessName {1}, ProcessId {2}.</param>
+        </member>
+        <member name="M:Microsoft.Server.Common.TraceCore.HandledExceptionIsEnabled(Microsoft.Server.Common.Diagnostics.EtwDiagnosticTrace)">
+            <summary>
+            Check if trace definition is enabled
+            Event description ID=57394, Level=informational, Channel=Debug
+            </summary>
+            <param name="trace">The trace provider</param>
+        </member>
+        <member name="M:Microsoft.Server.Common.TraceCore.HandledException(Microsoft.Server.Common.Diagnostics.EtwDiagnosticTrace,System.Exception)">
+            <summary>
+            Gets trace definition like: Handling an exception.
+            Event description ID=57394, Level=informational, Channel=Debug
+            </summary>
+            <param name="trace">The trace provider</param>
+            <param name="exception">Exception associated with the event</param>
+        </member>
+        <member name="M:Microsoft.Server.Common.TraceCore.ShipAssertExceptionMessageIsEnabled(Microsoft.Server.Common.Diagnostics.EtwDiagnosticTrace)">
+            <summary>
+            Check if trace definition is enabled
+            Event description ID=57395, Level=error, Channel=Analytic
+            </summary>
+            <param name="trace">The trace provider</param>
+        </member>
+        <member name="M:Microsoft.Server.Common.TraceCore.ShipAssertExceptionMessage(Microsoft.Server.Common.Diagnostics.EtwDiagnosticTrace,System.String)">
+            <summary>
+            Gets trace definition like: An unexpected failure occurred. Applications should not attempt to handle this error. For diagnostic purposes, this English message is associated with the failure: {0}.
+            Event description ID=57395, Level=error, Channel=Analytic
+            </summary>
+            <param name="trace">The trace provider</param>
+            <param name="param0">Parameter 0 for event: An unexpected failure occurred. Applications should not attempt to handle this error. For diagnostic purposes, this English message is associated with the failure: {0}.</param>
+        </member>
+        <member name="M:Microsoft.Server.Common.TraceCore.ThrowingExceptionIsEnabled(Microsoft.Server.Common.Diagnostics.EtwDiagnosticTrace)">
+            <summary>
+            Check if trace definition is enabled
+            Event description ID=57396, Level=warning, Channel=Analytic
+            </summary>
+            <param name="trace">The trace provider</param>
+        </member>
+        <member name="M:Microsoft.Server.Common.TraceCore.ThrowingException(Microsoft.Server.Common.Diagnostics.EtwDiagnosticTrace,System.String,System.Exception)">
+            <summary>
+            Gets trace definition like: Throwing an exception. Source {0}.
+            Event description ID=57396, Level=warning, Channel=Analytic
+            </summary>
+            <param name="trace">The trace provider</param>
+            <param name="param0">Parameter 0 for event: Throwing an exception. Source {0}.</param>
+            <param name="exception">Exception associated with the event</param>
+        </member>
+        <member name="M:Microsoft.Server.Common.TraceCore.UnhandledExceptionIsEnabled(Microsoft.Server.Common.Diagnostics.EtwDiagnosticTrace)">
+            <summary>
+            Check if trace definition is enabled
+            Event description ID=57397, Level=critical, Channel=Analytic
+            </summary>
+            <param name="trace">The trace provider</param>
+        </member>
+        <member name="M:Microsoft.Server.Common.TraceCore.UnhandledException(Microsoft.Server.Common.Diagnostics.EtwDiagnosticTrace,System.Exception)">
+            <summary>
+            Gets trace definition like: Unhandled exception.
+            Event description ID=57397, Level=critical, Channel=Analytic
+            </summary>
+            <param name="trace">The trace provider</param>
+            <param name="exception">Exception associated with the event</param>
+        </member>
+        <member name="M:Microsoft.Server.Common.TraceCore.TraceCodeEventLogCriticalIsEnabled(Microsoft.Server.Common.Diagnostics.EtwDiagnosticTrace)">
+            <summary>
+            Check if trace definition is enabled
+            Event description ID=57399, Level=critical, Channel=Debug
+            </summary>
+            <param name="trace">The trace provider</param>
+        </member>
+        <member name="M:Microsoft.Server.Common.TraceCore.TraceCodeEventLogCritical(Microsoft.Server.Common.Diagnostics.EtwDiagnosticTrace,Microsoft.Server.Common.Diagnostics.TraceRecord)">
+            <summary>
+            Gets trace definition like: Wrote to the EventLog.
+            Event description ID=57399, Level=critical, Channel=Debug
+            </summary>
+            <param name="trace">The trace provider</param>
+            <param name="traceRecord">Extended data (TraceRecord) for the event</param>
+        </member>
+        <member name="M:Microsoft.Server.Common.TraceCore.TraceCodeEventLogErrorIsEnabled(Microsoft.Server.Common.Diagnostics.EtwDiagnosticTrace)">
+            <summary>
+            Check if trace definition is enabled
+            Event description ID=57400, Level=error, Channel=Debug
+            </summary>
+            <param name="trace">The trace provider</param>
+        </member>
+        <member name="M:Microsoft.Server.Common.TraceCore.TraceCodeEventLogError(Microsoft.Server.Common.Diagnostics.EtwDiagnosticTrace,Microsoft.Server.Common.Diagnostics.TraceRecord)">
+            <summary>
+            Gets trace definition like: Wrote to the EventLog.
+            Event description ID=57400, Level=error, Channel=Debug
+            </summary>
+            <param name="trace">The trace provider</param>
+            <param name="traceRecord">Extended data (TraceRecord) for the event</param>
+        </member>
+        <member name="M:Microsoft.Server.Common.TraceCore.TraceCodeEventLogInfoIsEnabled(Microsoft.Server.Common.Diagnostics.EtwDiagnosticTrace)">
+            <summary>
+            Check if trace definition is enabled
+            Event description ID=57401, Level=informational, Channel=Debug
+            </summary>
+            <param name="trace">The trace provider</param>
+        </member>
+        <member name="M:Microsoft.Server.Common.TraceCore.TraceCodeEventLogInfo(Microsoft.Server.Common.Diagnostics.EtwDiagnosticTrace,Microsoft.Server.Common.Diagnostics.TraceRecord)">
+            <summary>
+            Gets trace definition like: Wrote to the EventLog.
+            Event description ID=57401, Level=informational, Channel=Debug
+            </summary>
+            <param name="trace">The trace provider</param>
+            <param name="traceRecord">Extended data (TraceRecord) for the event</param>
+        </member>
+        <member name="M:Microsoft.Server.Common.TraceCore.TraceCodeEventLogVerboseIsEnabled(Microsoft.Server.Common.Diagnostics.EtwDiagnosticTrace)">
+            <summary>
+            Check if trace definition is enabled
+            Event description ID=57402, Level=verbose, Channel=Debug
+            </summary>
+            <param name="trace">The trace provider</param>
+        </member>
+        <member name="M:Microsoft.Server.Common.TraceCore.TraceCodeEventLogVerbose(Microsoft.Server.Common.Diagnostics.EtwDiagnosticTrace,Microsoft.Server.Common.Diagnostics.TraceRecord)">
+            <summary>
+            Gets trace definition like: Wrote to the EventLog.
+            Event description ID=57402, Level=verbose, Channel=Debug
+            </summary>
+            <param name="trace">The trace provider</param>
+            <param name="traceRecord">Extended data (TraceRecord) for the event</param>
+        </member>
+        <member name="M:Microsoft.Server.Common.TraceCore.TraceCodeEventLogWarningIsEnabled(Microsoft.Server.Common.Diagnostics.EtwDiagnosticTrace)">
+            <summary>
+            Check if trace definition is enabled
+            Event description ID=57403, Level=warning, Channel=Debug
+            </summary>
+            <param name="trace">The trace provider</param>
+        </member>
+        <member name="M:Microsoft.Server.Common.TraceCore.TraceCodeEventLogWarning(Microsoft.Server.Common.Diagnostics.EtwDiagnosticTrace,Microsoft.Server.Common.Diagnostics.TraceRecord)">
+            <summary>
+            Gets trace definition like: Wrote to the EventLog.
+            Event description ID=57403, Level=warning, Channel=Debug
+            </summary>
+            <param name="trace">The trace provider</param>
+            <param name="traceRecord">Extended data (TraceRecord) for the event</param>
+        </member>
+        <member name="M:Microsoft.Server.Common.TraceCore.HandledExceptionWarningIsEnabled(Microsoft.Server.Common.Diagnostics.EtwDiagnosticTrace)">
+            <summary>
+            Check if trace definition is enabled
+            Event description ID=57404, Level=warning, Channel=Analytic
+            </summary>
+            <param name="trace">The trace provider</param>
+        </member>
+        <member name="M:Microsoft.Server.Common.TraceCore.HandledExceptionWarning(Microsoft.Server.Common.Diagnostics.EtwDiagnosticTrace,System.Exception)">
+            <summary>
+            Gets trace definition like: Handling an exception.
+            Event description ID=57404, Level=warning, Channel=Analytic
+            </summary>
+            <param name="trace">The trace provider</param>
+            <param name="exception">Exception associated with the event</param>
+        </member>
+        <member name="M:Microsoft.Server.Common.TraceCore.BufferPoolAllocationIsEnabled(Microsoft.Server.Common.Diagnostics.EtwDiagnosticTrace)">
+            <summary>
+            Check if trace definition is enabled
+            Event description ID=131, Level=verbose, Channel=Debug
+            </summary>
+            <param name="trace">The trace provider</param>
+        </member>
+        <member name="M:Microsoft.Server.Common.TraceCore.BufferPoolAllocation(Microsoft.Server.Common.Diagnostics.EtwDiagnosticTrace,System.Int32)">
+            <summary>
+            Gets trace definition like: Pool allocating {0} Bytes.
+            Event description ID=131, Level=verbose, Channel=Debug
+            </summary>
+            <param name="trace">The trace provider</param>
+            <param name="Size">Parameter 0 for event: Pool allocating {0} Bytes.</param>
+        </member>
+        <member name="M:Microsoft.Server.Common.TraceCore.BufferPoolChangeQuotaIsEnabled(Microsoft.Server.Common.Diagnostics.EtwDiagnosticTrace)">
+            <summary>
+            Check if trace definition is enabled
+            Event description ID=132, Level=verbose, Channel=Debug
+            </summary>
+            <param name="trace">The trace provider</param>
+        </member>
+        <member name="M:Microsoft.Server.Common.TraceCore.BufferPoolChangeQuota(Microsoft.Server.Common.Diagnostics.EtwDiagnosticTrace,System.Int32,System.Int32)">
+            <summary>
+            Gets trace definition like: BufferPool of size {0}, changing quota by {1}.
+            Event description ID=132, Level=verbose, Channel=Debug
+            </summary>
+            <param name="trace">The trace provider</param>
+            <param name="PoolSize">Parameter 0 for event: BufferPool of size {0}, changing quota by {1}.</param>
+            <param name="Delta">Parameter 1 for event: BufferPool of size {0}, changing quota by {1}.</param>
+        </member>
+        <member name="M:Microsoft.Server.Common.TraceCore.ActionItemScheduledIsEnabled(Microsoft.Server.Common.Diagnostics.EtwDiagnosticTrace)">
+            <summary>
+            Check if trace definition is enabled
+            Event description ID=133, Level=verbose, Channel=Debug
+            </summary>
+            <param name="trace">The trace provider</param>
+        </member>
+        <member name="M:Microsoft.Server.Common.TraceCore.ActionItemScheduled(Microsoft.Server.Common.Diagnostics.EtwDiagnosticTrace,Microsoft.Server.Common.Diagnostics.EventTraceActivity)">
+            <summary>
+            Gets trace definition like: IO Thread scheduler callback invoked.
+            Event description ID=133, Level=verbose, Channel=Debug
+            </summary>
+            <param name="trace">The trace provider</param>
+            <param name="eventTraceActivity">The event trace activity</param>
+        </member>
+        <member name="M:Microsoft.Server.Common.TraceCore.ActionItemCallbackInvokedIsEnabled(Microsoft.Server.Common.Diagnostics.EtwDiagnosticTrace)">
+            <summary>
+            Check if trace definition is enabled
+            Event description ID=134, Level=verbose, Channel=Debug
+            </summary>
+            <param name="trace">The trace provider</param>
+        </member>
+        <member name="M:Microsoft.Server.Common.TraceCore.ActionItemCallbackInvoked(Microsoft.Server.Common.Diagnostics.EtwDiagnosticTrace,Microsoft.Server.Common.Diagnostics.EventTraceActivity)">
+            <summary>
+            Gets trace definition like: IO Thread scheduler callback invoked.
+            Event description ID=134, Level=verbose, Channel=Debug
+            </summary>
+            <param name="trace">The trace provider</param>
+            <param name="eventTraceActivity">The event trace activity</param>
+        </member>
+        <member name="M:Microsoft.Server.Common.TraceCore.CreateEventDescriptors">
+            <summary>
+            Creates the event descriptors array
+            </summary>
+        </member>
+        <member name="M:Microsoft.Server.Common.TraceCore.EnsureEventDescriptors">
+            <summary>
+            Ensures that the event descriptors array is initialized
+            </summary>
+        </member>
+        <member name="M:Microsoft.Server.Common.TraceCore.IsEtwEventEnabled(Microsoft.Server.Common.Diagnostics.EtwDiagnosticTrace,System.Int32)">
+            <summary>
+            Check if ETW tracing is enabled for the particular event
+            </summary>
+            <param name="trace">The trace provider</param>
+            <param name="eventIndex">The index of the event descriptor</param>
+        </member>
+        <member name="M:Microsoft.Server.Common.TraceCore.WriteEtwEvent(Microsoft.Server.Common.Diagnostics.EtwDiagnosticTrace,System.Int32,Microsoft.Server.Common.Diagnostics.EventTraceActivity,System.String,System.String,System.String,System.String)">
+             <summary>
+             Writes ETW trace event
+            </summary>
+             <param name="trace">The trace provider</param>
+             <param name="eventIndex">The index of the event descriptor</param>>
+             <param name="eventParam0">A parameter of the ETW event</param>>
+             <param name="eventParam1">A parameter of the ETW event</param>>
+             <param name="eventParam2">A parameter of the ETW event</param>>
+             <param name="eventParam3">A parameter of the ETW event</param>>
+             <param name="eventParam4">A parameter of the ETW event</param>>
+        </member>
+        <member name="M:Microsoft.Server.Common.TraceCore.WriteEtwEvent(Microsoft.Server.Common.Diagnostics.EtwDiagnosticTrace,System.Int32,Microsoft.Server.Common.Diagnostics.EventTraceActivity,System.String,System.String)">
+             <summary>
+             Writes ETW trace event
+            </summary>
+             <param name="trace">The trace provider</param>
+             <param name="eventIndex">The index of the event descriptor</param>>
+             <param name="eventParam0">A parameter of the ETW event</param>>
+             <param name="eventParam1">A parameter of the ETW event</param>>
+             <param name="eventParam2">A parameter of the ETW event</param>>
+        </member>
+        <member name="M:Microsoft.Server.Common.TraceCore.WriteEtwEvent(Microsoft.Server.Common.Diagnostics.EtwDiagnosticTrace,System.Int32,Microsoft.Server.Common.Diagnostics.EventTraceActivity,System.String,System.String,System.String)">
+             <summary>
+             Writes ETW trace event
+            </summary>
+             <param name="trace">The trace provider</param>
+             <param name="eventIndex">The index of the event descriptor</param>>
+             <param name="eventParam0">A parameter of the ETW event</param>>
+             <param name="eventParam1">A parameter of the ETW event</param>>
+             <param name="eventParam2">A parameter of the ETW event</param>>
+             <param name="eventParam3">A parameter of the ETW event</param>>
+        </member>
+        <member name="M:Microsoft.Server.Common.TraceCore.WriteEtwEvent(Microsoft.Server.Common.Diagnostics.EtwDiagnosticTrace,System.Int32,Microsoft.Server.Common.Diagnostics.EventTraceActivity,System.Int32,System.String)">
+             <summary>
+             Writes ETW trace event
+            </summary>
+             <param name="trace">The trace provider</param>
+             <param name="eventIndex">The index of the event descriptor</param>>
+             <param name="eventParam0">A parameter of the ETW event</param>>
+             <param name="eventParam1">A parameter of the ETW event</param>>
+             <param name="eventParam2">A parameter of the ETW event</param>>
+        </member>
+        <member name="M:Microsoft.Server.Common.TraceCore.WriteEtwEvent(Microsoft.Server.Common.Diagnostics.EtwDiagnosticTrace,System.Int32,Microsoft.Server.Common.Diagnostics.EventTraceActivity,System.Int32,System.Int32,System.String)">
+             <summary>
+             Writes ETW trace event
+            </summary>
+             <param name="trace">The trace provider</param>
+             <param name="eventIndex">The index of the event descriptor</param>>
+             <param name="eventParam0">A parameter of the ETW event</param>>
+             <param name="eventParam1">A parameter of the ETW event</param>>
+             <param name="eventParam2">A parameter of the ETW event</param>>
+             <param name="eventParam3">A parameter of the ETW event</param>>
+        </member>
+        <member name="M:Microsoft.Server.Common.TraceCore.WriteEtwEvent(Microsoft.Server.Common.Diagnostics.EtwDiagnosticTrace,System.Int32,Microsoft.Server.Common.Diagnostics.EventTraceActivity,System.String)">
+             <summary>
+             Writes ETW trace event
+            </summary>
+             <param name="trace">The trace provider</param>
+             <param name="eventIndex">The index of the event descriptor</param>>
+             <param name="eventParam0">A parameter of the ETW event</param>>
+             <param name="eventParam1">A parameter of the ETW event</param>>
+        </member>
+        <member name="M:Microsoft.Server.Common.TraceCore.WriteTraceSource(Microsoft.Server.Common.Diagnostics.EtwDiagnosticTrace,System.Int32,System.String,Microsoft.Server.Common.TracePayload)">
+            <summary>
+            write a trace source into the diagnostic trace
+            </summary>
+            <param name="trace">The trace provider</param>
+            <param name="eventIndex">The index of the event descriptor</param>
+            <param name="description">The description to write</param>
+            <param name="payload">The trace payload</param>
+        </member>
+        <member name="M:Microsoft.Server.Common.Diagnostics.DiagnosticsEventProvider.#ctor(System.Guid)">
+            <summary>
+            Constructs a new EventProvider.  This causes the class to be registered with the OS
+            if an ETW controller turns on the logging then logging will start. 
+            </summary>
+            <param name="providerGuid">The GUID that identifies this provider to the system.</param>
+        </member>
+        <member name="M:Microsoft.Server.Common.Diagnostics.DiagnosticsEventProvider.EtwRegister">
+            <summary>
+            This method registers the controlGuid of this class with ETW.
+            We need to be running on Vista or above. If not a 
+            PlatformNotSupported exception will be thrown. 
+            If for some reason the ETW EtwRegister call failed
+            a NotSupported exception will be thrown. 
+            </summary>        
+        </member>
+        <member name="M:Microsoft.Server.Common.Diagnostics.DiagnosticsEventProvider.Close">
+            <summary>
+            This method deregisters the controlGuid of this class with ETW.        
+            </summary>
+        </member>
+        <member name="M:Microsoft.Server.Common.Diagnostics.DiagnosticsEventProvider.Deregister">
+            <summary>
+            This method un-registers from ETW.
+            </summary>                
+        </member>
+        <member name="M:Microsoft.Server.Common.Diagnostics.DiagnosticsEventProvider.IsEnabled">
+            <summary>
+            IsEnabled, method used to test if provider is enabled
+            </summary>
+        </member>
+        <member name="M:Microsoft.Server.Common.Diagnostics.DiagnosticsEventProvider.IsEnabled(System.Byte,System.Int64)">
+            <summary>
+            IsEnabled, method used to test if event is enabled
+            </summary>
+            <param name="level">
+            Level  to test
+            </param>
+            <param name="keywords">
+            Keyword  to test
+            </param>
+        </member>
+        <member name="M:Microsoft.Server.Common.Diagnostics.DiagnosticsEventProvider.EncodeObject(System.Object@,Microsoft.Server.Common.Interop.UnsafeNativeMethods.EventData*,System.Byte*)">
+            <summary>
+            This routine is used by WriteEvent to unbox the object type and
+            to fill the passed in ETW data descriptor. 
+            </summary>
+            <param name="data">argument to be decoded</param>
+            <param name="dataDescriptor">pointer to the descriptor to be filled</param>
+            <param name="dataBuffer">storage buffer for storing user data, needed because cant get the address of the object</param>
+            <returns>null if the object is a basic type other than string. String otherwise</returns>
+        </member>
+        <member name="M:Microsoft.Server.Common.Diagnostics.DiagnosticsEventProvider.WriteMessageEvent(Microsoft.Server.Common.Diagnostics.EventTraceActivity,System.String,System.Byte,System.Int64)">
+            <summary>
+            WriteMessageEvent, method to write a string with level and Keyword
+            </summary>
+            <param name="level">
+            Level  to test  
+            </param>
+            <param name="Keyword">
+            Keyword  to test 
+            </param>        
+        </member>
+        <member name="M:Microsoft.Server.Common.Diagnostics.DiagnosticsEventProvider.WriteMessageEvent(Microsoft.Server.Common.Diagnostics.EventTraceActivity,System.String)">
+            <summary>
+            WriteMessageEvent, method to write a string with level=0 and Keyword=0
+            </summary>
+            <param name="eventMessage">
+            Message to log  
+            </param> 
+        </member>
+        <member name="M:Microsoft.Server.Common.Diagnostics.DiagnosticsEventProvider.WriteEvent(Microsoft.Server.Common.Diagnostics.EventDescriptor@,Microsoft.Server.Common.Diagnostics.EventTraceActivity,System.Object[])">
+            <summary>
+            WriteEvent, method to write a parameters with event schema properties
+            </summary>
+            <param name="EventDescriptor">
+            Event Descriptor for this event. 
+            </param>        
+        </member>
+        <member name="M:Microsoft.Server.Common.Diagnostics.DiagnosticsEventProvider.WriteEvent(Microsoft.Server.Common.Diagnostics.EventDescriptor@,Microsoft.Server.Common.Diagnostics.EventTraceActivity,System.String)">
+            <summary>
+            WriteEvent, method to write a string with event schema properties
+            </summary>
+            <param name="EventDescriptor">
+            Event Descriptor for this event. 
+            </param>
+            <param name="data">
+            string to log. 
+            </param> 
+        </member>
+        <member name="M:Microsoft.Server.Common.Diagnostics.DiagnosticsEventProvider.WriteEvent(Microsoft.Server.Common.Diagnostics.EventDescriptor@,Microsoft.Server.Common.Diagnostics.EventTraceActivity,System.Int32,System.IntPtr)">
+            <summary>
+            WriteEvent, method to be used by generated code on a derived class
+            </summary>
+            <param name="EventDescriptor">
+            Event Descriptor for this event. 
+            </param>
+            <param name="count">
+            number of event descriptors 
+            </param>
+            <param name="data">
+            pointer  do the event data
+            </param>
+        </member>
+        <member name="M:Microsoft.Server.Common.Diagnostics.DiagnosticsEventProvider.WriteTransferEvent(Microsoft.Server.Common.Diagnostics.EventDescriptor@,Microsoft.Server.Common.Diagnostics.EventTraceActivity,System.Guid,System.Object[])">
+            <summary>
+            WriteTransferEvent, method to write a parameters with event schema properties
+            </summary>
+            <param name="eventDescriptor">
+            Event Descriptor for this event. 
+            </param>        
+        </member>
+        <member name="M:Microsoft.Server.Common.ExceptionTrace.AsError``1(System.AggregateException,System.String)">
+            <summary>
+            Extracts the first inner exception of type <typeparamref name="TPreferredException"/>
+            from the <see cref="T:System.AggregateException"/> if one is present.
+            </summary>
+            <remarks>
+            If no <typeparamref name="TPreferredException"/> inner exception is present, this
+            method returns the first inner exception.   All inner exceptions will be traced,
+            including the one returned.   The containing <paramref name="aggregateException"/>
+            will not be traced unless there are no inner exceptions.
+            </remarks>
+            <typeparam name="TPreferredException">The preferred type of inner exception to extract.   
+            Use <c>typeof(Exception)</c> to extract the first exception regardless of type.</typeparam>
+            <param name="aggregateException">The <see cref="T:System.AggregateException"/> to examine.</param>
+            <param name="eventSource">The event source to trace.</param>
+            <returns>The extracted exception.  It will not be <c>null</c> 
+            but it may not be of type <typeparamref name="TPreferredException"/>.</returns>
+        </member>
+        <member name="M:Microsoft.Server.Common.SR.ArgumentNullOrEmpty(System.Object)">
+            <summary>Gets localized string like: The argument {0} is null or empty.</summary>
+            <param name="param0">Parameter 0 for string: The argument {0} is null or empty.</param>
+        </member>
+        <member name="M:Microsoft.Server.Common.SR.FailFastMessage(System.Object)">
+            <summary>Gets localized string like: An unrecoverable error occurred. For diagnostic purposes, this English message is associated with the failure: '{0}'.</summary>
+            <param name="param0">Parameter 0 for string: An unrecoverable error occurred. For diagnostic purposes, this English message is associated with the failure: '{0}'.</param>
+        </member>
+        <member name="M:Microsoft.Server.Common.SR.BufferAllocationFailed(System.Object)">
+            <summary>Gets localized string like: Failed to allocate a managed memory buffer of {0} bytes. The amount of available memory may be low.</summary>
+            <param name="param0">Parameter 0 for string: Failed to allocate a managed memory buffer of {0} bytes. The amount of available memory may be low.</param>
+        </member>
+        <member name="M:Microsoft.Server.Common.SR.BufferedOutputStreamQuotaExceeded(System.Object)">
+            <summary>Gets localized string like: The size quota for this stream ({0}) has been exceeded.</summary>
+            <param name="param0">Parameter 0 for string: The size quota for this stream ({0}) has been exceeded.</param>
+        </member>
+        <member name="M:Microsoft.Server.Common.SR.ShipAssertExceptionMessage(System.Object)">
+            <summary>Gets localized string like: An unexpected failure occurred. Applications should not attempt to handle this error. For diagnostic purposes, this English message is associated with the failure: '{0}'.</summary>
+            <param name="param0">Parameter 0 for string: An unexpected failure occurred. Applications should not attempt to handle this error. For diagnostic purposes, this English message is associated with the failure: '{0}'.</param>
+        </member>
+        <member name="M:Microsoft.Server.Common.SR.TimeoutMustBeNonNegative(System.Object,System.Object)">
+            <summary>Gets localized string like: Argument {0} must be a non-negative timeout value. Provided value was {1}.</summary>
+            <param name="param0">Parameter 0 for string: Argument {0} must be a non-negative timeout value. Provided value was {1}.</param>
+            <param name="param1">Parameter 1 for string: Argument {0} must be a non-negative timeout value. Provided value was {1}.</param>
+        </member>
+        <member name="M:Microsoft.Server.Common.SR.TimeoutMustBePositive(System.Object,System.Object)">
+            <summary>Gets localized string like: Argument {0} must be a positive timeout value. Provided value was {1}.</summary>
+            <param name="param0">Parameter 0 for string: Argument {0} must be a positive timeout value. Provided value was {1}.</param>
+            <param name="param1">Parameter 1 for string: Argument {0} must be a positive timeout value. Provided value was {1}.</param>
+        </member>
+        <member name="M:Microsoft.Server.Common.SR.CannotConvertObject(System.Object,System.Object)">
+            <summary>Gets localized string like: Cannot convert object '{0}' to type '{1}'.</summary>
+            <param name="param0">Parameter 0 for string: Cannot convert object '{0}' to type '{1}'.</param>
+            <param name="param1">Parameter 1 for string: Cannot convert object '{0}' to type '{1}'.</param>
+        </member>
+        <member name="M:Microsoft.Server.Common.SR.EtwAPIMaxStringCountExceeded(System.Object)">
+            <summary>Gets localized string like: Number of string arguments passed to Etw WriteEvent has exceeded the max allowed limit of {0}.</summary>
+            <param name="param0">Parameter 0 for string: Number of string arguments passed to Etw WriteEvent has exceeded the max allowed limit of {0}.</param>
+        </member>
+        <member name="M:Microsoft.Server.Common.SR.EtwMaxNumberArgumentsExceeded(System.Object)">
+            <summary>Gets localized string like: Number of arguments passed to Etw WriteEvent has exceeded the max allowed limit of {0}.</summary>
+            <param name="param0">Parameter 0 for string: Number of arguments passed to Etw WriteEvent has exceeded the max allowed limit of {0}.</param>
+        </member>
+        <member name="M:Microsoft.Server.Common.SR.EtwRegistrationFailed(System.Object)">
+            <summary>Gets localized string like: Etw registration failed with error code {0}.</summary>
+            <param name="param0">Parameter 0 for string: Etw registration failed with error code {0}.</param>
+        </member>
+        <member name="M:Microsoft.Server.Common.SR.InvalidAsyncResultImplementation(System.Object)">
+            <summary>Gets localized string like: An incorrect implementation of the IAsyncResult interface may be returning incorrect values from the CompletedSynchronously property or calling the AsyncCallback more than once. The type {0} could be the incorrect implementation.</summary>
+            <param name="param0">Parameter 0 for string: An incorrect implementation of the IAsyncResult interface may be returning incorrect values from the CompletedSynchronously property or calling the AsyncCallback more than once. The type {0} could be the incorrect implementation.</param>
+        </member>
+        <member name="M:Microsoft.Server.Common.SR.AsyncResultCompletedTwice(System.Object)">
+            <summary>Gets localized string like: The IAsyncResult implementation '{0}' tried to complete a single operation multiple times. This could be caused by an incorrect application IAsyncResult implementation or other extensibility code, such as an IAsyncResult that returns incorrect CompletedSynchronously values or invokes the AsyncCallback multiple times.</summary>
+            <param name="param0">Parameter 0 for string: The IAsyncResult implementation '{0}' tried to complete a single operation multiple times. This could be caused by an incorrect application IAsyncResult implementation or other extensibility code, such as an IAsyncResult that returns incorrect CompletedSynchronously values or invokes the AsyncCallback multiple times.</param>
+        </member>
+        <member name="M:Microsoft.Server.Common.SR.TimeoutInputQueueDequeue(System.Object)">
+            <summary>Gets localized string like: A Dequeue operation timed out after {0}. The time allotted to this operation may have been a portion of a longer timeout.</summary>
+            <param name="param0">Parameter 0 for string: A Dequeue operation timed out after {0}. The time allotted to this operation may have been a portion of a longer timeout.</param>
+        </member>
+        <member name="M:Microsoft.Server.Common.SR.TimeoutOnOperation(System.Object)">
+            <summary>Gets localized string like: The operation did not complete within the allotted timeout of {0}. The time allotted to this operation may have been a portion of a longer timeout.</summary>
+            <param name="param0">Parameter 0 for string: The operation did not complete within the allotted timeout of {0}. The time allotted to this operation may have been a portion of a longer timeout.</param>
+        </member>
+        <member name="P:Microsoft.Server.Common.SR.ActionItemIsAlreadyScheduled">
+            <summary>Gets localized string like: The ActionItem was already scheduled for execution that hasn't been completed yet.</summary>
+        </member>
+        <member name="P:Microsoft.Server.Common.SR.AsyncCallbackThrewException">
+            <summary>Gets localized string like: Async Callback threw an exception.</summary>
+        </member>
+        <member name="P:Microsoft.Server.Common.SR.AsyncResultAlreadyEnded">
+            <summary>Gets localized string like: End cannot be called twice on an AsyncResult.</summary>
+        </member>
+        <member name="P:Microsoft.Server.Common.SR.InvalidAsyncResult">
+            <summary>Gets localized string like: An incorrect IAsyncResult was provided to an 'End' method. The IAsyncResult object passed to 'End' must be the one returned from the matching 'Begin' or passed to the callback provided to 'Begin'.</summary>
+        </member>
+        <member name="P:Microsoft.Server.Common.SR.BufferIsNotRightSizeForBufferManager">
+            <summary>Gets localized string like: This buffer cannot be returned to the buffer manager because it is the wrong size.</summary>
+        </member>
+        <member name="P:Microsoft.Server.Common.SR.ReadNotSupported">
+            <summary>Gets localized string like: Read not supported on this stream.</summary>
+        </member>
+        <member name="P:Microsoft.Server.Common.SR.SeekNotSupported">
+            <summary>Gets localized string like: Seek not supported on this stream.</summary>
+        </member>
+        <member name="P:Microsoft.Server.Common.SR.ValueMustBeNonNegative">
+            <summary>Gets localized string like: Value must be non-negative.</summary>
+        </member>
+        <member name="P:Microsoft.Server.Common.SR.InvalidAsyncResultImplementationGeneric">
+            <summary>Gets localized string like: An incorrect implementation of the IAsyncResult interface may be returning incorrect values from the CompletedSynchronously property or calling the AsyncCallback more than once.</summary>
+        </member>
+        <member name="P:Microsoft.Server.Common.SR.InvalidNullAsyncResult">
+            <summary>Gets localized string like: A null value was returned from an async 'Begin' method or passed to an AsyncCallback. Async 'Begin' implementations must return a non-null IAsyncResult and pass the same IAsyncResult object as the parameter to the AsyncCallback.</summary>
+        </member>
+        <member name="P:Microsoft.Server.Common.SR.MustCancelOldTimer">
+            <summary>Gets localized string like: You must cancel the previous timer before setting a new one.</summary>
+        </member>
+        <member name="T:Microsoft.Server.Common.Diagnostics.ActivityControl">
+            <summary>
+            enum ActivityControl
+            </summary>
+        </member>
+        <member name="F:Microsoft.Server.Common.Diagnostics.ActivityControl.EVENT_ACTIVITY_CTRL_GET_ID">
+            <summary>
+            Get the activity Id from the thread
+            </summary>
+        </member>
+        <member name="F:Microsoft.Server.Common.Diagnostics.ActivityControl.EVENT_ACTIVITY_CTRL_SET_ID">
+            <summary>
+            Set the activity Id to the thread
+            </summary>
+        </member>
+        <member name="F:Microsoft.Server.Common.Diagnostics.ActivityControl.EVENT_ACTIVITY_CTRL_CREATE_ID">
+            <summary>
+            Create the activity Id
+            </summary>
+        </member>
+        <member name="F:Microsoft.Server.Common.Diagnostics.ActivityControl.EVENT_ACTIVITY_CTRL_GET_SET_ID">
+            <summary>
+            Get the activity Id from the thread and set it
+            </summary>
+        </member>
+        <member name="F:Microsoft.Server.Common.Diagnostics.ActivityControl.EVENT_ACTIVITY_CTRL_CREATE_SET_ID">
+            <summary>
+            Create an activity Id and set it to the thread
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,25 @@
+
+Workspaces tool initializing...
+Retrieving permissions for site url: http://akr-spindex1.gojo.net/fs/Canada Project
+
+<GetPermissionCollection xmlns="http://schemas.microsoft.com/sharepoint/soap/directory/">
+  <Permissions>
+    <Permission MemberID="69" Mask="138612833" MemberIsUser="True" MemberGlobal="False" UserLogin="GOJO-NET\martinob" />
+    <Permission MemberID="73" Mask="1011028719" MemberIsUser="True" MemberGlobal="False" UserLogin="GOJO-NET\hyatt" />
+    <Permission MemberID="88" Mask="1011028719" MemberIsUser="True" MemberGlobal="False" UserLogin="GOJO-NET\demeol" />
+    <Permission MemberID="286" Mask="1011028719" MemberIsUser="True" MemberGlobal="False" UserLogin="GOJO-NET\emmettb" />
+    <Permission MemberID="312" Mask="1011028719" MemberIsUser="True" MemberGlobal="False" UserLogin="GOJO-NET\sharples" />
+    <Permission MemberID="330" Mask="1011028719" MemberIsUser="True" MemberGlobal="False" UserLogin="GOJO-NET\gory" />
+    <Permission MemberID="349" Mask="1011028719" MemberIsUser="True" MemberGlobal="False" UserLogin="GOJO-NET\keeners" />
+    <Permission MemberID="361" Mask="1011028719" MemberIsUser="True" MemberGlobal="False" UserLogin="GOJO-NET\levins" />
+    <Permission MemberID="486" Mask="1011028719" MemberIsUser="True" MemberGlobal="False" UserLogin="GOJO-NET\rosenlieb" />
+    <Permission MemberID="567" Mask="1011028719" MemberIsUser="True" MemberGlobal="False" UserLogin="GOJO-NET\rastettr" />
+    <Permission MemberID="581" Mask="1011028719" MemberIsUser="True" MemberGlobal="False" UserLogin="GOJO-NET\esakove" />
+    <Permission MemberID="674" Mask="1011028719" MemberIsUser="True" MemberGlobal="False" UserLogin="GOJO-NET\schrecj" />
+    <Permission MemberID="709" Mask="1011028719" MemberIsUser="True" MemberGlobal="False" UserLogin="GOJO-NET\hindmarj" />
+    <Permission MemberID="822" Mask="138612833" MemberIsUser="True" MemberGlobal="False" UserLogin="GOJO-NET\dolan" />
+    <Permission MemberID="1073741823" Mask="-1" MemberIsUser="True" MemberGlobal="False" UserLogin="SHAREPOINT\system" />
+  </Permissions>
+</GetPermissionCollection>
+
+End.

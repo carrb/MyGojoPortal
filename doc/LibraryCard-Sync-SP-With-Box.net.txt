@@ -1,0 +1,124 @@
+See:  http://www.cmswire.com/cms/document-management/boxnets-new-sync-technology-wires-your-desktop-to-the-cloud-007776.php
+
+Images and More
+
+http://www.box.com/enterprise/
+
+
+
+Freemium App Synchs Box
+with SharePoint
+LivingAnalytics has introduced a new SharePoint
+Feature for synchronizing Box.com accounts with
+SharePoint libraries. Called LibraryCard, it’s
+designed to enable users to take advantage of the
+user friendliness of the Box interface, while being
+able to apply the governance of a SharePoint
+environment to files being managed with Box. The
+software is currently in beta, but has already been
+written up on the Box blog. LibraryCard will be
+marketed as a freemium application.
+“Basically, there are a lot of IT people and records
+managers that want to use SharePoint to manage all
+their documents,” said Chris Riley, a co-founder of
+LivingAnalytics who is currently acting as an advisor
+to the company. “A lot of salespeople, however, hate
+the SharePoint interface and would rather use Box.
+LibraryCard enables them to use Box, but have their
+account linked behind the scenes to SharePoint,
+where all the proper records management, back-up,
+and security controls can be applied.”
+“The goal of LivingAnalytics has always been to
+solve content needs with simple to use solutions,”
+said Patrick O’Fallon, a LivingAnalytics co-founder
+who is currently running the company. “We like to
+bridge gaps, like the one between SharePoint and
+Box. I know a lot of solutions have claimed to
+synchronize from Box to SharePoint, but the way
+they have typically handled it has been cloud-based
+or outside the SharePoint infrastructure.
+“We have some fairly deep understanding of
+SharePoint best practices, and we knew we needed
+to write LibraryCard as a native application within
+SharePoint.” (Microsoft defines a SharePoint
+Feature as “a modular server-side, file system-level
+customization that contains items that can be
+installed and activated in a SharePoint
+environment.”)
+An on-line demo of LibraryCard shows how a user
+can introduce Box files into their SharePoint
+implementation. Box account information is entered
+into LibraryCard, and a new SharePoint library is
+automatically set up that contains the documents
+from that Box account. Every time a user adds new
+documents to their Box account, those documents
+are duplicated in the SharePoint library. Changes
+made to documents in Box are synched in
+SharePoint.
+Basic functionality like the synching of Box libraries
+with SharePoint will likely be offered as part of a
+free download. More advanced premium features
+will be available for a charge. “A lot of the current
+enterprise-class synchronization services available
+for Box and SharePoint are very expensive for users
+to get into,” said O’Fallon.
+An interactive demo of LibraryCard is currently
+being hosted by CloudShare, the company that
+Riley now works for [see DIR 7/22/11]. “There are a
+number of large organizations that have needed this
+type of functionality for a long time and are beta
+testing our technology,” said O’Fallon. “We are pretty excited about that. Most of the testers are
+SharePoint administrators.”
+For more information: http://livinganalytics.com/;
+http://livinganalytics.com/?products=librarycard;
+http://blog.box.com/2012/02/connect-box-to-legacy-systems-with-library-card/
+
+
+https://use.cloudshare.com/Pro/Registration.mvc/Permalink/N69MZ0ERNMXH?ret=%2FPro%2FPermalink.mvc%3Ftoken%3DN69MZ0ERNMXH&referralCode=Permalink%3A%20N69MZ0ERNMXH
+
+
+Box.Net
+
+Connect Box to Legacy Systems with LibraryCard
+
+By Alex Willen, Developer Advocate
+
+At Box, we envision a world where businesses of all sizes manage their content in the cloud, and a big part of this vision is ensuring that Box is wherever you are. With so many employees clamoring for intuitively designed, easy-to-use tools to share content, we see more and more often that Box is residing alongside traditional content management systems. It’s our firm belief that Box should make your life easier regardless of what tools you and your business currently use.
+
+That’s why we’re especially pleased to announce that one of our platform partners, LivingAnalytics, has created a tool called LibraryCard that makes it easy to seamlessly link Box and SharePoint. The best part? It’s a native SharePoint application and works by creating libraries in SharePoint for each Box account you add. This allows you to access all of your content on Box from within SharePoint, while still leaving you able to securely and easily share content with coworkers, or partners and vendors outside your organization.
+
+
+Dan
+CloudShare, Box, and SharePoint, oh my!
+February 10th, 2012 | Author: Dan | Filed under: CloudShare, Demos & POCs, SharePoint | Tags: beta, box, CloudShare, content management, Integration, living analytics, Microsoft, SharePoint, solution showcase, storage
+ 
+ 
+ 
+ 
+ 
+ 
+8 Votes
+
+There are two major tools that everyone seems to be talking about in the content management world- Box and SharePoint. On my drive to work on the 101 in Silicon Valley, I actually pass dueling billboards for Microsoft and Box; it’s everything. Now, stop me if you’ve heard this story before:
+
+The SharePoint 2010 platform has all the bells and whistles to do on-site document management, records management, auditing, invoice capture, and every other cliche on the platform. If it exists in the content management world, it probably exists somewhere based on SharePoint, and the growth is accelerating.
+
+Your users either love SharePoint so much that it has sprawled out of control across your entire organization, or they hate it so much they refuse to use it, sticking with shared drives or cloud systems instead, and making your CIO seethe with rage.
+
+Here is the other side of the coin- Box just works for end users. You are probably already using a free account on a daily basis, and you use it to share and collaborate on content with users inside and outside of your organization. For me, it is one of my main business and personal tools.
+
+A lot of users and organizations are in a really tough spot right now- they need the nitty gritty content management tools in SharePoint, but they love the look, feel, and mobility of Box, and today using both means having siloed systems. SharePoint is for content inside your organization, and Box is for outside. End users, however, are starved for the integration of the two, and just want things to work.  For an administrator, this is a battle that you just can’t win.
+
+So, what do you do?
+
+Working with the top people at Box, CloudShare, and Living Analytics, we’ve built a tool that allows you to view, manage, and edit your Box documents from within SharePoint. In SharePoint terms, it creates a library for every Box account. Let me give you an example- you have a records management site in SharePoint and you have 15 users with Box accounts.  You can now manage all of this content from one place by adding your users’ Box content directly to SharePoint.
+
+Everything that SharePoint can do, you can do with your Box data! Furthermore, you can use the amazing sync and mobile features from Box to collaborate and connect your content from outside the firewall.
+
+CloudShare factors into this equation in a unique way because it allows you to create and share complete development environments in the cloud. LivingAnalytics didn’t have to buy, deploy, or use a single physical piece of hardware to develop, test, and launch the Library Card app. The barrier to entry in this case was nothing more than having an Internet connection and a laptop.
+
+Without CloudShare, a small start-up like LivingAnalytics would be stuck with non-agile infrastructure that would not scale with the launch of their product.  With CloudShare, no infrastructure is needed, it’s an awesome way to collaborate with developers, and once the development is done, you have a platform to share with prospects.
+
+Sounds cool, right? We’ve released a beta of the tool called Library Card, that you can Try Today.
+
+Since this is still in beta, don’t get lost in the book stacks, and any feedback you have would be greatly appreciated.

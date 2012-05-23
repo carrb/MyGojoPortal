@@ -1,0 +1,3 @@
+Need to investigate the github project for Backbone Boilerplate...to see the architectural configuration, and file, functions layout.
+
+

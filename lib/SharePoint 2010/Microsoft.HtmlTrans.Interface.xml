@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.HtmlTrans.Interface</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.HtmlTrans.BrowserType">
+      <summary>Specifies the browser type to target in converting a document to HTML.</summary>
+    </member>
+    <member name="F:Microsoft.HtmlTrans.BrowserType.BT_IE3">
+      <summary>Specifies the browser to target in converting a document to HTML is Internet Explorer 3.0 level browsers and earlier.</summary>
+    </member>
+    <member name="F:Microsoft.HtmlTrans.BrowserType.BT_IE4">
+      <summary>Specifies the browser to target in converting a document to HTML is Internet Explorer 4.0 level browsers and later.</summary>
+    </member>
+    <member name="F:Microsoft.HtmlTrans.BrowserType.BT_UNKNOWN">
+      <summary>Specifies the browser to target in converting a document to HTML is unknown.</summary>
+    </member>
+    <member name="T:Microsoft.HtmlTrans.CreateDCInfo">
+      <summary>Provides methods to access and manage file content and information in a document conversion.</summary>
+    </member>
+    <member name="M:Microsoft.HtmlTrans.CreateDCInfo.#ctor"></member>
+    <member name="P:Microsoft.HtmlTrans.CreateDCInfo.ce">
+      <summary>Gets or sets the return code that the conversion framework will return.</summary>
+      <returns>A <see cref="T:Microsoft.HtmlTrans.CreationErrorType" /> value that specifies the error type.</returns>
+    </member>
+    <member name="P:Microsoft.HtmlTrans.CreateDCInfo.ErrorString">
+      <summary>Gets or sets the error message that the converter might create.</summary>
+      <returns>A string that specifies the error message.</returns>
+    </member>
+    <member name="P:Microsoft.HtmlTrans.CreateDCInfo.HasErrorString">
+      <summary>Gets a Boolean value that indicates whether the converter created an error string, i.e., whether the property value of <see cref="P:Microsoft.HtmlTrans.CreateDCInfo.ErrorString" /> is valid.</summary>
+      <returns>true if the converter created an error string; otherwise, false. </returns>
+    </member>
+    <member name="P:Microsoft.HtmlTrans.CreateDCInfo.HasMainFile">
+      <summary>Gets a Boolean value that indicates whether the converter produced output.</summary>
+      <returns>true if the converter produced output; otherwise, false.</returns>
+    </member>
+    <member name="P:Microsoft.HtmlTrans.CreateDCInfo.HasSupportingFiles">
+      <summary>Gets a Boolean value that indicates whether the converter produced additional files on top of the main file (e.g., images in addition to an HTML file).</summary>
+      <returns>true if the converter produced additional files; otherwise, false.</returns>
+    </member>
+    <member name="P:Microsoft.HtmlTrans.CreateDCInfo.MainFileName">
+      <summary>Gets or sets the name of the main file.</summary>
+      <returns>A string that contains the name of the main file. Use the <see cref="P:Microsoft.HtmlTrans.CreateDCInfo.rgbMainFile" /> property to access the content of a file.</returns>
+    </member>
+    <member name="P:Microsoft.HtmlTrans.CreateDCInfo.rgbMainFile">
+      <summary>Gets or sets a Byte array that contains the main file that the converter produced.</summary>
+      <returns>A Byte array that contains the main file.</returns>
+    </member>
+    <member name="P:Microsoft.HtmlTrans.CreateDCInfo.rgrgbSupportingFiles">
+      <summary>Gets or sets an array of Byte arrays that contain additional files that the converter might have produced (for example, images for an HTML file).</summary>
+      <returns>A Byte array that contains the additional files.</returns>
+    </member>
+    <member name="P:Microsoft.HtmlTrans.CreateDCInfo.rgSupportingFileNames">
+      <summary>Gets or sets an array that contains the names of additional files that the converter might have produced.</summary>
+      <returns>A string array that contains the names of additional files.</returns>
+    </member>
+    <member name="P:Microsoft.HtmlTrans.CreateDCInfo.SupportingFolderName">
+      <summary>Gets or sets the name of the folder where the additional files got created. </summary>
+      <returns>A string that contains the folder name.</returns>
+    </member>
+    <member name="T:Microsoft.HtmlTrans.CreateHtmlInfo">
+      <summary>Contains the results of the document conversion.</summary>
+    </member>
+    <member name="M:Microsoft.HtmlTrans.CreateHtmlInfo.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.HtmlTrans.CreateHtmlInfo" /> class.</summary>
+    </member>
+    <member name="P:Microsoft.HtmlTrans.CreateHtmlInfo.ce">
+      <summary>Gets or sets a constant value that reports errors that may occur during the document conversion process.</summary>
+      <returns>A <see cref="T:Microsoft.HtmlTrans.CreationErrorType" /> value. </returns>
+    </member>
+    <member name="P:Microsoft.HtmlTrans.CreateHtmlInfo.fHasMainFile">
+      <summary>Gets a value indicating whether the HTML results of the document conversion include a main HTML file.</summary>
+      <returns>true if the HTML results of the document conversion include a main HTML file; false if an error occurs and the converter fails to generate the expected HTML output. </returns>
+    </member>
+    <member name="P:Microsoft.HtmlTrans.CreateHtmlInfo.fHasThicket">
+      <summary>Gets or sets a Boolean value that indicates whether the HTML results of the document conversion include supporting files in addition to the main HTML file.</summary>
+      <returns>true if the HTML results of the document conversion include supporting files; otherwise, false. </returns>
+    </member>
+    <member name="P:Microsoft.HtmlTrans.CreateHtmlInfo.rgbMainFile">
+      <summary>Gets or sets the binary contents of the main HTML file resulting from the document conversion.</summary>
+      <returns>A Byte (8-bit integer) array that contains the main HTML file.</returns>
+    </member>
+    <member name="P:Microsoft.HtmlTrans.CreateHtmlInfo.rgrgbThicketFiles">
+      <summary>Gets or sets the binary contents of the supporting files, if any, resulting from the document conversion</summary>
+      <returns>An array of Byte arrays that contains the supporting files.</returns>
+    </member>
+    <member name="P:Microsoft.HtmlTrans.CreateHtmlInfo.rgstrThicketFileNames">
+      <summary>Gets or sets the name of the additional supporting files, if any, generated by the document conversion.</summary>
+      <returns>A string that contains an array of the names of the additional supporting files, if any.</returns>
+    </member>
+    <member name="P:Microsoft.HtmlTrans.CreateHtmlInfo.strMainFileName">
+      <summary>Gets or sets the name of the main HTML file generated by the document conversion.</summary>
+      <returns>A string that contains the name of the main output file. </returns>
+    </member>
+    <member name="P:Microsoft.HtmlTrans.CreateHtmlInfo.strMainFilePath">
+      <summary>Gets or sets the location of the main HTML file generated by the document conversion.</summary>
+      <returns>A string that contains the file path specified in URL format (for example,  http://server_name/site_name/file_name ). </returns>
+    </member>
+    <member name="P:Microsoft.HtmlTrans.CreateHtmlInfo.strThicketFolderName">
+      <summary>Gets or sets the location of the supporting files included as part of the results of the document conversion.</summary>
+      <returns>A string that contains the name of the subfolder under the parent folder specified in the strMainFilePath property. </returns>
+    </member>
+    <member name="T:Microsoft.HtmlTrans.CreationErrorType">
+      <summary>Returns errors that may occur during the document conversion process.</summary>
+    </member>
+    <member name="F:Microsoft.HtmlTrans.CreationErrorType.CE_NONE">
+      <summary>Indicates no error has occurred.</summary>
+    </member>
+    <member name="F:Microsoft.HtmlTrans.CreationErrorType.CE_CRASH">
+      <summary>Indicates the converter has crashed.</summary>
+    </member>
+    <member name="F:Microsoft.HtmlTrans.CreationErrorType.CE_HANG">
+      <summary>Indicates the converter has not responded within the time-out specified in the call to the <see cref="M:Microsoft.HtmlTrans.IHtmlTrLauncher.CHICreateHtml(System.String,System.Byte[],Microsoft.HtmlTrans.BrowserType,System.String,System.String,System.Int32,System.Boolean)" />method. Increasing the time-out value might prevent this error.</summary>
+    </member>
+    <member name="F:Microsoft.HtmlTrans.CreationErrorType.CE_OTHER_BLOCKLIST">
+      <summary>Indicates that the converter failed to produce any output.</summary>
+    </member>
+    <member name="F:Microsoft.HtmlTrans.CreationErrorType.CE_SERVERFILENOTFOUND">
+      <summary>Indicates the IHtmlTrLauncher implementation could not locate the converter.</summary>
+    </member>
+    <member name="F:Microsoft.HtmlTrans.CreationErrorType.CE_RESOURCESUNAVAILABLE">
+      <summary>Indicates there is insufficient memory or other resources to complete the conversion.</summary>
+    </member>
+    <member name="F:Microsoft.HtmlTrans.CreationErrorType.CE_SPGETCONTENTFAILED">
+      <summary>Indicates the handler page could not retrieve the requested file from Windows SharePoint Services.</summary>
+    </member>
+    <member name="F:Microsoft.HtmlTrans.CreationErrorType.CE_DISKWRITEERROR">
+      <summary>Indicates a disk write error has occurred.</summary>
+    </member>
+    <member name="F:Microsoft.HtmlTrans.CreationErrorType.CE_BADINPUT">
+      <summary>Indicates the command-line arguments used to start the converter are invalid; for example, the file type is not recognized by the custom converter application.</summary>
+    </member>
+    <member name="F:Microsoft.HtmlTrans.CreationErrorType.CE_BACKENDUNAVAILABLE">
+      <summary>Indicates the objects implementing the IHtmlTrLoadBalancer or IHtmlTrLauncher interface are unavailable.</summary>
+    </member>
+    <member name="F:Microsoft.HtmlTrans.CreationErrorType.CE_ALREADYRUNNING">
+      <summary>Indicates the specified conversion task is already running.</summary>
+    </member>
+    <member name="F:Microsoft.HtmlTrans.CreationErrorType.CE_STARTTIMEOUT">
+      <summary>Indicates the converter did not begin its task before the specified time-out.</summary>
+    </member>
+    <member name="F:Microsoft.HtmlTrans.CreationErrorType.CE_OTHER">
+      <summary>Indicates an unspecified error has occurred.</summary>
+    </member>
+    <member name="T:Microsoft.HtmlTrans.IDocumentConversionsLauncher">
+      <summary>This class is reserved for internal use and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:Microsoft.HtmlTrans.IDocumentConversionsLauncher.ConvertFile(System.String,System.String,System.String,System.String,System.Byte[],System.String,System.String,System.Int32,System.Boolean)">
+      <summary>This class is reserved for internal use and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="T:Microsoft.HtmlTrans.IHtmlTrLauncher">
+      <summary>Exposes a single method that starts the process of converting a document to HTML format for viewing in the browser by a user who does not have the appropriate client application or viewer installed.</summary>
+    </member>
+    <member name="M:Microsoft.HtmlTrans.IHtmlTrLauncher.CHICreateHtml(System.String,System.Byte[],Microsoft.HtmlTrans.BrowserType,System.String,System.String,System.Int32,System.Boolean)">
+      <summary>Starts the process of converting a document to HTML format for viewing in the browser by a user who does not have the appropriate client application or viewer installed.</summary>
+      <returns>Microsoft.HtmlTrans.CreateHtmlInfo The HTML output of the conversion process is returned in an instance of the CreateHtmlInfo class, which also contains information about any conversion error that occurred and about additional supporting files that may be part of the output. </returns>
+      <param name="strLauncherUri">Specifies the server hosting the launcher application by using the value returned by the StrGetLauncher method of the IHtmlTrLoadBalancer interface.</param>
+      <param name="rgbFile">The binary contents of the source file.</param>
+      <param name="bt">Specifies the target browser type by using a constant from the <see cref="T:Microsoft.HtmlTrans.BrowserType" /> enumeration.</param>
+      <param name="strReqFile">The URL of the document to convert.</param>
+      <param name="strTaskName">The document conversion task name, which the load balancer uses to keep track of the request.</param>
+      <param name="timeout">The time in seconds before the document conversion times out.</param>
+      <param name="fReturnFileBits">Specifies whether to return the binary contents of the converted file (that is, the HTML output) in the rgbMainFile and rgrgbThicketFiles properties of the instance of the CreateHtmlInfo class returned by the CHICreateHtml method.</param>
+    </member>
+    <member name="T:Microsoft.HtmlTrans.IHtmlTrLoadBalancer">
+      <summary>Manages the load on multiple servers hosting document conversion launcher services.</summary>
+    </member>
+    <member name="M:Microsoft.HtmlTrans.IHtmlTrLoadBalancer.LauncherTaskCompleted(System.String,System.String)">
+      <summary>Notifies the load balancer component that the server has completed the specified document conversion task.</summary>
+      <returns>Boolean Returns true for success, false for failure. </returns>
+      <param name="strLauncherUri">The name of the server that has completed the document conversion task.</param>
+      <param name="strTaskName">The name of the document conversion task previously passed in the call to the<see cref="M:Microsoft.HtmlTrans.IHtmlTrLoadBalancer.StrGetLauncher(System.String)" /> method.</param>
+    </member>
+    <member name="M:Microsoft.HtmlTrans.IHtmlTrLoadBalancer.RegisterLauncher(System.String)">
+      <summary>Notifies the load balancer component that a server hosting the launcher component is ready to begin handling document conversion requests.</summary>
+      <returns>Boolean Returns true for success; false for failure. </returns>
+      <param name="strLauncherUri">A Uniform Resource Identifier (URI) that identifies the server hosting the launcher.</param>
+    </member>
+    <member name="M:Microsoft.HtmlTrans.IHtmlTrLoadBalancer.StrGetLauncher(System.String)">
+      <summary>Returns the name of the server hosting a launcher component to use for the document conversion.</summary>
+      <returns>A string that contains a Uniform Resource Identifier (URI) that identifies the server hosting the launcher. Pass this value as the <paramref name="strLauncherUri" /> argument to the CHICreateHtml method. </returns>
+      <param name="strTaskName">The name assigned to the document conversion task. Receives a value of TransformCurrentlyRunning if a task with the specified name is already running.</param>
+    </member>
+    <member name="M:Microsoft.HtmlTrans.IHtmlTrLoadBalancer.UnRegisterLauncher(System.String)">
+      <summary>Notifies the load balancer component that a server hosting the launcher component is no longer handling document conversion requests.</summary>
+      <returns>A Boolean value. Returns true for success; false for failure. </returns>
+      <param name="strLauncherUri">The name of the server hosting the launcher component.</param>
+    </member>
+    <member name="T:Microsoft.HtmlTrans.TSReturnType">
+      <summary>Returns a status value to the handler page that requests a document conversion.</summary>
+    </member>
+    <member name="F:Microsoft.HtmlTrans.TSReturnType.TSR_SUCCESS">
+      <summary>Indicates that the document conversion task with the specified name is already in progress.</summary>
+    </member>
+    <member name="F:Microsoft.HtmlTrans.TSReturnType.TSR_LBUNAVAILABLE">
+      <summary>Indicates that the component implementing the IHtmlTrLauncher interface is unavailable.</summary>
+    </member>
+    <member name="F:Microsoft.HtmlTrans.TSReturnType.TSR_LAUNCHERUNAVAILABLE">
+      <summary>Indicates that the component implementing the IHtmlTrLoadBalancer interface is unavailable.</summary>
+    </member>
+    <member name="F:Microsoft.HtmlTrans.TSReturnType.TSR_ALREADYRUNNING">
+      <summary>Indicates that the request to the custom conversion components from the handler page succeeded.</summary>
+    </member>
+  </members>
+</doc>
