@@ -42,14 +42,14 @@ namespace SiteLinks
         {
             Dictionary<string, string> siteCollections = new Dictionary<string, string>
                                                              {
-                                                                 {"myGOJO", "http://akr-spstage1"},
+                                                        //         {"myGOJO", "http://akr-spstage1"},
                                                         //         {"MySite Host", "http://akr-spstage1/mysite"},
                                                          //        {"Project Workspaces", "http://akr-spstage1/pw"},
                                                         //         {"Home - Techknow", "http://akr-spstage1/sites/techknow"},
                                                          //        {"Team Workspaces", "http://akr-spstage1/tw"},
                                                          //        {"Home - Collab", "http://akr-spstage1/collab"},
                                                          //        {"Home - File Sharing Workspaces", "http://akr-spstage1/fs"},
-                                                                 {"GOJO Ideas", "http://akr-spstage1/ideas"},
+                                                         //        {"GOJO Ideas", "http://akr-spstage1/ideas"},
                                                                  {"myGOJO - Portal", "http://akr-spstage1/portal"},
                                                                  {"HR Safety and Environmental","http://akr-spstage1/sites/hrsafetyenv"},
                                                                  {"Home - Marketing Services","http://akr-spstage1/sites/MarketingServices"}

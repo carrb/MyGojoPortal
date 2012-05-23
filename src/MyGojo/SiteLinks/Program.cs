@@ -7,11 +7,11 @@ namespace SiteLinks
     {
         static void Main(string[] args)
         {
-            var fileProcessor = new RecursiveDirectoryProcessor("C:\\users\\wades\\Pictures");
-            Console.WriteLine("Number of files collected: {0}", App.CollectedFileEntries.Count);
-
-            Console.WriteLine("Enter any key to exit.");
-            Console.ReadLine();
+            //var fileProcessor = new RecursiveDirectoryProcessor("C:\\users\\wades\\Pictures");
+            //Console.WriteLine("Number of files collected: {0}", App.CollectedFileEntries.Count);
+            //
+            //Console.WriteLine("Enter any key to exit.");
+            //Console.ReadLine();
  
             var siteCollectionsToProcess = App.SiteCollections;
 
@@ -24,8 +24,8 @@ namespace SiteLinks
 
             }
 
-            //var testPointSites = App.CollectedSites;
-            //var testPointUsers = App.CollectedUsers;
+            var testPointSites = App.CollectedSites;
+            var testPointUsers = App.CollectedUsers;
 
 
             Console.WriteLine("Enter any key to exit.");
