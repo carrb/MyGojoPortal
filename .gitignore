@@ -1,6 +1,65 @@
 # Build Folders (you can keep bin if you'd like, to store dlls and pdbs)
-bin
-obj
+[Bb]in
+[Oo]bj
 
-# mstest test results
-TestResults
+# Numerous always-ignore extensions
+*.suo
+*.user
+*.[Cc]ache
+*[Rr]esharper*
+NuGet.exe
+_[Ss]cripts
+*.exe
+*.dll
+*.nupkg
+*.ncrunchsolution
+*.dot[Cc]over
+*.bak
+*.csproj.user
+_ReSharper*
+*.resharper.user
+*.ReSharper.user
+*.resharper
+*.ReSharper
+*.suo
+*.cache
+*~
+*.swp
+*.diff
+*.err
+*.log
+*.rej
+*.swo
+*.swp
+*.vi
+*~
+*.sass-cache
+~$*.docx
+
+TestResult.xml
+desktop.ini
+.eprj
+
+# OS or Editor folders
+.DS_Store
+#.project
+#.settings
+.tmproj
+nbproject
+Thumbs.db
+_notes
+dwsync.xml
+
+# Folders to ignore
+.hg
+.svn
+.CVS
+intermediate
+publish
+.idea
+backup
+scratch
+
+# build script local files
+build/buildinfo.properties
+build/config/buildinfo.properties
