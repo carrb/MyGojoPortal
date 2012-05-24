@@ -25,8 +25,6 @@ namespace SiteLinks
             }
 
             var testPointSites = App.CollectedSites;
-            var testPointUsers = App.CollectedUsers;
-
 
             Console.WriteLine("Enter any key to exit.");
             Console.ReadLine();

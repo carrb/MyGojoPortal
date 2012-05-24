@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Microsoft.SharePoint.Client;
 using NLog;
 
@@ -9,13 +10,13 @@ namespace SiteLinks.Processors
         private Logger logger = LogManager.GetCurrentClassLogger();
 
         ///  Constructor
-        public AccountPermissionsProcessor(string siteUrl)
+        public AccountPermissionsProcessor(string siteUrl, List<string> siteUsers)
         {
-            GetSitePermissions(siteUrl);
+            GetSitePermissions(siteUrl, siteUsers);
         }
 
 
-        public void GetSitePermissions(string url)
+        public void GetSitePermissions(string url, List<string> userList)
         {
             try
             {
@@ -32,12 +33,13 @@ namespace SiteLinks.Processors
                         context.Load(roles);
                         context.ExecuteQuery();
 
-                        Console.WriteLine(role.Member.LoginName);
+                        
 
 
-                        if (!App.CollectedUsers.ContainsKey(role.Member.LoginName))
+                        if (!userList.Contains(role.Member.LoginName))
                         {
-                            App.CollectedUsers.Add(role.Member.LoginName, url);    
+                            userList.Add(role.Member.LoginName);
+                            Console.WriteLine("Added: " + role.Member.LoginName);
                         }
 
 

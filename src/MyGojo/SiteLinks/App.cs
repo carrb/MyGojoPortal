@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using NLog;
+using SiteLinks.Models;
 
 
 namespace SiteLinks
@@ -10,7 +11,7 @@ namespace SiteLinks
 
         public static IDictionary<string, string> CollectedFileEntries { get; private set; }
         public static IDictionary<string, string> SiteCollections { get; private set; }
-        public static IDictionary<string, string> CollectedSites { get; private set; }
+        public static IDictionary<string, Site> CollectedSites { get; private set; }
         public static IDictionary<string, string> CollectedUsers { get; private set; }
 
         // Private Constructor
@@ -30,11 +31,10 @@ namespace SiteLinks
             logger.Info("SiteLinks.Tests - (c) 2012 . All Rights Reserved.");
             logger.Info("Initializing...");
 
-
-            CollectedFileEntries = new Dictionary<string, string>();
+            //CollectedFileEntries = new Dictionary<string, string>();
             SiteCollections = LoadSiteCollectionsToProcess();
-            CollectedSites = new Dictionary<string, string>();
-            CollectedUsers = new Dictionary<string, string>();
+            CollectedSites = new Dictionary<string, Site>();
+
         }
 
         // Should Refactor at some point to pull values in from app.config

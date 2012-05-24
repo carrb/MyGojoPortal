@@ -1,6 +1,4 @@
 using System;
-using System.Collections.Generic;
-using Gojo.Core;
 using Microsoft.SharePoint.Client;
 using NLog;
 
@@ -22,22 +20,28 @@ namespace SiteLinks.Processors
 
         public void WalkSiteTree(string siteUrl)
         {
-            Console.WriteLine("Walking: " + siteUrl);
+            Console.WriteLine("Working on ----------------------> " + siteUrl);
 
             try
             {
               using (ClientContext context = new ClientContext(siteUrl))
-             {
+              {
                   Web site = context.Web;
                   WebCollection subSites = context.Web.Webs;
+
                   context.Load(context.Web);
                   context.Load(context.Web.Webs, web => web.Include(w => w.Title, w => w.ServerRelativeUrl));
                   context.ExecuteQuery();
 
-                  if (!App.CollectedSites.ContainsKey("http://akr-spstage1" + site.ServerRelativeUrl))
+                  var currentSiteUrl = "http://akr-spstage1" + site.ServerRelativeUrl;
+
+                  if (!App.CollectedSites.ContainsKey(currentSiteUrl))
                   {
-                      App.CollectedSites.Add("http://akr-spstage1" + site.ServerRelativeUrl, site.Title);
-                      var permProcessor = new AccountPermissionsProcessor("http://akr-spstage1" + site.ServerRelativeUrl);
+                      var currentSite = new Site(currentSiteUrl) { Title = site.Title };
+
+                      App.CollectedSites.Add(currentSiteUrl, currentSite);
+
+                      var permProcessor = new AccountPermissionsProcessor(currentSiteUrl, currentSite.UserAccounts);
                   }
 
                   if (subSites.Count < 1) return;

@@ -1,23 +1,20 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Gojo.Core.Data.Generators;
 
-namespace SiteLinks
+namespace SiteLinks.Models
 {
     public class Site
     {
         public int Id { get; set; }
-        public int Guid { get; set; }
-
+        public Guid SiteGuid { get; set; }
         public string Title { get; set; }
         public string Url { get; set; }
+        public List<string> UserAccounts { get; set; }
 
-        public ICollection<AccountLogin> UserAccounts { get; set; }
 
-
+        /// Constructor
+        /// 
         public Site(string siteUrl)
         {
             InitMembers(siteUrl);
@@ -29,9 +26,9 @@ namespace SiteLinks
         private void InitMembers(string url)
         {
             Id = CryptographicallyRandomIntegerGenerator.GetCryptographicallyRandomInt32Number();
-
+            SiteGuid = Guid.NewGuid();
             Url = url;
-            UserAccounts = new List<AccountLogin>();
+            UserAccounts = new List<string>();
         }
     }
 }

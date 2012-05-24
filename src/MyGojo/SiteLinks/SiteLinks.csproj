@@ -65,7 +65,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AccountLogin.cs" />
     <Compile Include="App.cs" />
     <Compile Include="Processors\AccountPermissionsProcessor.cs" />
     <Compile Include="Processors\IAccountPermissionsProcessor.cs" />

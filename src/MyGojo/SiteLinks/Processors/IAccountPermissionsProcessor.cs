@@ -1,7 +1,9 @@
+﻿using System.Collections.Generic;
+
 namespace SiteLinks.Processors
 {
-    public interface IAccountPermissionsProcessor
+    interface IAccountPermissionsProcessor
     {
-        void GetSitePermissions(string url);
+        void GetSitePermissions(string url, List<string> userList);
     }
 }
