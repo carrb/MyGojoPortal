@@ -25,6 +25,7 @@ namespace SiteLinks
 
 
         /// To leverage automatic properties, initialize appropriate members here.
+        /// 
         private void InitMembers(string url)
         {
             Id = CryptographicallyRandomIntegerGenerator.GetCryptographicallyRandomInt32Number();
