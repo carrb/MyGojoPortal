@@ -23,11 +23,9 @@ namespace SiteLinks
                 var siteProcessor = new RecursiveSiteProcessor(siteColl.Value);
                 
                 Console.WriteLine("Collected " + App.CollectedSites.Count + " sites in the SharePoint site collections given.");
-
             }
 
-            var testPointSites = App.CollectedSites;
-
+            //var testPointSites = App.CollectedSites;
             Console.WriteLine("Enter any key to exit.");
             Console.ReadLine();
         }

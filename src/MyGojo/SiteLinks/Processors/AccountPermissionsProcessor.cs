@@ -33,17 +33,13 @@ namespace SiteLinks.Processors
                         context.Load(roles);
                         context.ExecuteQuery();
 
-                        
+                        if (userList.Contains(role.Member.LoginName)) continue;
+                        userList.Add(role.Member.LoginName);
+                        Console.WriteLine("Added: " + role.Member.LoginName);
 
 
-                        if (!userList.Contains(role.Member.LoginName))
-                        {
-                            userList.Add(role.Member.LoginName);
-                            Console.WriteLine("Added: " + role.Member.LoginName);
-                        }
-
-
-
+                        // Can Use to Get Permission to site type if needed!
+                        //
                         //foreach (RoleDefinition def in role.RoleDefinitionBindings)
                         //{
                         //    // enumerate the enum and check each perm type to see if the perm is included
