@@ -10,11 +10,12 @@ namespace SiteLinks
     public class Site
     {
         public int Id { get; set; }
+        public int Guid { get; set; }
 
         public string Title { get; set; }
         public string Url { get; set; }
 
-        public ICollection<AccountLogin> AccountLogins { get; set; }
+        public ICollection<AccountLogin> UserAccounts { get; set; }
 
 
         public Site(string siteUrl)
@@ -27,8 +28,9 @@ namespace SiteLinks
         private void InitMembers(string url)
         {
             Id = CryptographicallyRandomIntegerGenerator.GetCryptographicallyRandomInt32Number();
+
             Url = url;
-            AccountLogins = new List<AccountLogin>();
+            UserAccounts = new List<AccountLogin>();
         }
     }
 }
