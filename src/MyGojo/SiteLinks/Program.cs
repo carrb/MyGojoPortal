@@ -7,12 +7,14 @@ namespace SiteLinks
     {
         static void Main(string[] args)
         {
+            #region Recursive Directory/File Processor Testing
             //var fileProcessor = new RecursiveDirectoryProcessor("C:\\users\\wades\\Pictures");
             //Console.WriteLine("Number of files collected: {0}", App.CollectedFileEntries.Count);
             //
             //Console.WriteLine("Enter any key to exit.");
             //Console.ReadLine();
- 
+            #endregion
+
             var siteCollectionsToProcess = App.SiteCollections;
 
             foreach (var siteColl in siteCollectionsToProcess)

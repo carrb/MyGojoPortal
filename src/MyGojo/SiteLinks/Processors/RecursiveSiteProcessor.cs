@@ -1,6 +1,7 @@
 using System;
 using Microsoft.SharePoint.Client;
 using NLog;
+using SiteLinks.Models;
 
 namespace SiteLinks.Processors
 {
@@ -37,7 +38,7 @@ namespace SiteLinks.Processors
 
                   if (!App.CollectedSites.ContainsKey(currentSiteUrl))
                   {
-                      var currentSite = new Site(currentSiteUrl) { Title = site.Title };
+                      var currentSite = new SiteInfo(currentSiteUrl) { Title = site.Title };
 
                       App.CollectedSites.Add(currentSiteUrl, currentSite);
 

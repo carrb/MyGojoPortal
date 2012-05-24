@@ -4,7 +4,7 @@ using Gojo.Core.Data.Generators;
 
 namespace SiteLinks.Models
 {
-    public class Site
+    public class SiteInfo
     {
         public int Id { get; set; }
         public Guid SiteGuid { get; set; }
@@ -15,7 +15,7 @@ namespace SiteLinks.Models
 
         /// Constructor
         /// 
-        public Site(string siteUrl)
+        public SiteInfo(string siteUrl)
         {
             InitMembers(siteUrl);
         }

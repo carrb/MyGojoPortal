@@ -11,8 +11,7 @@ namespace SiteLinks
 
         public static IDictionary<string, string> CollectedFileEntries { get; private set; }
         public static IDictionary<string, string> SiteCollections { get; private set; }
-        public static IDictionary<string, Site> CollectedSites { get; private set; }
-        public static IDictionary<string, string> CollectedUsers { get; private set; }
+        public static IDictionary<string, SiteInfo> CollectedSites { get; private set; }
 
         // Private Constructor
         static App()
@@ -33,7 +32,7 @@ namespace SiteLinks
 
             //CollectedFileEntries = new Dictionary<string, string>();
             SiteCollections = LoadSiteCollectionsToProcess();
-            CollectedSites = new Dictionary<string, Site>();
+            CollectedSites = new Dictionary<string, SiteInfo>();
 
         }
 
@@ -50,7 +49,7 @@ namespace SiteLinks
                                                          //        {"Home - Collab", "http://akr-spstage1/collab"},
                                                          //        {"Home - File Sharing Workspaces", "http://akr-spstage1/fs"},
                                                          //        {"GOJO Ideas", "http://akr-spstage1/ideas"},
-                                                                 {"myGOJO - Portal", "http://akr-spstage1/portal"},
+                                                         //        {"myGOJO - Portal", "http://akr-spstage1/portal"},
                                                                  {"HR Safety and Environmental","http://akr-spstage1/sites/hrsafetyenv"},
                                                                  {"Home - Marketing Services","http://akr-spstage1/sites/MarketingServices"}
                                                              };
