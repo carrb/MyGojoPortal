@@ -18,7 +18,7 @@ namespace MyGojo.Data.Model
 
         
 
-        public List<string> UserAccounts { get; set; }
+        public List<UserInfo> UserAccounts { get; set; }
 
 
         /// Constructor
@@ -38,7 +38,7 @@ namespace MyGojo.Data.Model
             IsVisible = true;
             IsEditable = true;
             Priority = 1;
-            UserAccounts = new List<string>();
+            UserAccounts = new List<UserInfo>();
         }
     }
 }

@@ -1,26 +1,32 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.SharePoint.Client;
+using MyGojo.Data.Model;
 using NLog;
 
 namespace SiteLinks.Processors
 {
-    public class AccountPermissionsProcessor : IAccountPermissionsProcessor
+    public class AccountPermissionsProcessor//  : IAccountPermissionsProcessor
     {
         private Logger logger = LogManager.GetCurrentClassLogger();
 
+        private string thisUrl;
+        private List<UserInfo> thisUserList; 
+
+
         ///  Constructor
-        public AccountPermissionsProcessor(string siteUrl, List<string> siteUsers)
+        public AccountPermissionsProcessor(string siteUrl, List<UserInfo> siteUsers)
         {
-            GetSitePermissions(siteUrl, siteUsers);
+            thisUrl = siteUrl;
+            thisUserList = siteUsers;
         }
 
 
-        public void GetSitePermissions(string url, List<string> userList)
+        public List<UserInfo> GetSitePermissions()
         {
             try
             {
-                using (ClientContext context = new ClientContext(url))
+                using (ClientContext context = new ClientContext(thisUrl))
                 {
                     RoleAssignmentCollection roles = context.Web.RoleAssignments;
                     context.Load(roles);
@@ -33,8 +39,10 @@ namespace SiteLinks.Processors
                         context.Load(roles);
                         context.ExecuteQuery();
 
-                        if (userList.Contains(role.Member.LoginName)) continue;
-                        userList.Add(role.Member.LoginName);
+                        var currentUser = new UserInfo(role.Member.LoginName);
+
+                        if (thisUserList.Contains(currentUser)) continue;
+                        thisUserList.Add(currentUser);
                         Console.WriteLine("Added: " + role.Member.LoginName);
 
 
@@ -55,11 +63,14 @@ namespace SiteLinks.Processors
                         //    }
                         //}
                     }
+
+                    return thisUserList;
                 }
             }
             catch (Exception ex)
             {
                 logger.Error("Error creating ClientContext and getting site RoleAssignments: {0}", ex.Message);
+                return thisUserList;
             }
         }
 

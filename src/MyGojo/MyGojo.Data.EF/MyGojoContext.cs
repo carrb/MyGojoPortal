@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
+﻿using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
-using System.Linq;
-using System.Text;
+
 using MyGojo.Data.Model;
 
 namespace MyGojo.Data.EF
@@ -24,6 +21,7 @@ namespace MyGojo.Data.EF
 
 
         public IDbSet<SiteInfo> Sites { get; set; }
+        public IDbSet<UserInfo> Users { get; set; }
 
 
 

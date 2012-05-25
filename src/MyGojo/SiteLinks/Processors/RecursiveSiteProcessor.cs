@@ -43,6 +43,7 @@ namespace SiteLinks.Processors
                       App.CollectedSites.Add(currentSiteUrl, currentSite);
 
                       var permProcessor = new AccountPermissionsProcessor(currentSiteUrl, currentSite.UserAccounts);
+                      currentSite.UserAccounts = permProcessor.GetSitePermissions();
                   }
 
                   if (subSites.Count < 1) return;
