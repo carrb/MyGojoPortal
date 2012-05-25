@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gojo.Core", "Gojo.Core\Gojo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyGojo.Data", "MyGojo.Data\MyGojo.Data.csproj", "{7D85D474-B03E-4D9E-906C-4AF1AC08ED6F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyGojo.Data.EF", "MyGojo.Data.EF\MyGojo.Data.EF.csproj", "{7D60DB99-B5C2-405E-8FE0-6DF292E76378}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,10 @@ Global
 		{71610806-03DA-493B-8265-6A2AFF24DC87}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{71610806-03DA-493B-8265-6A2AFF24DC87}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{71610806-03DA-493B-8265-6A2AFF24DC87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D60DB99-B5C2-405E-8FE0-6DF292E76378}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D60DB99-B5C2-405E-8FE0-6DF292E76378}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D60DB99-B5C2-405E-8FE0-6DF292E76378}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D60DB99-B5C2-405E-8FE0-6DF292E76378}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7D85D474-B03E-4D9E-906C-4AF1AC08ED6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7D85D474-B03E-4D9E-906C-4AF1AC08ED6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7D85D474-B03E-4D9E-906C-4AF1AC08ED6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
