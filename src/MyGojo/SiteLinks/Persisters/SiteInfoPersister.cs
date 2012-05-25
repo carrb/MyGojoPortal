@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 using MyGojo.Data.EF;
 using MyGojo.Data.EF.Repositories;
 using MyGojo.Data.Model;
+
 using NLog;
 
 namespace SiteLinks.Persisters
@@ -21,6 +20,9 @@ namespace SiteLinks.Persisters
             PersistSiteInfo(collectedSites);
         }
 
+
+
+        // Needs to check for existing UserInfo objects alredy persisted in database...see code snippet below commented out!
 
         public void PersistSiteInfo(IDictionary<string, SiteInfo> sites)
         {
