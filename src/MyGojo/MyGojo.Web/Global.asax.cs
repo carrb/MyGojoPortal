@@ -1,25 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data.Entity;
-//using System.Data.Entity.Infrastructure;
-using System.Linq;
+﻿using System.Data.Entity;
 using System.Reflection;
 using System.Web;
-using System.Web.Http;
 using System.Web.Mvc;
-using System.Web.Optimization;
-using System.Web.Routing;
+
 using Autofac;
 using Autofac.Core;
 using Autofac.Integration.Mvc;
+
 using MyGojo.Data.EF;
+using MyGojo.Data.EF.Repositories;
 using MyGojo.Web.Infrastructure.AutoMapper;
 using MyGojo.Web.Infrastructure.Bundles;
 using MyGojo.Web.Infrastructure.Filters;
 using MyGojo.Web.Infrastructure.Routing;
 using MyGojo.Web.Infrastructure.ViewGeneration;
 using MyGojo.Web.Infrastructure.WebApi;
+
 using NLog;
 
 namespace MyGojo.Web
@@ -45,6 +41,7 @@ namespace MyGojo.Web
             BundlesConfiguration.Configure();
 
             // Use LocalDB for Entity Framework by default
+            // See Web.config for this information!!!!
             //Database.DefaultConnectionFactory = new SqlConnectionFactory("Data Source=(localdb)\v11.0; Integrated Security=True; MultipleActiveResultSets=True");
         }
 

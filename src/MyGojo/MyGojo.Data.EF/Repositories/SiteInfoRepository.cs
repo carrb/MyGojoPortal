@@ -8,7 +8,7 @@ using MyGojo.Data.Model;
 
 namespace MyGojo.Data.EF.Repositories
 {
-    public class SiteInfoRepository
+    public class SiteInfoRepository : ISiteInfoRepository
     {
         private readonly MyGojoContext context;
         private readonly IDbSet<SiteInfo> entities;

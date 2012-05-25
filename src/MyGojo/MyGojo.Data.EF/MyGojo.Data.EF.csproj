@@ -48,6 +48,7 @@
     <Compile Include="MyGojoContext.cs" />
     <Compile Include="MyGojoContextInitializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\ISiteInfoRepository.cs" />
     <Compile Include="Repositories\SiteInfoRepository.cs" />
   </ItemGroup>
   <ItemGroup>

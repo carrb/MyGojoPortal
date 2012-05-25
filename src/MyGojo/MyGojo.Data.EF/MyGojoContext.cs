@@ -13,10 +13,12 @@ namespace MyGojo.Data.EF
 
         // Use IoC to inject connection string?
         //public MyGojoContext(string connectionStringName) : base(connectionStringName) {}
-        public MyGojoContext(IDatabaseInitializer<MyGojoContext> dbInit)
+        // public MyGojoContext(IDatabaseInitializer<MyGojoContext> dbInit)
+        public MyGojoContext()
             : base("MyGojo")
         {
-            Database.SetInitializer(dbInit);
+            Database.SetInitializer(new DropCreateDatabaseIfModelChanges<MyGojoContext>());
+            //Database.SetInitializer(dbInit);
         }
 
 

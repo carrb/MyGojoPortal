@@ -1,4 +1,5 @@
 ﻿using System;
+using SiteLinks.Persisters;
 using SiteLinks.Processors;
 
 namespace SiteLinks
@@ -25,7 +26,11 @@ namespace SiteLinks
                 Console.WriteLine("Collected " + App.CollectedSites.Count + " sites in the SharePoint site collections given.");
             }
 
-            //var testPointSites = App.CollectedSites;
+            var testPointSites = App.CollectedSites;
+
+            var persister = new SiteInfoPersister(App.CollectedSites);
+
+
             Console.WriteLine("Enter any key to exit.");
             Console.ReadLine();
         }
