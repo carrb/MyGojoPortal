@@ -306,6 +306,10 @@
       <Project>{71610806-03da-493b-8265-6a2aff24dc87}</Project>
       <Name>Gojo.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\MyGojo.Data\MyGojo.Data.csproj">
+      <Project>{7d85d474-b03e-4d9e-906c-4af1ac08ed6f}</Project>
+      <Name>MyGojo.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

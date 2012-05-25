@@ -66,7 +66,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
-    <Compile Include="Models\SiteInfo.cs" />
     <Compile Include="Processors\AccountPermissionsProcessor.cs" />
     <Compile Include="Processors\IAccountPermissionsProcessor.cs" />
     <Compile Include="Processors\IRecursiveDirectoryProcessor.cs" />
@@ -86,7 +85,7 @@
       <Name>Gojo.Core</Name>
     </ProjectReference>
     <ProjectReference Include="..\MyGojo.Data\MyGojo.Data.csproj">
-      <Project>{fc7298bb-729e-4e09-84f3-104cbb4ff187}</Project>
+      <Project>{7d85d474-b03e-4d9e-906c-4af1ac08ed6f}</Project>
       <Name>MyGojo.Data</Name>
     </ProjectReference>
   </ItemGroup>

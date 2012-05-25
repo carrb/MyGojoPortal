@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
+using MyGojo.Data.Model;
 using NLog;
-using SiteLinks.Models;
 
 
 namespace SiteLinks

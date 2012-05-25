@@ -1,7 +1,7 @@
 using System;
 using Microsoft.SharePoint.Client;
+using MyGojo.Data.Model;
 using NLog;
-using SiteLinks.Models;
 
 namespace SiteLinks.Processors
 {

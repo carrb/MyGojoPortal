@@ -42,8 +42,6 @@ desktop.ini
 
 # OS or Editor folders
 .DS_Store
-#.project
-#.settings
 .tmproj
 nbproject
 Thumbs.db

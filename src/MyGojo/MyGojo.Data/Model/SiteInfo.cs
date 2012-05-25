@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using Gojo.Core.Data.Generators;
 
-namespace SiteLinks.Models
+namespace MyGojo.Data.Model
 {
     public class SiteInfo
     {
