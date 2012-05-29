@@ -4,19 +4,32 @@ using System.Security.Cryptography;
 
 namespace Gojo.Core.Data.Generators
 {
-    public class CryptographicallyRandomIntegerGenerator :  ICryptographicallyRandomIntegerGenerator
+    public class CryptographicallyRandomIntegerGenerator
     {
-        public static int GetCryptographicallyRandomInt32Number()
+
+        public static int GenerateCryptographicallyRandomPositiveInt32()
         {
-            return GenerateCryptographicallyRandomPositiveInt32();
+            byte[] randomBytes = new byte[4];
+
+            RNGCryptoServiceProvider rng = new RNGCryptoServiceProvider();
+            rng.GetBytes(randomBytes);
+
+            Int32 randomInt = BitConverter.ToInt32(randomBytes, 0);
+            return Math.Abs(randomInt);
         }
 
-        int ICryptographicallyRandomIntegerGenerator.GetCryptographicallyRandomInt32Number()
+        public static int GenerateCryptographicallyRandomPositiveInt32InRange(int min, int max)
         {
-            return GetCryptographicallyRandomInt32Number();
+            byte[] randomBytes = new byte[4];
+
+            RNGCryptoServiceProvider rng = new RNGCryptoServiceProvider();
+            rng.GetBytes(randomBytes);
+
+            Int32 randomInt = BitConverter.ToInt32(randomBytes, 0);
+            return new Random(randomInt).Next(min, max);
         }
 
-        public IList<int> GetCryptographicallyRandomInt32NumberSet(int howManyInts)
+        public static ICollection<int> GetCryptographicallyRandomInt32NumberSet(int howManyInts)
         {
             List<int> set = new List<int>();
 
@@ -28,15 +41,13 @@ namespace Gojo.Core.Data.Generators
 
             return set;
         }
-
-
-        private static int GenerateCryptographicallyRandomPositiveInt32()
+        
+        public static ICollection<int> GetCryptographicallyRandomInt32NumberSetInRange(int howManyInts, int min, int max)
         {
-            byte[] randomBytes = new byte[4];
-            RNGCryptoServiceProvider rng = new RNGCryptoServiceProvider();
-            rng.GetBytes(randomBytes);
-            Int32 randomInt = BitConverter.ToInt32(randomBytes, 0);
-            return Math.Abs(randomInt);
+            // To do....
+            throw new NotImplementedException();
         }
+
+
     }
 }

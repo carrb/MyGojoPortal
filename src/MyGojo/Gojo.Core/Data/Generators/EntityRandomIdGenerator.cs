@@ -22,10 +22,24 @@ namespace Gojo.Core.Data.Generators
         public static int GenerateCryptographicallyRandomInt32()
         {
             byte[] randomBytes = new byte[4];
+
             RNGCryptoServiceProvider rng = new RNGCryptoServiceProvider();
             rng.GetBytes(randomBytes);
+
             Int32 randomInt = BitConverter.ToInt32(randomBytes, 0);
             return randomInt;
+        }
+
+        public static int GenerateCryptographicallyRandomInt32InRange(int min, int max)
+        {
+            byte[] randomBytes = new byte[4];
+
+            RNGCryptoServiceProvider rng = new RNGCryptoServiceProvider();
+            rng.GetBytes(randomBytes);
+
+            Int32 randomInt = BitConverter.ToInt32(randomBytes, 0);
+
+            return new Random(randomInt).Next(min, max);
         }
     }
 }

@@ -68,7 +68,9 @@
     <Content Include="JustMock.Readme.txt" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
+    <None Include="app.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -79,10 +81,6 @@
     <ProjectReference Include="..\MyGojo.Data.Mongo\MyGojo.Data.Mongo.csproj">
       <Project>{7cbebbf9-bf90-4bed-bc08-7d633f6abed4}</Project>
       <Name>MyGojo.Data.Mongo</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\MyGojo.Data\MyGojo.Data.csproj">
-      <Project>{7d85d474-b03e-4d9e-906c-4af1ac08ed6f}</Project>
-      <Name>MyGojo.Data</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

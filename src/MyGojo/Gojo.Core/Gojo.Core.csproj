@@ -51,7 +51,6 @@
     <Compile Include="CodeContracts\PreconditionException.cs" />
     <Compile Include="Data\Generators\CryptographicallyRandomIntegerGenerator.cs" />
     <Compile Include="Data\Generators\EntityRandomIdGenerator.cs" />
-    <Compile Include="Data\Generators\ICryptographicallyRandomIntegerGenerator.cs" />
     <Compile Include="Data\Indexed.cs" />
     <Compile Include="Data\MultiValueDictionary\ArgumentVerifier.cs" />
     <Compile Include="Data\MultiValueDictionary\ExtensionMethods.cs" />
