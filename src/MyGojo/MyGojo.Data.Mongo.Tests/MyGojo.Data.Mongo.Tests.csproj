@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7D85D474-B03E-4D9E-906C-4AF1AC08ED6F}</ProjectGuid>
+    <ProjectGuid>{50FAFD5E-8CD4-471F-A642-8EB872C2DC40}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MyGojo.Data</RootNamespace>
-    <AssemblyName>MyGojo.Data</AssemblyName>
+    <RootNamespace>MyGojo.Data.Mongo.Tests</RootNamespace>
+    <AssemblyName>MyGojo.Data.Mongo.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,24 +30,59 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DreamSongs.MongoRepository">
+      <HintPath>..\packages\MongoRepository.1.3\lib\DreamSongs.MongoRepository.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentMongo">
+      <HintPath>..\packages\FluentMongo.1.3.1.1\lib\FluentMongo.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Bson">
+      <HintPath>..\packages\mongocsharpdriver.1.4.2\lib\net35\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver">
+      <HintPath>..\packages\mongocsharpdriver.1.4.2\lib\net35\MongoDB.Driver.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>..\packages\NUnit.2.6.0.12054\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Should">
+      <HintPath>..\packages\Should.1.1.12.0\lib\Should.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="Telerik.JustMock, Version=2012.1.508.6, Culture=neutral, PublicKeyToken=8b221631f7271365, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\JustMock.2012.1.508.0\lib\Net35\Telerik.JustMock.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\SiteInfo.cs" />
-    <Compile Include="Model\UserInfo.cs" />
+    <Compile Include="Integration\IntegrationTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="JustMock.Readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Gojo.Core\Gojo.Core.csproj">
       <Project>{71610806-03da-493b-8265-6a2aff24dc87}</Project>
       <Name>Gojo.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyGojo.Data.Mongo\MyGojo.Data.Mongo.csproj">
+      <Project>{7cbebbf9-bf90-4bed-bc08-7d633f6abed4}</Project>
+      <Name>MyGojo.Data.Mongo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyGojo.Data\MyGojo.Data.csproj">
+      <Project>{7d85d474-b03e-4d9e-906c-4af1ac08ed6f}</Project>
+      <Name>MyGojo.Data</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

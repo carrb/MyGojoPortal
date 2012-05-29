@@ -17,13 +17,20 @@
 // jQuery ready event - occures after all code has been downloaded and evaluated and is ready to be initialized.
 // Application Composition Root - where application is initialized.
 jQuery(function($) {
-    
+
 });
 
 
 // jQuery document ready event - occurs after ...
 $(document).ready(function () {
-   //  gojo().init();
+    //  gojo().init();
+    
+    $('#demo').click(function () {
+        // Possible theme values:  (default, warning, danger, info, success)
+        $.jGrowl("There should be a lot more information here to allow learning more information about more information regarding the application and using jGrowl for notifications.", {
+            theme: "warning"
+        });
+    });
 
 
 });

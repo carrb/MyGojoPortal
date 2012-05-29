@@ -1,22 +1,15 @@
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 
 namespace MyGojo.Data.Model
 {
     public class SiteInfo
     {
-        [Key]
         public int Id { get; set; }
-
         public string Title { get; set; }
         public string Url { get; set; }
         public bool IsVisible { get; set; }
         public bool IsEditable { get; set; }
-
-        [Range(1, 2048)]
         public int Priority { get; set; }
-
-        
 
         public List<UserInfo> UserAccounts { get; set; }
 

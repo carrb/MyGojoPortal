@@ -201,8 +201,25 @@
     <Content Include="Content\CSS\bootstrap.css" />
     <Content Include="Content\CSS\bootstrap.ie6.css" />
     <Content Include="Content\CSS\bootstrap.min.css" />
+    <Content Include="Content\CSS\chosen-sprite.png" />
+    <Content Include="Content\CSS\chosen.css" />
     <Content Include="Content\CSS\custom.css" />
     <Content Include="Content\CSS\font-awesome.css" />
+    <Content Include="Content\CSS\jquery.jgrowl.css" />
+    <Content Include="Content\CSS\smoothness\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\CSS\smoothness\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\CSS\smoothness\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\CSS\smoothness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\CSS\smoothness\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\CSS\smoothness\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\CSS\smoothness\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\CSS\smoothness\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\CSS\smoothness\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\CSS\smoothness\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\CSS\smoothness\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\CSS\smoothness\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\CSS\smoothness\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\CSS\smoothness\jquery-ui-1.8.20.custom.css" />
     <Content Include="Content\font\fontawesome-webfont.svg" />
     <Content Include="Content\Images\GojoHq.jpg" />
     <Content Include="Content\Images\GojoHQWeb.jpg" />
@@ -240,9 +257,13 @@
     <Content Include="Scripts\bootstrap-tooltip.js" />
     <Content Include="Scripts\bootstrap-transition.js" />
     <Content Include="Scripts\bootstrap-typeahead.js" />
+    <Content Include="Scripts\bootstrap-typeahead.min.js" />
+    <Content Include="Scripts\bootstrap-typeahead.original.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Content\js\gojo.js" />
+    <Content Include="Scripts\chosen.jquery.js" />
+    <Content Include="Scripts\chosen.jquery.min.js" />
     <Content Include="Scripts\ember.js" />
     <Content Include="Scripts\ember.min.js" />
     <Content Include="Scripts\google-code-prettify\prettify.css" />
@@ -250,11 +271,15 @@
     <Content Include="Scripts\imgSizer.js" />
     <Content Include="Scripts\jquery-1.7.2.js" />
     <Content Include="Scripts\jquery-1.7.2.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.custom.min.js" />
     <Content Include="Scripts\jquery.fittext.js" />
+    <Content Include="Scripts\jquery.jgrowl.js" />
+    <Content Include="Scripts\jquery.jgrowl.min.js" />
     <Content Include="Scripts\jquery\jquery.tipsy.js" />
     <Content Include="Scripts\json2.js" />
+    <Content Include="Scripts\less-1.3.0.min.js" />
     <Content Include="Scripts\modernizr.js" />
-    <Content Include="Scripts\plugins.js" />
+    <Content Include="Content\js\plugins.js" />
     <Content Include="Scripts\selectivizr-min.js" />
     <Content Include="Scripts\underscore-min.js" />
     <Content Include="Scripts\underscore.js" />
@@ -289,7 +314,7 @@
     <Content Include="Views\Shared\_QuickLinks.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Content\CSS\custom.less" />
+    <None Include="Content\less\mygojo.less" />
     <None Include="Content\font\fontawesome-webfont.eot" />
     <None Include="Content\font\fontawesome-webfont.svgz" />
     <None Include="Content\font\fontawesome-webfont.ttf" />
@@ -303,6 +328,7 @@
     <Content Include="Views\Shared\_LinksDirectoryRevised.cshtml" />
     <Content Include="Views\Home\MyWorkspaces.cshtml" />
     <Content Include="Views\Home\Terms.cshtml" />
+    <None Include="Content\less\overrides.less" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Gojo.Core\Gojo.Core.csproj">
