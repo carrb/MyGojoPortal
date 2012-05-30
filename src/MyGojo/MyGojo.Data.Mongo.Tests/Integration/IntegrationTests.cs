@@ -15,7 +15,7 @@ namespace MyGojo.Data.Mongo.Tests.Integration
     public class IntegrationTests
     {
 
-        private static MongoRepository<UserInfo> userRepository = new MongoRepository<UserInfo>();
+        private static readonly MongoRepository<UserInfo> userRepository = new MongoRepository<UserInfo>();
 
         [SetUp]
         public void SetUp()
@@ -29,7 +29,7 @@ namespace MyGojo.Data.Mongo.Tests.Integration
         {
             // See: http://mongorepository.codeplex.com/documentation
 
-
+            /*
 
             // Creat some UserInfo objects
             var userOne = new UserInfo
@@ -56,15 +56,57 @@ namespace MyGojo.Data.Mongo.Tests.Integration
             };
 
 
-            //userRepository.Add(new[] { userOne, userTwo, userThree });
+            var siteOne = new SiteInfo
+                              {
+                                  Title = "Site One",
+                                  Url = "http://akr-spstage1/pw/2012/Site One/",
+                                  IsEditable = true,
+                                  IsVisible = true,
+                                  Priority = 1
+                              };
+
+            var siteTwo = new SiteInfo
+            {
+                Title = "Site Two",
+                Url = "http://akr-spstage1/tw/Site Two/",
+                IsEditable = true,
+                IsVisible = true,
+                Priority = 2
+            };
+
+            var siteThree = new SiteInfo
+            {
+                Title = "Site Two",
+                Url = "http://akr-spstage1/fs/Site Three/",
+                IsEditable = true,
+                IsVisible = true,
+                Priority = 3
+            };
+
+            List<SiteInfo> sites = new List<SiteInfo>();
+            sites.Add(siteOne);
+            sites.Add(siteTwo);
+
+            userOne.Sites = sites;
+            userTwo.Sites = sites;
+
+            sites.Add(siteThree);
+
+            userThree.Sites = sites;
+
+
+
+            userRepository.Add(new[] { userOne, userTwo, userThree });
 
             // Show contents of DB
-            //DumpData();
+            DumpData();
 
 
             // Update Users
             //userOne.FirstName = "ScottySmithAndStein";
             //userRepository.Update(userOne);
+             * 
+             */
 
             // Delete user
             userRepository.DeleteAll();

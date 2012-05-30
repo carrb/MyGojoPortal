@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-
-using MyGojo.Data.EF;
-using MyGojo.Data.EF.Repositories;
-using MyGojo.Data.Model;
-
+using DreamSongs.MongoRepository;
+using MyGojo.Data.Mongo.Model;
 using NLog;
 
 namespace SiteLinks.Persisters
@@ -22,8 +19,22 @@ namespace SiteLinks.Persisters
 
 
 
-        // Needs to check for existing UserInfo objects alredy persisted in database...see code snippet below commented out!
+        public void PersistSiteInfo(IDictionary<string, SiteInfo> sites)
+        {
+            try
+            {
+     
+            }
+            catch (Exception ex)
+            {
+                logger.Error("Error persisting sites: {0}", ex.Message);
+            }
+        }
 
+
+
+        // Needs to check for existing UserInfo objects alredy persisted in database...see code snippet below commented out!
+        /*
         public void PersistSiteInfo(IDictionary<string, SiteInfo> sites)
         {
             try
@@ -45,6 +56,7 @@ namespace SiteLinks.Persisters
                 logger.Error("Error using MyGojoContext: {0}", ex.Message);
             }
         }
+        */
 
 
 

@@ -1,5 +1,6 @@
-﻿using System.Collections.Generic;
-using MyGojo.Data.Model;
+﻿using System;
+using System.Collections.Generic;
+using MyGojo.Data.Mongo.Model;
 using NLog;
 
 
@@ -12,6 +13,7 @@ namespace SiteLinks
         public static IDictionary<string, string> CollectedFileEntries { get; private set; }
         public static IDictionary<string, string> SiteCollections { get; private set; }
         public static IDictionary<string, SiteInfo> CollectedSites { get; private set; }
+        public static IDictionary<string, UserInfo> CollectedUsers { get; private set; } 
 
         // Private Constructor
         static App()
@@ -32,7 +34,8 @@ namespace SiteLinks
 
             //CollectedFileEntries = new Dictionary<string, string>();
             SiteCollections = LoadSiteCollectionsToProcess();
-            CollectedSites = new Dictionary<string, SiteInfo>();
+            CollectedSites = new Dictionary<string, SiteInfo>(StringComparer.OrdinalIgnoreCase);
+            CollectedUsers = new Dictionary<string, UserInfo>(StringComparer.OrdinalIgnoreCase);
 
         }
 
@@ -41,7 +44,7 @@ namespace SiteLinks
         {
             Dictionary<string, string> siteCollections = new Dictionary<string, string>
                                                              {
-                                                        //         {"myGOJO", "http://akr-spstage1"},
+                                                                {"myGOJO", "http://akr-spstage1"},
                                                         //         {"MySite Host", "http://akr-spstage1/mysite"},
                                                          //        {"Project Workspaces", "http://akr-spstage1/pw"},
                                                         //         {"Home - Techknow", "http://akr-spstage1/sites/techknow"},
@@ -49,7 +52,7 @@ namespace SiteLinks
                                                          //        {"Home - Collab", "http://akr-spstage1/collab"},
                                                          //        {"Home - File Sharing Workspaces", "http://akr-spstage1/fs"},
                                                          //        {"GOJO Ideas", "http://akr-spstage1/ideas"},
-                                                         //        {"myGOJO - Portal", "http://akr-spstage1/portal"},
+                                                                 {"myGOJO - Portal", "http://akr-spstage1/portal"},
                                                                  {"HR Safety and Environmental","http://akr-spstage1/sites/hrsafetyenv"},
                                                                  {"Home - Marketing Services","http://akr-spstage1/sites/MarketingServices"}
                                                              };

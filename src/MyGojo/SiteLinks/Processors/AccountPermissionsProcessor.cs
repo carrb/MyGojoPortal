@@ -1,17 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.SharePoint.Client;
-using MyGojo.Data.Model;
+using MyGojo.Data.Mongo.Model;
 using NLog;
 
 namespace SiteLinks.Processors
 {
     public class AccountPermissionsProcessor//  : IAccountPermissionsProcessor
     {
-        private Logger logger = LogManager.GetCurrentClassLogger();
-
-        private string thisUrl;
-        private List<UserInfo> thisUserList; 
+        private readonly Logger logger = LogManager.GetCurrentClassLogger();
+        private readonly string thisUrl;
+        private readonly List<UserInfo> thisUserList; 
 
 
         ///  Constructor
@@ -43,7 +42,12 @@ namespace SiteLinks.Processors
 
                         if (thisUserList.Contains(currentUser)) continue;
                         thisUserList.Add(currentUser);
+                       
+
+                        if (App.CollectedUsers.ContainsKey(role.Member.LoginName)) continue;
+                        App.CollectedUsers.Add(role.Member.LoginName, new UserInfo{AdLogin = role.Member.LoginName, Sites = new List<SiteInfo>()});
                         Console.WriteLine("Added: " + role.Member.LoginName);
+
 
 
                         // Can Use to Get Permission to site type if needed!

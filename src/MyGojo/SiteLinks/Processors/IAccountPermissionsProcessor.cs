@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using MyGojo.Data.Model;
+using MyGojo.Data.Mongo.Model;
 
 namespace SiteLinks.Processors
 {

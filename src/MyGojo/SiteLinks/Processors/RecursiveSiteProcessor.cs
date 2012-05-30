@@ -1,6 +1,7 @@
 using System;
 using Microsoft.SharePoint.Client;
-using MyGojo.Data.Model;
+
+using MyGojo.Data.Mongo.Model;
 using NLog;
 
 namespace SiteLinks.Processors
@@ -42,8 +43,8 @@ namespace SiteLinks.Processors
 
                       App.CollectedSites.Add(currentSiteUrl, currentSite);
 
-                      var permProcessor = new AccountPermissionsProcessor(currentSiteUrl, currentSite.UserAccounts);
-                      currentSite.UserAccounts = permProcessor.GetSitePermissions();
+                      var permProcessor = new AccountPermissionsProcessor(currentSiteUrl, currentSite.Users);
+                      currentSite.Users = permProcessor.GetSitePermissions();
                   }
 
                   if (subSites.Count < 1) return;
@@ -60,26 +61,5 @@ namespace SiteLinks.Processors
             }
         }
 
-
-        //private Web GetRootWebForSiteCollection(string url)
-        //{
-        //    Web rootWeb = null;
-        //
-        //    try
-        //    {
-        //        using (ClientContext context = new ClientContext(url))
-        //        {
-        //            rootWeb = context.Site.RootWeb;
-        //            context.Load(context.Site.RootWeb);
-        //            context.ExecuteQuery();
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        logger.Error("Error creating ClientContext and getting RootWeb for Site Collection: {0}", ex.Message);
-        //    }
-        //
-        //    return rootWeb;
-        //}
     }
 }

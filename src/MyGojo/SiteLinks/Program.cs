@@ -25,10 +25,14 @@ namespace SiteLinks
                 
                 Console.WriteLine("Collected " + App.CollectedSites.Count + " sites in the SharePoint site collections given.");
             }
+           
+            var siteAccessProcessor = new AccountSiteAccessProcessor(App.CollectedSites, App.CollectedUsers);
 
             var testPointSites = App.CollectedSites;
+            var testPointUsers = App.CollectedUsers;
 
-            var persister = new SiteInfoPersister(App.CollectedSites);
+            //var sitePersister = new SiteInfoPersister(App.CollectedSites);
+            var userPersister = new UserInfoPersister(App.CollectedUsers);
 
 
             Console.WriteLine("Enter any key to exit.");
