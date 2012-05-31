@@ -26,19 +26,56 @@ namespace SiteLinks.Persisters
         {
             try
             {
-                MongoRepository<UserInfo> userRepository = new MongoRepository<UserInfo>();  
+                MongoRepository<UserInfo> userRepository = new MongoRepository<UserInfo>();
+                var storedUsers = userRepository.All();
 
-                foreach (var user in App.CollectedUsers)
+                foreach (var currentUser in App.CollectedUsers.Select(userEntry => userEntry.Value))
                 {
-                    userRepository.Add(user.Value);
-                }
-      
+                    var existingUserInfo = userRepository.GetSingle(u => u.AdLogin == currentUser.AdLogin);
 
+                    if (existingUserInfo == null)
+                    {
+                        userRepository.Add(currentUser);
+                        continue;
+                    }
+
+                    userRepository.Delete(existingUserInfo);
+                    userRepository.Add(currentUser);
+                }
             }
             catch (Exception ex)
             {
                 logger.Error("Error persisting users: {0}", ex.Message);
             }
         }
+
+
+        /*
+                    var debugAllUsers = processor.AllUsers;
+
+
+            using (var context = new MyGojoWebContext())
+            {
+                var repository = new UserRepository(context);
+                var storedUsers = repository.All.ToList();
+
+                foreach (var currentUser in debugAllUsers.Select(userEntry => userEntry.Value))
+                {
+                    var result = storedUsers.SingleOrDefault(u => u.AdLogin == currentUser.AdLogin);
+             
+                    if (result == null || result.Workspaces == null)
+                    {
+                        repository.InsertOrUpdate(currentUser);
+                        continue;
+                    }
+                    
+                    if (result.Workspaces.Equals(currentUser.Workspaces)) continue;
+                    repository.InsertOrUpdate(currentUser);
+                }
+                repository.Save();
+            }
+            Console.WriteLine("\nDone.");
+        }
+         */
     }
 }

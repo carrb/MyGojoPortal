@@ -7,8 +7,6 @@ using Autofac;
 using Autofac.Core;
 using Autofac.Integration.Mvc;
 
-using MyGojo.Data.EF;
-using MyGojo.Data.EF.Repositories;
 using MyGojo.Web.Infrastructure.AutoMapper;
 using MyGojo.Web.Infrastructure.Bundles;
 using MyGojo.Web.Infrastructure.Filters;
@@ -61,15 +59,15 @@ namespace MyGojo.Web
         {
             var builder = new ContainerBuilder();
 
-            builder.Register(c => new MyGojoContextInitializer()).As<IDatabaseInitializer<MyGojoContext>>();
+            //builder.Register(c => new MyGojoContextInitializer()).As<IDatabaseInitializer<MyGojoContext>>();
 
-            builder.RegisterType<MyGojoContext>().As<MyGojoContext>()
-                .WithParameter(new ResolvedParameter(
-                                   (p, c) => p.ParameterType == typeof(IDatabaseInitializer<MyGojoContext>),
-                                   (p, c) => c.Resolve<IDatabaseInitializer<MyGojoContext>>()));
+            //builder.RegisterType<MyGojoContext>().As<MyGojoContext>()
+            //    .WithParameter(new ResolvedParameter(
+             //                      (p, c) => p.ParameterType == typeof(IDatabaseInitializer<MyGojoContext>),
+             //                      (p, c) => c.Resolve<IDatabaseInitializer<MyGojoContext>>()));
 
 
-            builder.RegisterType<SiteInfoRepository>().As<ISiteInfoRepository>().InstancePerHttpRequest();
+            //builder.RegisterType<SiteInfoRepository>().As<ISiteInfoRepository>().InstancePerHttpRequest();
 
             
             // Doing DI with Autofac in ASP.NET WebAPI
