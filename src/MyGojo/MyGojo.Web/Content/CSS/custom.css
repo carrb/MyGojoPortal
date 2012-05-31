@@ -38,6 +38,12 @@ p { -ms-word-break: break-all;
 /* Inspiration:  http://paulrobertlloyd.com/ */
 
 
+.hero-unit p.normal {
+    font-size: 13px;
+    line-height: 18px;
+    margin: 0 0 9px;
+}
+
 .hero-side section h1{
     border-top: 1px solid #CCCCCC;  
     font-weight: bold;
@@ -78,6 +84,8 @@ footer time { color: #888888; }
 .nav-list .nav-header {margin-left:0;margin-right: -15px;padding-left: 0;text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);}
 ul.nav-list + ul.nav-list { margin-top: 18px; } 
 .nav-list > li > a {padding: 2px 15px 2px 15px;}
-.nav-list > li > a, a {color: #0088CC;text-decoration: none;}
+.nav-list > li > a {color: #0088CC;text-decoration: none;display: block;}
+article.entry > h2 > a {color: #0088CC;text-decoration: none;display: block;}
+article.entry > h2 >  a:hover {background-color: #eeeeee; color: #0088CC;text-decoration: none;}
 
 /* The dark blue used in header bar color: #21374C; */

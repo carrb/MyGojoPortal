@@ -20,8 +20,8 @@
     <OldToolsVersion>4.0</OldToolsVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
-    <IISExpressAnonymousAuthentication />
-    <IISExpressWindowsAuthentication />
+    <IISExpressAnonymousAuthentication>disabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>enabled</IISExpressWindowsAuthentication>
     <IISExpressUseClassicPipelineMode />
     <UpgradeBackupLocation />
   </PropertyGroup>
@@ -61,6 +61,14 @@
     <Reference Include="dotless.Core">
       <HintPath>..\packages\dotless.1.3.0.0\lib\dotless.Core.dll</HintPath>
     </Reference>
+    <Reference Include="DreamSongs.MongoRepository, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MongoRepository.1.3\lib\DreamSongs.MongoRepository.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentMongo, Version=1.3.1.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\FluentMongo.1.3.1.1\lib\FluentMongo.dll</HintPath>
+    </Reference>
     <Reference Include="Hazware.Core">
       <HintPath>..\packages\Hazware.Core.2.0\lib\NET40-full\Hazware.Core.dll</HintPath>
     </Reference>
@@ -76,6 +84,14 @@
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Bson, Version=1.4.2.4500, Culture=neutral, PublicKeyToken=f686731cfb9cc103, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\mongocsharpdriver.1.4.2\lib\net35\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver, Version=1.4.2.4500, Culture=neutral, PublicKeyToken=f686731cfb9cc103, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\mongocsharpdriver.1.4.2\lib\net35\MongoDB.Driver.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.4.5.1\lib\net40\Newtonsoft.Json.dll</HintPath>
@@ -218,6 +234,7 @@
     <Content Include="Content\CSS\smoothness\images\ui-icons_cd0a0a_256x240.png" />
     <Content Include="Content\CSS\smoothness\jquery-ui-1.8.20.custom.css" />
     <Content Include="Content\font\fontawesome-webfont.svg" />
+    <Content Include="Content\Images\Data.jpg" />
     <Content Include="Content\Images\GojoHq.jpg" />
     <Content Include="Content\Images\GojoHQWeb.jpg" />
     <Content Include="Content\Images\GojoLogo-Header.png" />
@@ -323,9 +340,10 @@
     <Content Include="Views\Shared\_LinksDirectoryEurope.cshtml" />
     <Content Include="Views\Shared\_LinksDirectoryLatinAmerica.cshtml" />
     <Content Include="Views\Shared\_LinksDirectoryRevised.cshtml" />
-    <Content Include="Views\Home\MyWorkspaces.cshtml" />
+    <Content Include="Views\Home\_MyWorkspaces.cshtml" />
     <Content Include="Views\Home\Terms.cshtml" />
     <None Include="Content\less\overrides.less" />
+    <Content Include="Views\Home\_FakeWorkspacesList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Gojo.Core\Gojo.Core.csproj">

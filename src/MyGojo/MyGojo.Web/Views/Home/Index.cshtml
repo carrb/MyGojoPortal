@@ -1,67 +1,18 @@
-﻿@{
+﻿@model IEnumerable<MyGojo.Data.Mongo.Model.SiteInfo>
+
+@{
 	ViewBag.Title = "Index";
 }
 
 <div class="row-fluid">
-    <div class="span2">
-		<div class="well sidebar-nav">
-		<ul class="nav nav-list">
-            <li class="nav-header"><h4>Project Workspaces</h4></li>
-			<li><a href="http://spprod/pw/2010/GOW - Supply Chain">GOW - Supply Chain</a></li>	          
-			<li><a href="http://spprod/pw/2010/Japanese Foreign Material Reduction">Japanese Foreign Material Reduction</a></li>	          
-			<li><a href="http://spprod/pw/2010/Phoenix Transition Team">Phoenix Transition Team</a></li>	          
-			<li><a href="http://spprod/pw/2010/Project Workspaces">Project Workspaces</a></li>	          
-			<li><a href="http://spprod/pw/2010/Purell">Purell.com</a></li>	          
-			<li><a href="http://spprod/pw/2010/Return Optimization">Return Optimization</a></li>	          
-			<li><a href="http://spprod/pw/2010/Shadow">Shadow</a></li>	          
-			<li><a href="http://spprod/pw/2010/Test NonProd Stage 5">Test Non-Prod Stage 5</a></li>	          
-			<li><a href="http://spprod/pw/2011">Projects 2011</a></li>	          
-			<li><a href="http://spprod/pw/2011/2L FMX PET">2L FMX PET</a></li>	   
-            <li><a href="http://spprod/pw/2011/3Stage New Prod Test"></a></li> 
-            
-            <li class="nav-header"><h4>Team Workspaces</h4></li>	          
-            <li><a href="http://spprod/pw/2011/401K Provider Conversion">401K Provider Conversion</a></li>		          
-			<li><a href="http://spprod/pw/2011/5SNonProd Test">5SNonProd Test</a></li>		          
-			<li><a href="http://spprod/pw/2011/5Stage Non Prod Test">5Stage Non Prod Test</a></li>		          
-			<li><a href="http://spprod/pw/2011/800mL Accent Output Optimization">800mL Accent Output Optimization</a></li>		          
-			<li><a href="http://spprod/pw/2011/9118 Wipes Stand Team">9118 Wipes Stand Team</a></li>		          
-			<li><a href="http://spprod/pw/2011/Accent Output Optimization">Accent Output Optimization</a></li>		          
-            <li><a href="http://spprod/pw/2011/AddieTest">AddieTest</a></li>
-            
-            <li class="nav-header"><h4>File Sharing Workspaces</h4></li>			          
-            <li><a href="http://spprod/pw/2011/AutoCad 2010 Upgrade">AutoCad 2010 Upgrade</a></li>		          
-			<li><a href="http://spprod/pw/2011/Backorder Service Levels">Backorder Service Levels</a></li>		          
-			<li><a href="http://spprod/pw/2011/BIB Formula Yield Improvement">BIB Formula Yield Improvement</a></li>		          
-			<li><a href="http://spprod/pw/2011/Bid Process improvement">Bid Process improvement</a></li>		          
-			<li><a href="http://spprod/pw/2011/Bid Quote SFDC Full Integration">Bid Quote SFDC Full Integration</a></li>		          
-			<li><a href="http://spprod/pw/2011/Bioneutral Walk-in">Bioneutral Walk-in</a></li>		          
-			<li><a href="http://spprod/pw/2011/Capacity">Capacity</a></li>		          
-			<li><a href="http://spprod/pw/2011/Carrier Negotiations">Carrier Negotiations</a></li>		          
-			<li><a href="http://spprod/pw/2011/CE1 line productivity improvement">CE1 line productivity improvement</a></li>		          
-			<li><a href="http://spprod/pw/2011/Change Management Consulting">Change Management Consulting</a></li>		          
-			<li><a href="http://spprod/pw/2011/CHG 2 and 4 Soap Project">CHG 2 and 4 Soap Project</a></li>		          
-			<li><a href="http://spprod/pw/2011/CnS Cycle Time Reduction">CnS Cycle Time Reduction</a></li>		          
-			<li><a href="http://spprod/pw/2011/Collaborative Workspaces Training">Collaborative Workspaces Training</a></li>		          
-			<li><a href="http://spprod/pw/2011/Community Hand Soap Contamination Research">Community Hand Soap Contamination Research</a></li>		          
-			<li><a href="http://spprod/pw/2011/Consumer Advanced Formulation Products">Consumer Advanced Formulation Products</a></li>		          
-			<li><a href="http://spprod/pw/2011/Consumer SAVVY SELLER Website">Consumer SAVVY SELLER Website</a></li>		          
-			<li><a href="http://spprod/pw/2011/Controlling Residue Build-up of Soap on Foamer Production Lines">Controlling Residue Build-up of Soap on Foamer Production Lines</a></li>		          
-			<li><a href="http://spprod/pw/2011/Customer Maintenance Process Improvement">Customer Maintenance Process Improvement</a></li>		          
-			<li><a href="http://spprod/pw/2011/CX Refill Efficiency">CX Refill Efficiency</a></li>	
-			<li><a href="http://spprod/pw/2011/Development Lab Test Management Optimization">Development Lab Test Management Optimization</a></li>
-			<li><a href="http://spprod/pw/2011/Development Laboratories Portfolio Eval">Development Laboratories Portfolio Eval</a></li>	                 
-		</ul>
-		</div><!--/.well -->
-	</div><!--/span-->
-    
-
     <div class="span7">
         <div class="hero-unit">
             <div class="row-fluid">
                 <div class="span12">
                     <h1 class="homepage">MyGOJO</h1>
                     <p>This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-                    <p><a id="demo" class="btn btn-primary">Learn more &raquo;</a></p>    
+                    <p><a id="demo" class="btn btn-primary">Learn more &raquo;</a></p>
+                    <p class="normal">Diagnostic: <strong>@ViewBag.Message</strong></p>    
                 </div>
             </div>
         </div>   
@@ -80,7 +31,7 @@
             <div class="span6">
                 <h2>Heading</h2>
                 <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-                <p><img alt="" src="~/Content/Images/git-logo-120x80.png"></p>
+                <p><img alt="" src="~/Content/Images/Data.jpg"></p>
             </div><!--/span-->
         </div>
             
@@ -150,6 +101,13 @@
             </section>
         </div>     
     </div>
+    
+    <div class="span2">
+		<div class="well sidebar-nav">
+            @Html.Partial("_FakeWorkspacesList")
+            @*@Html.Partial("_MyWorkspaces")*@
+		</div><!--/.well -->
+	</div><!--/span-->
 </div>  <!--/row-->
 
 

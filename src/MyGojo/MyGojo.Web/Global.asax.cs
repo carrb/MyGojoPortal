@@ -6,7 +6,8 @@ using System.Web.Mvc;
 using Autofac;
 using Autofac.Core;
 using Autofac.Integration.Mvc;
-
+using DreamSongs.MongoRepository;
+using MyGojo.Data.Mongo.Model;
 using MyGojo.Web.Infrastructure.AutoMapper;
 using MyGojo.Web.Infrastructure.Bundles;
 using MyGojo.Web.Infrastructure.Filters;
@@ -58,6 +59,8 @@ namespace MyGojo.Web
         protected void InitializeContainer()
         {
             var builder = new ContainerBuilder();
+
+            builder.RegisterType<MongoRepository<UserInfo>>().As<MongoRepository<UserInfo>>().InstancePerHttpRequest();
 
             //builder.Register(c => new MyGojoContextInitializer()).As<IDatabaseInitializer<MyGojoContext>>();
 
