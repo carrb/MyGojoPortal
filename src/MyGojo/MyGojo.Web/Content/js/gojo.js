@@ -3,18 +3,19 @@
 
 MyGojo = Ember.Application.create();
 
-MyGojo.SiteLink = Ember.Object.extend({
+MyGojo.SiteInfo = Ember.Object.extend({
     id: null,
     title: null,
     url: null,
     position: null,
-    siteLinkChanged: function () {
+    SiteInfoChanged: function () {
         // do something
     }
 });
 
 
-MyGojo.SiteLinkStore = (function() {
+MyGojo.SiteInfoStore = (function () {
+    
     // generate 4 random hex digits
     var S4 = function() {
         return (((1 + Math.random()) * 0x10000) | 0).toString(16).substring(1);
@@ -25,8 +26,8 @@ MyGojo.SiteLinkStore = (function() {
         return (S4() + S4() + "-" + S4() + "-" + S4() + "-" + S4() + "-" + S4() + S4() + S4());
     };
 
-    // the SiteLinksStore is represented by a single JavaScript object in *localStorage*. Created with meaningful name.
-    // for older browsers? user amplify.js -- See: http://amplifyjs.com/api/store/
+    // the SiteInfosStore is represented by a single JavaScript object in *localStorage*. Created with meaningful name.
+    // for older browsers? use amplify.js -- See: http://amplifyjs.com/api/store/
     var Store = function(name) {
         this.name = name;
         var store = localStorage.getItem(this.name);
@@ -53,7 +54,7 @@ MyGojo.SiteLinkStore = (function() {
 
         // Retrieve a model from `this.data` by id.
         this.find = function(model) {
-            return MyGojo.SiteLink.create(this.data[model.get('id')]);
+            return MyGojo.SiteInfo.create(this.data[model.get('id')]);
         };
 
         // Return the array of all models currently in storage.
@@ -61,8 +62,8 @@ MyGojo.SiteLinkStore = (function() {
             var result = [];
             
             for (var key in this.data) {
-                var siteLink = MyGojo.SiteLink.create(this.data[key]);
-                result.push(siteLink);
+                var SiteInfo = MyGojo.SiteInfo.create(this.data[key]);
+                result.push(SiteInfo);
             }
 
             return result;
@@ -77,16 +78,16 @@ MyGojo.SiteLinkStore = (function() {
 
     };
     
-    return new Store('sitelinks-emberjs');
+    return new Store('SiteInfos-emberjs');
 
 })();
 
 
 (function() {
-    var items = MyGojo.SiteLinkStore.findAll();
+    var items = MyGojo.SiteInfoStore.findAll();
 
     if (items.length > 1) {
-        // MyGojo.siteLinksController.set('[]', items);
+        // MyGojo.SiteInfosController.set('[]', items);
     }
 })();
 

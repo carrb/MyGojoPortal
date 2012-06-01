@@ -23,7 +23,6 @@ jQuery(function($) {
 
 // jQuery document ready event - occurs after ...
 $(document).ready(function () {
-    //  gojo().init();
     
     $('#demo').click(function () {
         // Possible theme values:  (default, warning, danger, info, success)

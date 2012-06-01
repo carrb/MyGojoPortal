@@ -33,7 +33,7 @@ namespace MyGojo.Web.Controllers
         public ActionResult Index()
         {
             ViewBag.Message = "";
-            var currentUserAdLogin = User.Identity.Name;
+            var currentUserAdLogin = "GOJO-NET\\carrb";//User.Identity.Name;
 
             try
             {
@@ -44,9 +44,9 @@ namespace MyGojo.Web.Controllers
                     return View(new[] {new SiteInfo {Title = "No Workspace Membership", Url = "#"}});
                 }
 
-                logger.Info(foundUser);
+                logger.Info(foundUser.AdLogin);
 
-                return View(foundUser.Sites);    
+                return View(foundUser.Sites.OrderBy(s => s.Title));    
             }
             catch (Exception ex)
             {
