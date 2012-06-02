@@ -344,6 +344,7 @@
     <Content Include="Views\Home\Terms.cshtml" />
     <None Include="Content\less\overrides.less" />
     <Content Include="Views\Home\_FakeWorkspacesList.cshtml" />
+    <Content Include="Views\Home\_MyWorkspacesEmber.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Gojo.Core\Gojo.Core.csproj">

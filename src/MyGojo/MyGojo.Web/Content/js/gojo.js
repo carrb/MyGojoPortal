@@ -7,9 +7,27 @@ MyGojo.SiteInfo = Ember.Object.extend({
     id: null,
     title: null,
     url: null,
-    position: null,
+    priority: 1,
+    isVisible: true,
+    isEditable: true,
+    
     SiteInfoChanged: function () {
         // do something
+    }
+});
+
+MyGojo.SiteInfoController = Ember.ArrayProxy.create({
+    content: [],
+    
+    pushObject: function (item, ignoreStorage) {
+        if (!ignoreStorage)
+            MyGojo.SiteInfoStore.create(item);
+        return this._super(item);
+    },
+    
+    removeObject: function (item) {
+        MyGojo.SiteInfoStore.remote(item);
+        return this._super(item);
     }
 });
 
@@ -78,18 +96,12 @@ MyGojo.SiteInfoStore = (function () {
 
     };
     
-    return new Store('SiteInfos-emberjs');
+    return new Store('SiteInfo-emberjs');
 
 })();
 
 
-(function() {
-    var items = MyGojo.SiteInfoStore.findAll();
 
-    if (items.length > 1) {
-        // MyGojo.SiteInfosController.set('[]', items);
-    }
-})();
 
 
 

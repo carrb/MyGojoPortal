@@ -16,8 +16,25 @@
 
 // jQuery ready event - occures after all code has been downloaded and evaluated and is ready to be initialized.
 // Application Composition Root - where application is initialized.
-jQuery(function($) {
+jQuery(function ($) {
+    
+    var TestOne = MyGojo.SiteInfo.create({
+        title: "Test One",
+        url: "http://www.apple.com"
+    });
 
+    console.log(TestOne);
+
+    //MyGojo.SiteInfoStore.create(TestOne);
+    
+
+    (function () {
+        var items = MyGojo.SiteInfoStore.findAll();
+
+        if (items.length > 1) {
+            MyGojo.SiteInfoController.set('[]', items);
+        }
+    })();
 });
 
 
@@ -26,7 +43,7 @@ $(document).ready(function () {
     
     $('#demo').click(function () {
         // Possible theme values:  (default, warning, danger, info, success)
-        $.jGrowl("There should be a lot more information here to allow learning more information about more information regarding the application and using jGrowl for notifications.", {
+        $.jGrowl("There should be a lot more information here to allow learning the application and using jGrowl for notifications.", {
             theme: "warning"
         });
     });
