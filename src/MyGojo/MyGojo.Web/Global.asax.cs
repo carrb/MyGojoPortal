@@ -22,6 +22,7 @@ namespace MyGojo.Web
     public class MvcApplication : HttpApplication
     {
         private static readonly Logger logger = LogManager.GetCurrentClassLogger();
+
         public static IContainer Container { get; set; }
 
 
@@ -38,10 +39,6 @@ namespace MyGojo.Web
             ViewGenerationConfiguration.Configure();
             AutoMapperConfiguration.Configure();
             BundlesConfiguration.Configure();
-
-            // Use LocalDB for Entity Framework by default
-            // See Web.config for this information!!!!
-            //Database.DefaultConnectionFactory = new SqlConnectionFactory("Data Source=(localdb)\v11.0; Integrated Security=True; MultipleActiveResultSets=True");
         }
 
         protected void Application_Stop()
@@ -55,12 +52,12 @@ namespace MyGojo.Web
             logger.Error(Server.GetLastError());
         }
 
-
         protected void InitializeContainer()
         {
             var builder = new ContainerBuilder();
 
             builder.RegisterType<MongoRepository<UserInfo>>().As<MongoRepository<UserInfo>>().InstancePerHttpRequest();
+            builder.RegisterType<MongoRepository<SiteInfo>>().As<MongoRepository<SiteInfo>>().InstancePerHttpRequest();
 
             //builder.Register(c => new MyGojoContextInitializer()).As<IDatabaseInitializer<MyGojoContext>>();
 

@@ -1,5 +1,4 @@
 <!doctype html>
-<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
 <!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
 <!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
@@ -7,20 +6,21 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
     <meta charset="utf-8" />
-    <title>@ViewBag.Title - My ASP.NET MVC Application</title>
+    <title>@ViewBag.Title</title>
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <!-- Mobile viewport optimized: h5bp.com/viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
     <meta name="description" content="">
     <meta name="author" content="">
     <meta http-equiv="cleartype" content="on">
-    <!--
+
+    <!--  Old MVC Beta way -- See MVC 4 RC
         <link href="@System.Web.Optimization.BundleTable.Bundles.ResolveBundleUrl("~/Content/css")" rel="stylesheet" type="text/css" />
         <link href="@System.Web.Optimization.BundleTable.Bundles.ResolveBundleUrl("~/Content/themes/base/css")" rel="stylesheet" type="text/css" />
         <script src="@System.Web.Optimization.BundleTable.Bundles.ResolveBundleUrl("~/Scripts/js")"></script>
     -->
     <link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato|Cantarell&v2" />
-    <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" />
+    <link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" />
     <link type="text/css" rel="stylesheet" href="~/Content/CSS/bootstrap.css">
     
     <style>body{padding-top:60px;padding-bottom:40px;}.sidebar-nav{padding:9px 0;}h1.homepage { font: 800 64px/64px "open sans";margin: 0 0 32px 0;}</style>
@@ -54,8 +54,8 @@
 </head>
 <body>
     <!--[if lt IE 7]>
-    <link href="~/Content/CSS/bootstrap.ie6.css" rel="stylesheet">
-  	<p class="chromeframe">Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p>
+        <link href="~/Content/CSS/bootstrap.ie6.css" rel="stylesheet" />
+  	    <p class="chromeframe">Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p>
     <![endif]-->
 
     <div class="navbar navbar-fixed-top">
@@ -78,20 +78,12 @@
     <div class="container-fluid">
 		@RenderBody() 
 	</div><!--/.fluid-container-->
-    
-    
-
+  
 
     @*<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 	<script>window.jQuery || document.write('<script src="~/Scripts/jquery-1.7.2.min.js"><\/script>')</script>*@
-    
-    
-
-
+   
     <script type="text/javascript" src="~/Scripts/jquery-1.7.2.min.js"></script>
-    
-    
-
     <script type="text/javascript" src="~/Scripts/jquery-ui-1.8.20.custom.min.js"></script>
     <script type="text/javascript" src="~/Scripts/jquery.jgrowl.min.js"></script>
 
@@ -119,9 +111,7 @@
 
     <!--script type="text/javascript" src=""></script-->
     <script type="text/javascript"> $(".chzn-select").chosen(); $(".chzn-select-deselect").chosen({ allow_single_deselect: true }); </script>
-	
 	<!-- end scripts -->
-    
    
     <!-- A little ie7- magic -->
     <script type="text/javascript"> $(function () { if ($.browser.msie && parseInt($.browser.version, 10) === 6) { $('.row div[class^="span"]:last-child').addClass("last-child"); $('[class="span"]').addClass("margin-left-20"); $(':button[class="btn"], :reset[class="btn"], :submit[class="btn"], input[type="button"]').addClass("button-reset"); $(":checkbox").addClass("input-checkbox"); $('[class^="icon-"], [class=" icon-"]').addClass("icon-sprite"); $(".pagination li:first-child a").addClass("pagination-first-child") } }) </script>
