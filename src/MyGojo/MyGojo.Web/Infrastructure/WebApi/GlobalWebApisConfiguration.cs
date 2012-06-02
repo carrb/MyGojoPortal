@@ -22,7 +22,8 @@ namespace MyGojo.Web.Infrastructure.WebApi
             JsonSerializerSettings serializerSettings = new JsonSerializerSettings();
             serializerSettings.Converters.Add(new IsoDateTimeConverter());
 
-            configuration.Formatters.Insert(0, new JsonNetFormatter(serializerSettings));
+            // ----  This line was used no longer needed in MVC 4 RC?
+            // configuration.Formatters.Insert(0, new JsonNetFormatter(serializerSettings));
 
             // No removal of built-in to handle JsonValue, JsonObject, and JsonArray as intended
             // Custom formatter simply takes precedence since they process in sequence.

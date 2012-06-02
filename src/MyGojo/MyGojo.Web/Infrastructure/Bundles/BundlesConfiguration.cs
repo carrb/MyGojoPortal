@@ -6,8 +6,7 @@ namespace MyGojo.Web.Infrastructure.Bundles
     {
         public static void Configure()
         {
-            // Can Create Custom:  http://codebetter.com/johnpetersen/2012/03/06/asp-net-mvc-4-beta-bundling-and-minification-dymystified/
-            BundleTable.Bundles.RegisterTemplateBundles();
+            // See new in MVC 4 RC as this may not be needed?
         }
     }
 }

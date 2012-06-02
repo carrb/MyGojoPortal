@@ -3,11 +3,46 @@
 <script type="text/x-handlebars">
     
     {{#view id="siteinfo-links-area"}}
+        {{view Bootstrap.NavList
+             contentBinding="MyGojo.SiteInfoController.content"
+             selectionBinding="MyGojo.SiteInfoController.selection"}}
+
+    {{/view}}
+
+    @*
+    
+    Bootstrap-ember.js
+    
+     <section>
+            <h2>Nav List</h2>
+            <pre class="prettyprint linenums">
+Bootstrap.NavList.create({
+  content: ["A", "B", "C"],
+  selectionBinding: "App.navListController.selection"
+}).append(); </pre>
+            <h4>Sample</h4>
+            <script type="text/x-handlebars">
+              <div class="well" style="padding:12px 0;">
+                {{view Bootstrap.NavList
+                    contentBinding="SampleApp.navListController.content"
+                    selectionBinding="SampleApp.navListController.selection"}}
+              </div>
+            </script>
+
+          <section>
+    
+    
+    
+    
+    
+
+    {{#view id="siteinfo-links-area"}}
         {{#collection id="siteinfo-list" contentBinding="MyGojo.SiteInfoController" tagName="ul" itemClassBinding="nav nav-list"}}
             {{view Ember.Checkbox titleBinding="content.title" valueBinding="content.priority"}}
         {{/collection}}
     {{/view}}
-    
+    *@
+
 
 </script>
 @*

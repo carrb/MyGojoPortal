@@ -15,6 +15,7 @@ namespace MyGojo.Web.Infrastructure.WebApi
     // See:  http://www.west-wind.com/weblog/posts/2012/Mar/09/Using-an-alternate-JSON-Serializer-in-ASPNET-Web-API
     // Better:   http://blogs.msdn.com/b/henrikn/archive/2012/02/18/using-json-net-with-asp-net-web-api.aspx
     //
+    /*  NO LONGER NEEDED!
     public class JsonNetFormatter : MediaTypeFormatter
     {
         private JsonSerializerSettings _jsonSerializerSettings;
@@ -115,8 +116,9 @@ namespace MyGojo.Web.Infrastructure.WebApi
             return task;
         }
 
-        */
+      
         
         #endregion
     }
+      */
 }
