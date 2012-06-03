@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using DreamSongs.MongoRepository;
 using MyGojo.Data.Mongo.Model;
@@ -33,6 +31,7 @@ namespace MyGojo.Web.Controllers
         public ActionResult Index()
         {
             ViewBag.Message = "";
+
             var currentUserAdLogin = "GOJO-NET\\carrb";//User.Identity.Name;
 
             try
@@ -41,10 +40,9 @@ namespace MyGojo.Web.Controllers
 
                 if (foundUser.Sites == null || foundUser.Sites.Count == 0)
                 {
+                    ViewBag.Message = currentUserAdLogin + " has no matching AdLogin record in Users table of DB";
                     return View(new[] {new SiteInfo {Title = "No Workspace Membership", Url = "#"}});
                 }
-
-                logger.Info(foundUser.AdLogin);
 
                 return View(foundUser.Sites.OrderBy(s => s.Title));    
             }

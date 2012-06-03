@@ -213,7 +213,7 @@
   _.invoke = function(obj, method) {
     var args = slice.call(arguments, 2);
     return _.map(obj, function(value) {
-      return (_.isFunction(method) ? method || value : value[method]).apply(value, args);
+      return (_.isFunction(method) ? method : value[method]).apply(value, args);
     });
   };
 
@@ -359,18 +359,21 @@
     return _.filter(array, function(value){ return !!value; });
   };
 
+  // Internal implementation of a recursive `flatten` function.
+  var flatten = function(input, shallow, output) {
+    each(input, function(value) {
+      if (_.isArray(value)) {
+        shallow ? push.apply(output, value) : flatten(value, shallow, output);
+      } else {
+        output.push(value);
+      }
+    });
+    return output;
+  };
+
   // Return a completely flattened version of an array.
   _.flatten = function(array, shallow) {
-    return (function flatten(input, output) {
-      each(input, function(value) {
-        if (_.isArray(value)) {
-          shallow ? push.apply(output, value) : flatten(value, output);
-        } else {
-          output.push(value);
-        }
-      });
-      return output;
-    })(array, []);
+    return flatten(array, shallow, []);
   };
 
   // Return a version of the array that does not contain the specified value(s).
@@ -384,10 +387,8 @@
   _.uniq = _.unique = function(array, isSorted, iterator) {
     var initial = iterator ? _.map(array, iterator) : array;
     var results = [];
-    // The `isSorted` flag is irrelevant if the array only contains two elements.
-    if (array.length < 3) isSorted = true;
     _.reduce(initial, function(memo, value, index) {
-      if (isSorted ? _.last(memo) !== value || !memo.length : !_.include(memo, value)) {
+      if (isSorted ? (_.last(memo) !== value || !memo.length) : !_.include(memo, value)) {
         memo.push(value);
         results.push(array[index]);
       }
@@ -399,7 +400,7 @@
   // Produce an array that contains the union: each distinct element from all of
   // the passed-in arrays.
   _.union = function() {
-    return _.uniq(_.flatten(arguments, true));
+    return _.uniq(flatten(arguments, true, []));
   };
 
   // Produce an array that contains every item shared between all the
@@ -416,7 +417,7 @@
   // Take the difference between one array and a number of other arrays.
   // Only the elements present in just the first array will remain.
   _.difference = function(array) {
-    var rest = _.flatten(slice.call(arguments, 1), true);
+    var rest = flatten(slice.call(arguments, 1), true, []);
     return _.filter(array, function(value){ return !_.include(rest, value); });
   };
 
@@ -426,8 +427,20 @@
     var args = slice.call(arguments);
     var length = _.max(_.pluck(args, 'length'));
     var results = new Array(length);
-    for (var i = 0; i < length; i++) results[i] = _.pluck(args, "" + i);
+    for (var i = 0; i < length; i++) {
+      results[i] = _.pluck(args, "" + i);
+    }
     return results;
+  };
+
+  // Zip together two arrays -- an array of keys and an array of values -- into
+  // a single object.
+  _.zipObject = function(keys, values) {
+    var result = {};
+    for (var i = 0, l = keys.length; i < l; i++) {
+      result[keys[i]] = values[i];
+    }
+    return result;
   };
 
   // If the browser doesn't supply us with indexOf (I'm looking at you, **MSIE**),
@@ -617,7 +630,9 @@
   _.after = function(times, func) {
     if (times <= 0) return func();
     return function() {
-      if (--times < 1) { return func.apply(this, arguments); }
+      if (--times < 1) {
+        return func.apply(this, arguments);
+      }
     };
   };
 
@@ -661,7 +676,7 @@
   // Return a copy of the object only containing the whitelisted properties.
   _.pick = function(obj) {
     var result = {};
-    each(_.flatten(slice.call(arguments, 1)), function(key) {
+    each(flatten(slice.call(arguments, 1), true, []), function(key) {
       if (key in obj) result[key] = obj[key];
     });
     return result;
