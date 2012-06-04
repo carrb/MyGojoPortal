@@ -1,22 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Linq;
-using System.Reflection;
+﻿using System.Reflection;
 using System.Web;
-using System.Web.Http;
 using System.Web.Mvc;
-using System.Web.Optimization;
-using System.Web.Routing;
 
 using Autofac;
 using Autofac.Integration.Mvc;
-using DreamSongs.MongoRepository;
+
 using MyGojo.Web.Infrastructure.Bundles;
 using MyGojo.Web.Infrastructure.Filters;
 using MyGojo.Web.Infrastructure.Routing;
 using MyGojo.Web.Infrastructure.ViewGeneration;
 using MyGojo.Web.Infrastructure.WebApi;
+
+using Utility.Logging.NLog.Autofac;
 
 
 namespace MyGojo.Web
@@ -52,6 +47,10 @@ namespace MyGojo.Web
         protected void BootstrapContainer()
         {
             var builder = new ContainerBuilder();
+
+            builder.RegisterModule<NLogLoggerAutofacModule>();
+
+
 
             //builder.RegisterType<MongoRepository<UserInfo>>().As<MongoRepository<UserInfo>>().InstancePerHttpRequest();
             //builder.RegisterType<MongoRepository<SiteInfo>>().As<MongoRepository<SiteInfo>>().InstancePerHttpRequest();

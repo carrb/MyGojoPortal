@@ -39,10 +39,28 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Autofac">
+      <HintPath>..\packages\Autofac.2.6.1.841\lib\NET40\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Configuration">
+      <HintPath>..\packages\Autofac.2.6.1.841\lib\NET40\Autofac.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Integration.Mvc">
+      <HintPath>..\packages\Autofac.Mvc4.2.6.1.841\lib\NET40\Autofac.Integration.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="dotless.Core">
       <HintPath>..\packages\dotless.1.3.0.3\lib\dotless.Core.dll</HintPath>
     </Reference>
+    <Reference Include="DreamSongs.MongoRepository">
+      <HintPath>..\packages\MongoRepository.1.3.1\lib\DreamSongs.MongoRepository.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MongoDB.Bson">
+      <HintPath>..\packages\mongocsharpdriver.1.4.2\lib\net35\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver">
+      <HintPath>..\packages\mongocsharpdriver.1.4.2\lib\net35\MongoDB.Driver.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Newtonsoft.Json.4.5.6\lib\net40\Newtonsoft.Json.dll</HintPath>
@@ -118,6 +136,15 @@
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20505.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
+    <Reference Include="Utility.Logging">
+      <HintPath>..\packages\Utility.Logging.1.4.2.0\lib\net40\Utility.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Utility.Logging.NLog">
+      <HintPath>..\packages\Utility.Logging.NLog.1.4.2.0\lib\net40\Utility.Logging.NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="Utility.Logging.NLog.Autofac">
+      <HintPath>..\packages\Utility.Logging.NLog.Autofac.1.4.2.0\lib\net40\Utility.Logging.NLog.Autofac.dll</HintPath>
+    </Reference>
     <Reference Include="WebGrease">
       <Private>True</Private>
       <HintPath>..\packages\WebGrease.1.0.0\lib\WebGrease.dll</HintPath>
@@ -128,13 +155,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="App_Start\FilterConfig.cs" />
-    <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Infrastructure\Attributes\AjaxOnlyAttribute.cs" />
+    <Compile Include="Infrastructure\Bundles\Bundles.cs" />
+    <Compile Include="Infrastructure\Filters\ConditionalFilterProvider.cs" />
+    <Compile Include="Infrastructure\Filters\Filters.cs" />
+    <Compile Include="Infrastructure\Filters\RequestTimingFilter.cs" />
+    <Compile Include="Infrastructure\Results\PermanentRedirectResult.cs" />
+    <Compile Include="Infrastructure\Results\XmlResult.cs" />
+    <Compile Include="Infrastructure\Routing\Routing.cs" />
+    <Compile Include="Infrastructure\ViewGeneration\ViewGeneration.cs" />
+    <Compile Include="Infrastructure\WebApi\WebAPI.cs" />
+    <Compile Include="Infrastructure\WebApi\JsonNetFormatter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -197,6 +232,8 @@
     <None Include="Scripts\jquery-1.7.2.intellisense.js">
       <DependentUpon>jquery-1.7.2.js</DependentUpon>
     </None>
+    <Content Include="Scripts\backbone-min.js" />
+    <Content Include="Scripts\backbone.js" />
     <Content Include="Scripts\jquery-1.7.2.js" />
     <Content Include="Scripts\jquery-1.7.2.min.js">
       <DependentUpon>jquery-1.7.2.js</DependentUpon>
@@ -219,6 +256,8 @@
       <DependentUpon>jquery.validate.unobtrusive.js</DependentUpon>
     </Content>
     <Content Include="Scripts\modernizr-2.5.3.js" />
+    <Content Include="Scripts\underscore-min.js" />
+    <Content Include="Scripts\underscore.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -259,7 +298,18 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="App_Start\" />
     <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Gojo.Core\Gojo.Core.csproj">
+      <Project>{71610806-03da-493b-8265-6a2aff24dc87}</Project>
+      <Name>Gojo.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyGojo.Data\MyGojo.Data.csproj">
+      <Project>{ffda7479-5b64-42e1-9bfb-070ba674ceb6}</Project>
+      <Name>MyGojo.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

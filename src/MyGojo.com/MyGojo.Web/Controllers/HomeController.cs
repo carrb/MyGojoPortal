@@ -1,16 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
+using Utility.Logging;
 
 namespace MyGojo.Web.Controllers
 {
     public class HomeController : Controller
     {
+        public HomeController(ILogger logger)
+        {
+            logger.Info("HomeController created...this logger was injected!");
+        }
+
         public ActionResult Index()
         {
-            ViewBag.Message = "Modify this template to kick-start your ASP.NET MVC application.";
+            ViewBag.Message = "";
 
             return View();
         }

@@ -9,12 +9,20 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyGojo.Data.Tests", "MyGojo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gojo.Core", "Gojo.Core\Gojo.Core.csproj", "{71610806-03DA-493B-8265-6A2AFF24DC87}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyGojo.Web", "MyGojo.Web\MyGojo.Web.csproj", "{B8D33138-5A57-49C0-8110-9477CA0EDA08}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyGojo.Web.Tests", "MyGojo.Web.Tests\MyGojo.Web.Tests.csproj", "{4C3EB220-63FC-437F-AE65-92AD0AF7AE9C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4C3EB220-63FC-437F-AE65-92AD0AF7AE9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C3EB220-63FC-437F-AE65-92AD0AF7AE9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C3EB220-63FC-437F-AE65-92AD0AF7AE9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C3EB220-63FC-437F-AE65-92AD0AF7AE9C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{71610806-03DA-493B-8265-6A2AFF24DC87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{71610806-03DA-493B-8265-6A2AFF24DC87}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{71610806-03DA-493B-8265-6A2AFF24DC87}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -23,6 +31,10 @@ Global
 		{B590A732-C11C-446E-AACF-08EB94A7378D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B590A732-C11C-446E-AACF-08EB94A7378D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B590A732-C11C-446E-AACF-08EB94A7378D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8D33138-5A57-49C0-8110-9477CA0EDA08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8D33138-5A57-49C0-8110-9477CA0EDA08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8D33138-5A57-49C0-8110-9477CA0EDA08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8D33138-5A57-49C0-8110-9477CA0EDA08}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FFDA7479-5B64-42E1-9BFB-070BA674CEB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FFDA7479-5B64-42E1-9BFB-070BA674CEB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FFDA7479-5B64-42E1-9BFB-070BA674CEB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
