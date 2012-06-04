@@ -1,4 +1,5 @@
 ﻿using System.Web.Optimization;
+using MyGojo.Web.Infrastructure.Optimization;
 
 namespace MyGojo.Web.Infrastructure.Bundles
 {
@@ -7,6 +8,14 @@ namespace MyGojo.Web.Infrastructure.Bundles
         public static void ConfigureAndRegister()
         {
             BundleCollection bundles = BundleTable.Bundles;
+
+            //var lessBundle = new Bundle("~/Content/less").IncludeDirectory("~/Content/less", "*.less");
+            //
+            //lessBundle.Transforms.Add(new LessTransform());
+            //lessBundle.Transforms.Add(new CssMinify());
+            //bundles.Add(lessBundle);
+
+
 
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                        "~/Scripts/jquery-1.*"));
@@ -21,7 +30,11 @@ namespace MyGojo.Web.Infrastructure.Bundles
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"));
 
-            bundles.Add(new StyleBundle("~/Content/css").Include("~/Content/site.css"));
+            bundles.Add(new StyleBundle("~/Content/css").Include(
+                        "~/Content/site.css",
+                        "~/Content/CSS/bootstrap.css",
+                        "~/Content/CSS/bootstrap-responsive.css",
+                        "~/Content/CSS/custom.css"));
 
             bundles.Add(new StyleBundle("~/Content/themes/base/css").Include(
                         "~/Content/themes/base/jquery.ui.core.css",
@@ -36,6 +49,12 @@ namespace MyGojo.Web.Infrastructure.Bundles
                         "~/Content/themes/base/jquery.ui.datepicker.css",
                         "~/Content/themes/base/jquery.ui.progressbar.css",
                         "~/Content/themes/base/jquery.ui.theme.css"));
+
+            bundles.Add(new ScriptBundle("~/bundles/extra").Include(
+                "~/Scripts/underscore-min.js",
+                "~/Scripts/backbone-min.js",
+                "~/Scripts/plugins.js"));
+
         }
     }
 }

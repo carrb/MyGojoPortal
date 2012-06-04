@@ -1,40 +1,110 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+	ViewBag.Title = "Home Page";
 }
-@section featured {
-    <section class="featured">
-        <div class="content-wrapper">
-            <hgroup class="title">
-                <h1>@ViewBag.Title.</h1>
-                <h2>@ViewBag.Message</h2>
-            </hgroup>
-            <p>
-                To learn more about ASP.NET MVC visit <a href="http://asp.net/mvc" title="ASP.NET MVC Website">
-                    http://asp.net/mvc</a>. The page features <mark>videos, tutorials,
-                        and samples</mark> to help you get the most from ASP.NET MVC. If you have
-                any questions about ASP.NET MVC visit <a href="http://forums.asp.net/1146.aspx/1?MVC"
-                    title="ASP.NET MVC Forum">our forums</a>.
-            </p>
+
+<div class="row-fluid">
+    <div class="span7">
+        <div class="hero-unit">
+            <div class="row-fluid">
+                <div class="span12">
+                    <h1 class="homepage">MyGOJO</h1>
+                    <p>This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+                    <p><a id="demo" class="btn btn-primary">Learn more &raquo;</a></p>
+                    <p class="normal">Diagnostic: <strong>@ViewBag.Message</strong></p>    
+                </div>
+            </div>
+        </div>   
+        <div class="row-fluid">
+            <div class="span6">
+                <div class="alert alert-success">
+                    <p><strong>Li Europan lingues es membres del sam familie</strong>. Lor separat existentie es un myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica, li pronunciation e li plu commun vocabules. Omnicos directe al desirabilite de un nov lingua franca: On refusa continuar payar custosi traductores. </p>
+                    <div class="alert-actions">
+                        <a href="#" class="btn small">Projects</a>
+                        <a href="#" class="btn small">Teams</a>
+                        <a href="#" class="btn small">File Libraries</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="span6">
+                <div class="alert alert-info">
+                    <h3>Heading</h3>
+                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh. Por scientie, musica, sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica, li pronunciation e li plu commun vocabules. Omnicos directe al desirabilite de un nov lingua franca: On refusa continuar payar custosi traductores.</p>
+                </div>
+            </div><!--/span-->
         </div>
-    </section>
-}
-<h3>We suggest the following:</h3>
-<ol class="round">
-    <li class="one">
-        <h5>Getting Started</h5>
-        ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-        enables a clean separation of concerns and that gives you full control over markup
-        for enjoyable, agile development. ASP.NET MVC includes many features that enable
-        fast, TDD-friendly development for creating sophisticated applications that use
-        the latest web standards. <a href="http://go.microsoft.com/fwlink/?LinkId=245151">Learn
-            more</a></li>
-    <li class="two">
-        <h5>Add NuGet packages and jump start your coding</h5>
-        NuGet makes it easy to install and update free libraries and tools. <a href="http://go.microsoft.com/fwlink/?LinkId=245153">
-            Learn more</a></li>
-    <li class="three">
-        <h5>Find Web Hosting</h5>
-        You can easily find a web hosting company that offers the right mix of features
-        and price for your applications. <a href="http://go.microsoft.com/fwlink/?LinkId=245157">Learn
-            more</a></li>
-</ol>
+            
+        <div class="row-fluid">
+                @Html.Partial("_LinksDirectoryRevised")
+        </div>  <!--/row-->
+
+        
+    </div>
+    
+    <div class="span3">
+        <div class="hero-side">
+            <section>   
+                <h1>Company Announcements</h1>
+                <article class="entry summary">
+                    <h2><a href="#">Best Time To Change 401k</a></h2>
+                    <footer>
+                        <p><time pubdate="" datetime="2012-05-03T08:28:04+00:00">May 3 2012</time></p>    
+                    </footer>
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas.</p>
+                </article>
+                <article class="entry summary">
+                    <h2><a href="#">Sustainable Ways of Working</a></h2>
+                    <footer>
+                        <p><time pubdate="" datetime="2012-05-01T20:28:04+00:00">May 1 2012</time></p>    
+                    </footer>
+                    <p>Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica, li pronunciation e li plu commun vocabules.</p>
+                </article>
+                <article class="entry summary last">
+                    <h2><a href="#">Gerry's Place Update</a></h2>
+                    <footer>
+                        <p><time pubdate="" datetime="2012-03-17T20:11:04+00:00">Apr 17 2012</time></p>    
+                    </footer>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+                </article>
+            </section>
+            <section>
+                <h1>Bulletin Board</h1>
+                <article class="entry summary">
+                    <h2><a href="http://content.mygojo.com/ENews/ENewsGtv/index.asp">GTV News</a></h2>
+                    <footer>
+                        <p><time pubdate="" datetime="2012-05-01T20:11:04+00:00">May 01 2012</time></p>    
+                    </footer>
+                    <p>GTV broadcasts news about our business, our employees, our community and our world.</p>
+                </article>
+                <article class="entry summary">
+                    <h2><a href="http://content.mygojo.com/ENews/ENewsStakeholders/2012Holidays.pdf">Holiday Schedule 2012</a></h2>
+                    <footer>
+                        <p><time pubdate="" datetime="2012-05-01T20:11:04+00:00">Dec 01 2011</time></p>    
+                    </footer>
+                    <p>GOJO Industries official holidays for the year 2012.</p>
+                </article>
+                <article class="entry summary">
+                    <h2><a href="http://akr-webapps/Recognition/default.aspx">GOJO Recognition Program</a></h2>
+                    <footer>
+                        <p><time pubdate="" datetime="2012-05-01T20:11:04+00:00">Jan 01 2011</time></p>    
+                    </footer>
+                    <p>The GOJO Recognition Program recognizes people who do their best work to promote GOJO Purpose, Vision, and Values.</p>
+                </article>
+                <article class="entry summary">
+                    <h2><a href="http://content.mygojo.com/AboutGOJO/CorporateCalendar/CalendarIndex.htm">GOJO Enterprise Calendars</a></h2>
+                    <footer>
+                        <p><time pubdate="" datetime="2012-05-01T20:11:04+00:00">Oct 01 2010</time></p>    
+                    </footer>
+                    <p>The GOJO Enterprise Calendars for various Enterprise groups and regional offices.</p>
+                </article>
+            </section>
+        </div>     
+    </div>
+    
+    <div class="span2">
+		<div class="well sidebar-nav">
+           @Html.Partial("_FakeWorkspacesList")
+            @* @Html.Partial("_MyWorkspaces") *@
+		</div><!--/.well -->
+	</div><!--/span-->
+</div>  <!--/row-->

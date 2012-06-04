@@ -164,6 +164,7 @@
     <Compile Include="Infrastructure\Filters\ConditionalFilterProvider.cs" />
     <Compile Include="Infrastructure\Filters\Filters.cs" />
     <Compile Include="Infrastructure\Filters\RequestTimingFilter.cs" />
+    <Compile Include="Infrastructure\Optimization\LessTransform.cs" />
     <Compile Include="Infrastructure\Results\PermanentRedirectResult.cs" />
     <Compile Include="Infrastructure\Results\XmlResult.cs" />
     <Compile Include="Infrastructure\Routing\Routing.cs" />
@@ -173,6 +174,17 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\CSS\bootstrap-responsive.css" />
+    <Content Include="Content\CSS\bootstrap.css" />
+    <Content Include="Content\CSS\custom.css" />
+    <Content Include="Content\Images\GojoLogo-Header.png" />
+    <Content Include="Content\Images\GojoLogoThick-Small.png" />
+    <Content Include="Content\Images\Link-Icon-Excel.png" />
+    <Content Include="Content\Images\Link-Icon-External.png" />
+    <Content Include="Content\Images\Link-Icon-Mail.png" />
+    <Content Include="Content\Images\Link-Icon-Pdf.png" />
+    <Content Include="Content\Images\Link-Icon-Word.png" />
+    <Content Include="Content\Images\Link-Icon-Zip.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -227,13 +239,17 @@
     <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="crossdomain.xml" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <None Include="Scripts\jquery-1.7.2.intellisense.js">
       <DependentUpon>jquery-1.7.2.js</DependentUpon>
     </None>
+    <Content Include="humans.txt" />
+    <Content Include="robots.txt" />
     <Content Include="Scripts\backbone-min.js" />
     <Content Include="Scripts\backbone.js" />
+    <Content Include="Scripts\imgSizer.js" />
     <Content Include="Scripts\jquery-1.7.2.js" />
     <Content Include="Scripts\jquery-1.7.2.min.js">
       <DependentUpon>jquery-1.7.2.js</DependentUpon>
@@ -255,7 +271,10 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js">
       <DependentUpon>jquery.validate.unobtrusive.js</DependentUpon>
     </Content>
+    <Content Include="Scripts\json2.js" />
     <Content Include="Scripts\modernizr-2.5.3.js" />
+    <Content Include="Scripts\plugins.js" />
+    <Content Include="Scripts\selectivizr-min.js" />
     <Content Include="Scripts\underscore-min.js" />
     <Content Include="Scripts\underscore.js" />
     <Content Include="Web.config" />
@@ -265,7 +284,6 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Content\Site.css" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Images\accent.png" />
     <Content Include="Images\bullet.png" />
@@ -295,10 +313,17 @@
     <Content Include="Views\Web.config" />
     <Content Include="packages.config" />
     <None Include="readme.txt" />
+    <Content Include="Views\Shared\_QuickLinks.cshtml" />
+    <Content Include="Views\Shared\_Footer.cshtml" />
+    <Content Include="Views\Shared\_LinksDirectoryRevised.cshtml" />
+    <Content Include="Views\Home\_FakeWorkspacesList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="App_Start\" />
+    <Folder Include="Content\font\" />
+    <Folder Include="Content\js\" />
+    <Folder Include="Content\less\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
