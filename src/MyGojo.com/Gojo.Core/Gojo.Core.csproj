@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{71610806-03DA-493B-8265-6A2AFF24DC87}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Gojo.Core</RootNamespace>
+    <AssemblyName>Gojo.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CodeContracts\AssertionException.cs" />
+    <Compile Include="CodeContracts\Check.cs" />
+    <Compile Include="CodeContracts\DesignByContractException.cs" />
+    <Compile Include="CodeContracts\InvariantException.cs" />
+    <Compile Include="CodeContracts\PostconditionException.cs" />
+    <Compile Include="CodeContracts\PreconditionException.cs" />
+    <Compile Include="Data\Generators\CryptographicallyRandomIntegerGenerator.cs" />
+    <Compile Include="Data\Generators\EntityRandomIdGenerator.cs" />
+    <Compile Include="Data\Indexed.cs" />
+    <Compile Include="Data\MultiValueDictionary\ArgumentVerifier.cs" />
+    <Compile Include="Data\MultiValueDictionary\ExtensionMethods.cs" />
+    <Compile Include="Data\MultiValueDictionary\Grouping.cs" />
+    <Compile Include="Data\MultiValueDictionary\MultiValueDictionary.cs" />
+    <Compile Include="Data\Parsers\ArgParser.cs" />
+    <Compile Include="Data\Specification\ISpecification.cs" />
+    <Compile Include="Data\Specification\Specification.cs" />
+    <Compile Include="Data\Specification\SpecificationExtensions.cs" />
+    <Compile Include="Data\Specification\SpecificationRuleBase.cs" />
+    <Compile Include="Data\Tree\ComplexSubtree.cs" />
+    <Compile Include="Data\Tree\ComplexTree.cs" />
+    <Compile Include="Data\Tree\ComplexTreeNode.cs" />
+    <Compile Include="Data\Tree\ComplexTreeNodeList.cs" />
+    <Compile Include="Data\Tree\Enums.cs" />
+    <Compile Include="Data\Tree\SimpleSubtree.cs" />
+    <Compile Include="Data\Tree\SimpleTree.cs" />
+    <Compile Include="Data\Tree\SimpleTreeNode.cs" />
+    <Compile Include="Data\Tree\SimpleTreeNodeList.cs" />
+    <Compile Include="Data\Validation\DataAnnotationsValidator.cs" />
+    <Compile Include="Expressions\ExpressionVisitor.cs" />
+    <Compile Include="Expressions\MemberAccessPathVisitor.cs" />
+    <Compile Include="Expressions\MemberAccessPropertyInfoVisitor.cs" />
+    <Compile Include="Extensions\DateTimeExtensions.cs" />
+    <Compile Include="Extensions\DateTimeOffsetExtensions.cs" />
+    <Compile Include="Extensions\DictionaryExtensions.cs" />
+    <Compile Include="Extensions\EnumerableExtensions.cs" />
+    <Compile Include="Extensions\EnumExtensions.cs" />
+    <Compile Include="Extensions\ExtraDebugExtensions.cs" />
+    <Compile Include="Extensions\FunctionalExtensions.cs" />
+    <Compile Include="Extensions\LambdaExtensions.cs" />
+    <Compile Include="Extensions\LinqExtensions.cs" />
+    <Compile Include="Extensions\NotifyPropertyChangedBase.cs" />
+    <Compile Include="Extensions\QueryableExtensions.cs" />
+    <Compile Include="Extensions\SecurityExtensions.cs" />
+    <Compile Include="Extensions\SlugConvertor.cs" />
+    <Compile Include="Guard.cs" />
+    <Compile Include="IO\PathUtil.cs" />
+    <Compile Include="Logging\ILogger.cs" />
+    <Compile Include="Logging\LogUtility.cs" />
+    <Compile Include="Logging\TraceHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuickReflectionHelper.cs" />
+    <Compile Include="Security\Attributes\SensitiveInformationAttribute.cs" />
+    <Compile Include="Security\Authentication\Impersonation.cs" />
+    <Compile Include="Security\Authentication\ImpersonationErrorCodes.cs" />
+    <Compile Include="Storage\AppStorage.cs" />
+    <Compile Include="Storage\LocalStorage.cs" />
+    <Compile Include="Storage\SessionStorage.cs" />
+    <Compile Include="Storage\Store.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Data\Tree\SimpleTreeClassDiagram.cd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
