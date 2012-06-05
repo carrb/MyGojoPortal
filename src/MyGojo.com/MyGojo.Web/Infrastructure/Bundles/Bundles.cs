@@ -15,26 +15,12 @@ namespace MyGojo.Web.Infrastructure.Bundles
             //lessBundle.Transforms.Add(new CssMinify());
             //bundles.Add(lessBundle);
 
-
-
-            bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                       "~/Scripts/jquery-1.*"));
-
-            bundles.Add(new ScriptBundle("~/bundles/jqueryui").Include(
-                        "~/Scripts/jquery-ui*"));
-
-            bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
-                        "~/Scripts/jquery.unobtrusive*",
-                        "~/Scripts/jquery.validate*"));
-
-            bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
-                        "~/Scripts/modernizr-*"));
-
             bundles.Add(new StyleBundle("~/Content/css").Include(
                         "~/Content/site.css",
                         "~/Content/CSS/bootstrap.css",
                         "~/Content/CSS/bootstrap-responsive.css",
-                        "~/Content/CSS/custom.css"));
+                        "~/Content/CSS/custom.css",
+                        "~/Content/CSS/font-awesome.css"));
 
             bundles.Add(new StyleBundle("~/Content/themes/base/css").Include(
                         "~/Content/themes/base/jquery.ui.core.css",
@@ -49,6 +35,20 @@ namespace MyGojo.Web.Infrastructure.Bundles
                         "~/Content/themes/base/jquery.ui.datepicker.css",
                         "~/Content/themes/base/jquery.ui.progressbar.css",
                         "~/Content/themes/base/jquery.ui.theme.css"));
+
+
+            bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
+                       "~/Scripts/jquery-1.*"));
+
+            bundles.Add(new ScriptBundle("~/bundles/jqueryui").Include(
+                        "~/Scripts/jquery-ui*"));
+
+            bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
+                        "~/Scripts/jquery.unobtrusive*",
+                        "~/Scripts/jquery.validate*"));
+
+            bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
+                        "~/Scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/extra").Include(
                 "~/Scripts/underscore-min.js",

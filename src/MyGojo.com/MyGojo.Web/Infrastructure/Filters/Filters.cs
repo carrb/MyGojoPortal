@@ -4,6 +4,7 @@ using System.Web.Mvc;
 
 namespace MyGojo.Web.Infrastructure.Filters
 {
+    // See: http://blogs.msdn.com/b/rickandy/archive/2011/05/02/securing-your-asp-net-mvc-3-application.aspx
 	public class Filters
 	{
 		public static void ConfigureAndRegister()
@@ -29,6 +30,8 @@ namespace MyGojo.Web.Infrastructure.Filters
 
 
 			filters.Add(new HandleErrorAttribute());
+            filters.Add(new AuthorizeAttribute());
+
 		}
 
 
