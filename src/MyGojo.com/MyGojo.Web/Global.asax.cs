@@ -4,7 +4,9 @@ using System.Web.Mvc;
 
 using Autofac;
 using Autofac.Integration.Mvc;
-
+using DreamSongs.MongoRepository;
+using Gojo.Core.Logging;
+using MyGojo.Data.Model;
 using MyGojo.Web.Infrastructure.Bundles;
 using MyGojo.Web.Infrastructure.Filters;
 using MyGojo.Web.Infrastructure.Routing;
@@ -32,15 +34,15 @@ namespace MyGojo.Web
             Bundles.ConfigureAndRegister();
         }
 
-        protected void Application_Stop()
+        protected void Application_Stop(ILogger logger)
         {
-            //logger.Info("Application closing...");
-            //logger.Info("Terminated.");
+            logger.Info("Application closing...");
+            logger.Info("Terminated.");
         }
 
-        protected void Application_Error()
+        protected void Application_Error(ILogger logger)
         {
-            //logger.Error(Server.GetLastError());
+            logger.Error(Server.GetLastError());
         }
 
 
@@ -52,8 +54,8 @@ namespace MyGojo.Web
 
 
 
-            //builder.RegisterType<MongoRepository<UserInfo>>().As<MongoRepository<UserInfo>>().InstancePerHttpRequest();
-            //builder.RegisterType<MongoRepository<SiteInfo>>().As<MongoRepository<SiteInfo>>().InstancePerHttpRequest();
+            builder.RegisterType<MongoRepository<UserInfo>>().As<MongoRepository<UserInfo>>().InstancePerHttpRequest();
+            builder.RegisterType<MongoRepository<SiteInfo>>().As<MongoRepository<SiteInfo>>().InstancePerHttpRequest();
 
             builder.RegisterControllers(Assembly.GetExecutingAssembly());
             builder.RegisterModelBinders(Assembly.GetExecutingAssembly());

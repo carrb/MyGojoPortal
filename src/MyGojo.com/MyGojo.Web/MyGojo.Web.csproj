@@ -175,7 +175,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\CSS\bootstrap-responsive.css" />
+    <Content Include="Content\CSS\bootstrap-responsive.min.css" />
     <Content Include="Content\CSS\bootstrap.css" />
+    <Content Include="Content\CSS\bootstrap.min.css" />
     <Content Include="Content\CSS\custom.css" />
     <Content Include="Content\CSS\font-awesome.css" />
     <Content Include="Content\CSS\jquery.jgrowl.css" />
@@ -254,8 +256,15 @@
     </None>
     <Content Include="humans.txt" />
     <Content Include="robots.txt" />
+    <Content Include="Scripts\app.js" />
     <Content Include="Scripts\backbone-min.js" />
     <Content Include="Scripts\backbone.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js">
+      <DependentUpon>bootstrap.js</DependentUpon>
+    </Content>
+    <Content Include="Content\CSS\prettify.css" />
+    <Content Include="Scripts\prettify.js" />
     <Content Include="Scripts\imgSizer.js" />
     <Content Include="Scripts\jquery-1.7.2.js" />
     <Content Include="Scripts\jquery-1.7.2.min.js">
@@ -328,6 +337,7 @@
     <Content Include="Views\Shared\_Footer.cshtml" />
     <Content Include="Views\Shared\_LinksDirectoryRevised.cshtml" />
     <Content Include="Views\Home\_FakeWorkspacesList.cshtml" />
+    <Content Include="Views\Home\_MyWorkspaces.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

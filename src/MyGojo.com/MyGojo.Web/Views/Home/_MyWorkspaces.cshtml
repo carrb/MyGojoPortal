@@ -1,0 +1,9 @@
+﻿<div id="my-workspaces">    
+    <ul class="nav nav-list">
+        <li class="nav-header"><h4><i class="icon-list-alt icon-large"></i> My Workspaces</h4></li>
+        @foreach (var item in Model)
+        {
+            <li><a href="@item.Url" rel="tooltip" data-original-title="@item.Url">@item.Title</a></li>
+        }
+    </ul>
+</div>

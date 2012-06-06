@@ -1,4 +1,6 @@
-﻿@{
+﻿@model IEnumerable<MyGojo.Data.Model.SiteInfo>
+
+@{
 	ViewBag.Title = "Home Page";
 }
 
@@ -103,8 +105,8 @@
     
     <div class="span2">
 		<div class="well sidebar-nav">
-           @Html.Partial("_FakeWorkspacesList")
-            @* @Html.Partial("_MyWorkspaces") *@
+           @* @Html.Partial("_FakeWorkspacesList") *@
+            @Html.Partial("_MyWorkspaces")
 		</div><!--/.well -->
 	</div><!--/span-->
 </div>  <!--/row-->

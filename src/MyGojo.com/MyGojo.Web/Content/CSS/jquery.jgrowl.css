@@ -1,4 +1,4 @@
-
+/* jquery.jgrowl.css -   See: http://stanlemon.net/pages/jgrowl */
 div.jGrowl {
 	padding: 			10px;
 	z-index: 			9999;
@@ -123,6 +123,28 @@ div.jGrowl div.jGrowl-closer {
 	font-weight: 			bold;
 	text-align: 			center;
 }
+
+div.jGrowl div.warning {
+  color: #5f5c27;
+  background-color: #fef5b2;
+  border: 1px solid #fee4a3;
+}
+div.jGrowl div.info {
+  color: #187371;
+  background-color: #c9f4f3;
+  border: 1px solid #acede1;
+}
+div.jGrowl div.success {
+  color: #387218;
+  background-color: #abe789;
+  border: 1px solid #aee274;
+}
+div.jGrowl div.danger {
+  color: #df382c;
+  background-color: #fadfdd;
+  border: 1px solid #f8d0d4;
+}
+
 
 /** Hide jGrowl when printing **/
 @media print {
