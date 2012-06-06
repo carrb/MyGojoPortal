@@ -20,6 +20,7 @@ namespace MyGojo.Web.Infrastructure.Bundles
                         "~/Content/CSS/bootstrap.css",
                         "~/Content/CSS/bootstrap-responsive.css",
                         "~/Content/CSS/custom.css",
+                        "~/Content/CSS/jquery.jgrowl.css",
                         "~/Content/CSS/font-awesome.css"));
 
             bundles.Add(new StyleBundle("~/Content/themes/base/css").Include(
@@ -51,6 +52,7 @@ namespace MyGojo.Web.Infrastructure.Bundles
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/extra").Include(
+                "~/Scripts/jquery.jgrowl.min.hs",
                 "~/Scripts/underscore-min.js",
                 "~/Scripts/backbone-min.js",
                 "~/Scripts/plugins.js"));

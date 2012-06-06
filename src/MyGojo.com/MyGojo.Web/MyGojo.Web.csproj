@@ -17,8 +17,8 @@
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
-    <IISExpressAnonymousAuthentication />
-    <IISExpressWindowsAuthentication />
+    <IISExpressAnonymousAuthentication>disabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>enabled</IISExpressWindowsAuthentication>
     <IISExpressUseClassicPipelineMode />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -177,6 +177,9 @@
     <Content Include="Content\CSS\bootstrap-responsive.css" />
     <Content Include="Content\CSS\bootstrap.css" />
     <Content Include="Content\CSS\custom.css" />
+    <Content Include="Content\CSS\font-awesome.css" />
+    <Content Include="Content\CSS\jquery.jgrowl.css" />
+    <Content Include="Content\font\fontawesome-webfont.svg" />
     <Content Include="Content\Images\GojoLogo-Header.png" />
     <Content Include="Content\Images\GojoLogoThick-Small.png" />
     <Content Include="Content\Images\Link-Icon-Excel.png" />
@@ -242,6 +245,10 @@
     <Content Include="crossdomain.xml" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Content\font\fontawesome-webfont.eot" />
+    <Content Include="Content\font\fontawesome-webfont.svgz" />
+    <Content Include="Content\font\fontawesome-webfont.ttf" />
+    <Content Include="Content\font\fontawesome-webfont.woff" />
     <None Include="Scripts\jquery-1.7.2.intellisense.js">
       <DependentUpon>jquery-1.7.2.js</DependentUpon>
     </None>
@@ -257,6 +264,10 @@
     <Content Include="Scripts\jquery-ui-1.8.20.js" />
     <Content Include="Scripts\jquery-ui-1.8.20.min.js">
       <DependentUpon>jquery-ui-1.8.20.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.jgrowl.js" />
+    <Content Include="Scripts\jquery.jgrowl.min.js">
+      <DependentUpon>jquery.jgrowl.js</DependentUpon>
     </Content>
     <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.min.js">
@@ -321,7 +332,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="App_Start\" />
-    <Folder Include="Content\font\" />
     <Folder Include="Content\js\" />
     <Folder Include="Content\less\" />
     <Folder Include="Models\" />
@@ -352,9 +362,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerPort>12225</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:11671/</IISUrl>
+          <IISUrl>http://localhost:12121</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
