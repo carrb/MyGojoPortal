@@ -19,7 +19,7 @@ namespace MyGojo.Web.Infrastructure.Bundles
                         "~/Content/site.css",
                         "~/Content/CSS/bootstrap.min.css",
                         "~/Content/CSS/bootstrap-responsive.min.css",
-                        "~/Content/CSS/custom.css",
+                      //  "~/Content/CSS/custom.css",
                         "~/Content/CSS/jquery.jgrowl.css",
                         "~/Content/CSS/prettify.css",
                         "~/Content/CSS/font-awesome.css"));

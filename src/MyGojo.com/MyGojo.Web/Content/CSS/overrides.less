@@ -1,0 +1,165 @@
+﻿/* overrides.less */
+
+/*	Investigate using DataTables with Bootstrap v2:  http://www.datatables.net/blog/Twitter_Bootstrap_2 
+	Link for CSS styling and overrides for use with Bootstrap v2.1:  http://www.datatables.net/blog/Twitter_Bootstrap
+
+	Buttons styling:  http://charliepark.org/bootstrap_buttons/ 
+
+    Need to adapt for LESS but good tip on color management with LESS/SASS
+    See: http://blog.12spokes.com/web-design-development/simple-css-color-management-with-sass/
+    Notes:
+
+    * Most apps and sites utilize four main colors: A BRAND color, an ACTION color, a FUNCTION color, and an ALERT color. 
+    * Create tints for each using .lighten() and .darken() functions.
+    * Tweak the percentages on a per-color basis here to get a nice gradation (functions for dynamically adjusting a base color’s saturation, hue, other).
+    * Set up your gradients, box shadows, etc. Once you’ve got a whole bunch of nice tints for each of your base colors, set up some mixins to use.
+
+
+	Inspiration:  
+	http://paulrobertlloyd.com/
+
+	
+	Great TOOLS:
+	CSS 2 LESS convertor:  http://css2less.cc/
+
+*/
+
+
+/*  */
+
+.nav-list {
+    .nav-header {
+        margin-left:0;
+        margin-right: -15px;
+        padding-left: 0;
+        text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    }
+    > {
+        li {
+            > {
+                a {
+                    padding: 2px 15px 2px 15px;
+                    color: #0088CC;
+                    text-decoration: none;
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+.navbar-inner {
+    background-color: #21374C;
+    background-image: none;
+}
+
+.hero-unit {
+    p.normal {
+        font-size: 13px;
+        line-height: 18px;
+        margin: 0 0 9px;
+    }
+}
+
+.nav {
+    .nav-header {
+        color: #555555;
+        text-transform: none;
+    }
+    > {
+        li {
+            > {
+                a {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+ul.nav-list {
+    + {
+        ul.nav-list {
+            margin-top: 18px;
+        }
+    }
+}
+
+article.entry {
+    footer {
+        time {
+            text-transform: uppercase;
+            font-size: 11px;
+            line-height:18px;
+        }
+    }
+    > {
+        h2 {
+            > {
+                a {
+                    color: #0088CC;
+                    text-decoration: none;
+                    display: block;
+                }
+                a:hover {
+                    background-color: #eeeeee;
+                    color: #0088CC;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+p {
+    -ms-word-break: break-all;
+    word-break: break-all;
+    word-break: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+}
+
+footer {
+    time {
+        color: #888888;
+    }
+}
+
+article.entry summary footer *, article.entry comment footer * {
+    border-bottom: 0 none;
+    display: block;
+    margin-right: 0;
+}
+
+body, p, textarea, .navbar-search .search-query {
+    font-family: "Segoe UI", Candara, "Lucida Grande", "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", Verdana, "Verdana Ref", sans-serif;
+    *font-size:small;
+}
+
+.hero-side {
+    section {
+        h1 {
+            border-top: 1px solid #CCCCCC;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 18px;
+            margin-bottom: 18px;
+            padding: 12px 0 6px 0;
+        }
+        h2 {
+            border-top: 1px solid #EEEEEE;
+            font-size: 12px;
+            line-height: 18px;
+            padding: 12px 0 6px 0;
+            margin-bottom: -6px;
+        }
+    }
+    article.last {
+        margin-bottom: 36px;
+    }
+}
+
+
+/* The dark blue used in header bar color: #21374C; */
+
