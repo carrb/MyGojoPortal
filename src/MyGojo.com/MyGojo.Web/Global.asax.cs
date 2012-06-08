@@ -25,6 +25,10 @@ namespace MyGojo.Web
         // Checkout http://vibrantcode.com/2012/06/06/look-ma-no-gac/
         // for using the latest source builds of MVC 4, RAZOR, WebPages, WebAPI, and more!
 
+        // For Deployment
+        // See: http://www.asp.net/mvc/tutorials/deployment/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-web-config-file-transformations-3-of-12
+
+
 
 
         protected void Application_Start()

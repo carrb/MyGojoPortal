@@ -1,18 +1,6 @@
 ﻿@model MyGojo.Data.Model.Announcement 
 
-@* This partial view defines form fields that will appear when creating and editing entities
-
-
-<div class="control-group">
-<label class="control-label" for="input01">Text input</label>
-<div class="controls">
-<input type="text" class="input-xlarge" id="input01">
-<p class="help-block">Supporting help text</p>
-</div>
-</div>
-
-
- *@
+@* This partial view defines form fields that will appear when creating and editing entities *@
 
 <div class="control-group">    @*  If error add error to class *@
     <label class="control-label" for="input-title">Title</label>
@@ -24,10 +12,13 @@
 
 <div class="control-group">
   <label class="control-label" for="textarea-content" >Content</label>
-  <div class="controls">
-      <textarea rows="5" class="input-xlarge"  id="textarea-content"></textarea>
-      <p class="help-block">Specify the content of the announcement here using Markdown syntax. Reference <a href="http://daringfireball.net/projects/markdown/syntax">Mardown</a> for details.</p>
-  </div>
+    <div class="controls">
+        <textarea rows="5" class="input-xlarge"  id="textarea-content"></textarea>
+        <p class="help-block">Specify the content of the announcement here using Markdown syntax. Reference <a href="http://daringfireball.net/projects/markdown/syntax">Mardown</a> for details.</p>
+    </div>
+    <div id="editor-wrapper">
+        <p>Div for Testing EpicEditor</p>   
+    </div>
 </div>
 
 

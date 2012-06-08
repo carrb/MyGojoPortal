@@ -50,6 +50,26 @@
             $('#my-workspaces').tooltip({
                 selector: "a[rel=tooltip]"
             });
+            
+            var editorWrapper = $('#editor-wrapper');
+            var editor = new EpicEditor(editorWrapper);
+            
+            editor.options({
+                file: {
+                    name: 'editorForcontent',
+                    defaultContent: 'Write text in here!'
+                },
+                /*
+                themes: {
+                    editor: '/css/epiceditor/editor-custom.css',
+                    preview: '/css/epiceditor/preview-custom.css'
+                },
+                */
+                focusOnLoad: true,
+                shortcuts: {
+                    preview: 77 
+                }
+            }).load();
 
         });
 
