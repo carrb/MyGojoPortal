@@ -10,7 +10,7 @@ namespace MyGojo.Web.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger _logger;
-        private MongoRepository<UserInfo> _repository; 
+        private readonly MongoRepository<UserInfo> _repository; 
 
         public HomeController(MongoRepository<UserInfo> repository, ILogger logger)
         {

@@ -1,0 +1,32 @@
+
+
+Namespacing with Object Literal (as opposed to the Single Global Variable and Deeply Nested namespacing patterns):
+Article: http://michaux.ca/articles/javascript-namespacing
+Code Template: http://code.google.com/p/pageforest/source/browse/appengine/static/src/js/namespace.js
+
+Compare this simple (library/namespace)
+==============================
+var myApp = {};                                                  
+myApp.message = 'hello';
+
+myApp.sayHello = function() {
+  alert(myApp.message);             // typical implementation has instead using 'this' ----  alert(this.message);
+};
+
+Usage:
+-----------------------
+myApp.sayHello();
+
+var importedfn = myApp.sayHello;
+importedfn(); 
+
+Usage with Typical
+-----------------------
+myApp.sayHello() // works because "this" refers to myApp object.
+
+var importedfn = myApp.sayHello;
+importedfn(); // error because "this" refers to global object.
+
+Lesson:
+
+The lesson to be learned here is that this should never refer to an object being used as a namespace because it leads to confusion about importing identifiers from that namespace. 

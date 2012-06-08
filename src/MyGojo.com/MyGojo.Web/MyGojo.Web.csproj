@@ -164,6 +164,7 @@
     </Compile>
     <Compile Include="Infrastructure\Attributes\AjaxOnlyAttribute.cs" />
     <Compile Include="Infrastructure\Bundles\Bundles.cs" />
+    <Compile Include="Infrastructure\Bundles\LessTransform.cs" />
     <Compile Include="Infrastructure\Filters\ConditionalFilterProvider.cs" />
     <Compile Include="Infrastructure\Filters\Filters.cs" />
     <Compile Include="Infrastructure\Filters\RequestTimingFilter.cs" />
@@ -181,6 +182,7 @@
     <Content Include="Content\CSS\bootstrap-responsive.min.css" />
     <Content Include="Content\CSS\bootstrap.css" />
     <Content Include="Content\CSS\bootstrap.min.css" />
+    <Content Include="Content\CSS\overrides.css" />
     <Content Include="Content\CSS\font-awesome.css" />
     <Content Include="Content\CSS\jquery.jgrowl.css" />
     <Content Include="Content\font\fontawesome-webfont.svg" />
@@ -253,7 +255,7 @@
     <Content Include="Content\font\fontawesome-webfont.svgz" />
     <Content Include="Content\font\fontawesome-webfont.ttf" />
     <Content Include="Content\font\fontawesome-webfont.woff" />
-    <Content Include="Content\CSS\overrides.less" />
+    <Content Include="Content\Less\overrides.less" />
     <None Include="Scripts\jquery-1.7.2.intellisense.js">
       <DependentUpon>jquery-1.7.2.js</DependentUpon>
     </None>
@@ -267,6 +269,7 @@
       <DependentUpon>bootstrap.js</DependentUpon>
     </Content>
     <Content Include="Content\CSS\prettify.css" />
+    <Content Include="Scripts\epiceditor.js" />
     <Content Include="Scripts\prettify.js" />
     <Content Include="Scripts\imgSizer.js" />
     <Content Include="Scripts\jquery-1.7.2.js" />
@@ -300,7 +303,9 @@
     <Content Include="Scripts\selectivizr-min.js" />
     <Content Include="Scripts\underscore-min.js" />
     <Content Include="Scripts\underscore.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -345,7 +350,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="App_Start\" />
-    <Folder Include="Content\js\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>

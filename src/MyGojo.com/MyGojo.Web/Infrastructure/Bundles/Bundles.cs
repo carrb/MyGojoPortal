@@ -1,25 +1,21 @@
 ﻿using System.Web.Optimization;
+using Utility.Logging;
 using MyGojo.Web.Infrastructure.Optimization;
 
 namespace MyGojo.Web.Infrastructure.Bundles
 {
     public class Bundles
     {
+
         public static void ConfigureAndRegister()
         {
             BundleCollection bundles = BundleTable.Bundles;
-
-            //var lessBundle = new Bundle("~/Content/less").IncludeDirectory("~/Content/less", "*.less");
-            //
-            //lessBundle.Transforms.Add(new LessTransform());
-            //lessBundle.Transforms.Add(new CssMinify());
-            //bundles.Add(lessBundle);
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                         "~/Content/site.css",
                         "~/Content/CSS/bootstrap.min.css",
                         "~/Content/CSS/bootstrap-responsive.min.css",
-                      //  "~/Content/CSS/custom.css",
+                        "~/Content/CSS/overrides.css",
                         "~/Content/CSS/jquery.jgrowl.css",
                         "~/Content/CSS/prettify.css",
                         "~/Content/CSS/font-awesome.css"));
@@ -37,6 +33,7 @@ namespace MyGojo.Web.Infrastructure.Bundles
                         "~/Content/themes/base/jquery.ui.datepicker.css",
                         "~/Content/themes/base/jquery.ui.progressbar.css",
                         "~/Content/themes/base/jquery.ui.theme.css"));
+
 
 
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
@@ -58,8 +55,11 @@ namespace MyGojo.Web.Infrastructure.Bundles
                         "~/Scripts/jquery.jgrowl.min.js",
                         "~/Scripts/underscore-min.js",
                         "~/Scripts/backbone-min.js",
+                        "~/Scripts/epiceditor.js",
                         "~/Scripts/plugins.js",
                         "~/Scripts/app.js"));
+
+
 
         }
     }
