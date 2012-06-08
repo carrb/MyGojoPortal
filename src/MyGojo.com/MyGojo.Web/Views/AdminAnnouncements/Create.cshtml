@@ -1,0 +1,32 @@
+﻿@model MyGojo.Data.Model.Announcement 
+
+@{
+    ViewBag.Title = "Administration - Announcements - Create";
+}
+
+<div class="container-fluid">
+    <div class="span3">
+        <div class="well sidebar-nav">
+            <h4>@ViewBag.Title</h4>
+            <p class="normal">Diagnostic: @ViewBag.Message</p>
+        </div>
+    </div>
+    
+    <div class="span9">
+        @using (Html.BeginForm()) {
+        	@Html.ValidationSummary(true)
+        	<fieldset>
+        		<legend>Announcement</legend>
+        
+        		@Html.Partial("_CreateOrEdit", Model)
+        
+        		<p>
+        			<input type="submit" value="Create" />
+        		</p>
+        	</fieldset>
+        }
+        <div>
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    </div>   
+</div><!--/.fluid-container-->

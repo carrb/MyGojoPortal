@@ -158,6 +158,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\AdminAnnouncementsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -346,6 +347,11 @@
     <Content Include="Views\Shared\_LinksDirectoryRevised.cshtml" />
     <Content Include="Views\Home\_FakeWorkspacesList.cshtml" />
     <Content Include="Views\Home\_MyWorkspaces.cshtml" />
+    <Content Include="Views\Home\StyleTest.cshtml" />
+    <Content Include="Views\Home\StyleTestII.cshtml" />
+    <Content Include="Views\AdminAnnouncements\Index.cshtml" />
+    <Content Include="Views\AdminAnnouncements\Create.cshtml" />
+    <Content Include="Views\AdminAnnouncements\_CreateOrEdit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

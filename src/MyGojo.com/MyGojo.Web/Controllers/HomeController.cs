@@ -62,5 +62,20 @@ namespace MyGojo.Web.Controllers
 
             return View();
         }
+
+
+        /// GET: /Tests/StyleTest
+
+        public ActionResult StyleTest()
+        {
+            return View();
+        }
+
+        /// GET: /Tests/StyleTestII
+
+        public ActionResult StyleTestII()
+        {
+            return View();
+        }
     }
 }

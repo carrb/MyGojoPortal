@@ -22,6 +22,10 @@ namespace MyGojo.Web
     {
         public static IContainer Container { get; set; }
 
+        // Checkout http://vibrantcode.com/2012/06/06/look-ma-no-gac/
+        // for using the latest source builds of MVC 4, RAZOR, WebPages, WebAPI, and more!
+
+
 
         protected void Application_Start()
         {
@@ -56,6 +60,7 @@ namespace MyGojo.Web
 
             builder.RegisterType<MongoRepository<UserInfo>>().As<MongoRepository<UserInfo>>().InstancePerHttpRequest();
             builder.RegisterType<MongoRepository<SiteInfo>>().As<MongoRepository<SiteInfo>>().InstancePerHttpRequest();
+            builder.RegisterType<MongoRepository<Announcement>>().As<MongoRepository<Announcement>>().InstancePerHttpRequest();
 
             builder.RegisterControllers(Assembly.GetExecutingAssembly());
             builder.RegisterModelBinders(Assembly.GetExecutingAssembly());
