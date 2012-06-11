@@ -37,30 +37,28 @@ namespace MyGojo.Web.Infrastructure.Bundles
 
 
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                       "~/Scripts/jquery-1.*"));
+                       "~/Scripts/jquery-1.7.2.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryui").Include(
-                        "~/Scripts/jquery-ui*"));
+                        "~/Scripts/jquery-ui-1.8.20.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.unobtrusive*",
-                        "~/Scripts/jquery.validate*"));
+                        "~/Scripts/jquery.validate.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
-                        "~/Scripts/modernizr-*"));
+                        "~/Scripts/modernizr-2.5.3.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/extra").Include(
                         "~/Scripts/bootstrap.min.js",
+                        "~/Scripts/underscore-min.js",
+                        "~/Scripts/backbone.js",
+                        "~/Scripts/sequence.jquery.js",
                         "~/Scripts/prettify.js",
                         "~/Scripts/jquery.jgrowl.min.js",
-                        "~/Scripts/underscore-min.js",
-                        "~/Scripts/backbone-min.js",
                         "~/Scripts/epiceditor.js",
                         "~/Scripts/plugins.js",
                         "~/Scripts/app.js"));
-
-
-
         }
     }
 }

@@ -187,6 +187,10 @@
     <Content Include="Content\CSS\font-awesome.css" />
     <Content Include="Content\CSS\jquery.jgrowl.css" />
     <Content Include="Content\font\fontawesome-webfont.svg" />
+    <Content Include="Content\Images\gojo-inside-bathroom.jpg" />
+    <Content Include="Content\Images\Gojo-Inside-Library.jpg" />
+    <Content Include="Content\Images\gojo-inside-room.jpg" />
+    <Content Include="Content\Images\gojo-inside-room2.jpg" />
     <Content Include="Content\Images\GojoLogo-Header.png" />
     <Content Include="Content\Images\GojoLogoThick-Small.png" />
     <Content Include="Content\Images\Link-Icon-Excel.png" />
@@ -195,6 +199,7 @@
     <Content Include="Content\Images\Link-Icon-Pdf.png" />
     <Content Include="Content\Images\Link-Icon-Word.png" />
     <Content Include="Content\Images\Link-Icon-Zip.png" />
+    <Content Include="Content\Images\sequence-preloader.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -271,6 +276,7 @@
     </Content>
     <Content Include="Content\CSS\prettify.css" />
     <Content Include="Scripts\epiceditor.js" />
+    <Content Include="Scripts\mygojo.js" />
     <Content Include="Scripts\prettify.js" />
     <Content Include="Scripts\imgSizer.js" />
     <Content Include="Scripts\jquery-1.7.2.js" />
@@ -302,6 +308,7 @@
     <Content Include="Scripts\modernizr-2.5.3.js" />
     <Content Include="Scripts\plugins.js" />
     <Content Include="Scripts\selectivizr-min.js" />
+    <Content Include="Scripts\sequence.jquery.js" />
     <Content Include="Scripts\underscore-min.js" />
     <Content Include="Scripts\underscore.js" />
     <Content Include="Web.config">

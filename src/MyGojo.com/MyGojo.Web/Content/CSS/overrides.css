@@ -23,18 +23,18 @@
 
 body, p, textarea, .navbar-search .search-query { font-family: "Segoe UI", Candara, "Lucida Grande", "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", Verdana, "Verdana Ref", sans-serif; *font-size:small;}
 
-/* see:  blog.kenneth.io/blog/  */
+/* see:  blog.kenneth.io/blog/ 
 p { -ms-word-break: break-all;
         word-break: break-all;
 
-        /* non-standard for webkit */
+
         word-break: break-word;
 
    -webkit-hyphens: auto;
       -moz-hyphens: auto;
            hyphens: auto;
 }
-
+ */
 /* Inspiration:  http://paulrobertlloyd.com/ */
 
 

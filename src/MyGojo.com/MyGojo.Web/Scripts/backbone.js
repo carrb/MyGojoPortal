@@ -66,7 +66,7 @@
 
   // A module that can be mixed in to *any object* in order to provide it with
   // custom events. You may bind with `on` or remove with `off` callback functions
-  // to an event; trigger`-ing an event fires all callbacks in succession.
+  // to an event; `trigger`-ing an event fires all callbacks in succession.
   //
   //     var object = {};
   //     _.extend(object, Backbone.Events);
@@ -613,12 +613,6 @@
       index = options.at != null ? options.at : this.models.length;
       splice.apply(this.models, [index, 0].concat(models));
       if (this.comparator && options.at == null) this.sort({silent: true});
-      if (options.silent) return this;
-      for (i = 0, length = this.models.length; i < length; i++) {
-        if (!cids[(model = this.models[i]).cid]) continue;
-        options.index = i;
-        model.trigger('add', model, this, options);
-      }
 
       // Merge in duplicate models.
       if (options.merge) {
@@ -627,6 +621,13 @@
             model.set(dups[i], options);
           }
         }
+      }
+
+      if (options.silent) return this;
+      for (i = 0, length = this.models.length; i < length; i++) {
+        if (!cids[(model = this.models[i]).cid]) continue;
+        options.index = i;
+        model.trigger('add', model, this, options);
       }
 
       return this;

@@ -1,0 +1,56 @@
+See: http://lostechies.com/derickbailey/2012/05/22/function…-vs-function…-or-domready-vs-the-module-pattern/
+
+1. iImediately-Invoking Function Expression (FKA, Self-Invoking Function, anonymous function)
+(function($) {
+  // Backbone code in here
+})(jQuery);
+
+2.  jQuery’s “DOMReady” function (alias)
+$(function(){
+  // Backbone code in here
+});
+
+ These two blocks of code shown are dramatically different in when and why they execute. They do not serve the same purpose.
+ 
+ 1. a function that is immediately invoked by the calling (jQuery) parenthesis. 
+ The purpose of passing jQuery in to the parenthesis is to provide local scoping to the global variable. 
+ This helps reduce the amount of overhead of looking up the $ variable, and allows better 
+ compression / optimization for minifiers in some cases.  
+ A pattern of implementation that use an immediately invoking function to provide scope and privacy 
+ around a “module” of related functionality.
+ 
+ It’s a better idea to define your Backbone objects outside of a DOMReady function. Do this inside of a JavaScript Module 
+ pattern so that I can provide encapsulation and privacy for my code. I tend to use the “Revealing Module” pattern 
+ see the links above) to provide access to the bits that I need outside of my module.
+ 
+  
+ 2. Executes when the DOM is ready to be manipulated by your JavaScript code. 
+ This allows you to write code that needs the DOM, knowing that the DOM is available and ready to be read, 
+ written to, and otherwise modified by your application. 
+ 
+ -------------
+ 
+ // Define "MyApp" as a revealing module
+
+MyApp = (function(Backbone, $){
+
+  var View = Backbone.View.extend({
+    // do stuff here  
+  });
+
+  return {
+    init: function(){
+      var view = new View();
+      $("#some-div").html(view.render().el);
+    }
+  };
+
+})(Backbone, jQuery);
+
+
+
+// Run "MyApp" in DOMReady
+
+$(function(){
+  MyApp.init();
+});

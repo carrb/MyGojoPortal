@@ -10,75 +10,77 @@
  
  */
 
-(function (window) {
-    'use strict';
 
-    // Your starting point. Enjoy the ride!
-    /* Start execution unconcerned with DOM ready-state  */
-    jQuery(function ($) {
+MyGojoApp = (function (Backbone, $) {
+
+    // Initialization
+    init = function () {
+        console.info("MyGojoApp: object instantiated and initialized!");
+    },
+
+    // Methods
+    logStatus = function () {
+        console.info("logStatus called.");
+    };
+
+    return {
+        init: init,
+        logStatus: logStatus
+
+        //init: function () {
+        //    var view = new View();
+        //    $("#some-div").html(view.render().el);
+        //}
+    };
+
+})(Backbone, jQuery);
+
+
+
+$(function () {
+    MyGojoApp.init();
+
+    $('.carousel').carousel();
     
-        /* Namespace for this application */
-        var myGojo = myGojo || {};
-
-        var myGojoConfig = {
-            language: "english",
-            defaults: {
-                enableGeoLocation: true
-            }
-        };
-
-
-    });
+    $('#demobtn').click(function () {
+        console.log("Clicked jGrowl enabled button.");
     
-
-    /* jQuery DOM ready event - occurs after ... */
-    $(document).ready(function () {
-
-        $('#demo').click(function () {
-
-            console.log("Clicked jGrowl enabled button.");
-
-            // Possible theme values:  (default, warning, danger, info, success)
-            $.jGrowl("There should be a lot more information here to allow learning the application and using jGrowl for notifications.", {
-                theme: "success",
-                /* Possible values: default, warning, danger, info, success */
-                position: "top-left"
-                /* top-left top-right bottom-left bottom-right center */
-            });
-
-
-            $('#my-workspaces').tooltip({
-                selector: "a[rel=tooltip]"
-            });
-            
-            var editorWrapper = $('#editor-wrapper');
-            var editor = new EpicEditor(editorWrapper);
-            
-            editor.options({
-                file: {
-                    name: 'editorForcontent',
-                    defaultContent: 'Write text in here!'
-                },
-                /*
-                themes: {
-                    editor: '/css/epiceditor/editor-custom.css',
-                    preview: '/css/epiceditor/preview-custom.css'
-                },
-                */
-                focusOnLoad: true,
-                shortcuts: {
-                    preview: 77 
-                }
-            }).load();
-
+        // Possible theme values:  (default, warning, danger, info, success)
+        $.jGrowl("There should be a lot more information here to allow learning the application and using jGrowl for notifications.", {
+            theme: "success",
+            /* Possible values: default, warning, danger, info, success */
+            position: "top-left"
+            /* top-left top-right bottom-left bottom-right center */
         });
-
-
     });
 
+    // Tooltips with Url for Workspaces
+    $('#my-workspaces').tooltip({
+        selector: "a[rel=tooltip]"
+    });
+    
+    // Testing EpicEditor
+    var editorWindow = $('#editor-window');
+    var editor = new EpicEditor(editorWindow);
+    
+    editor.options({
+        file: {
+            name: 'editorForContent',
+            defaultContent: 'Write text in here!'
+        },
+        /*
+        themes: {
+            editor: '/css/epiceditor/editor-custom.css',
+            preview: '/css/epiceditor/preview-custom.css'
+        },
+        */
+        focusOnLoad: true,
+        shortcuts: {
+            preview: 77
+        }
+    }).load();
+});
 
-
-})(window);
 
 /*
 <script src="http://yandex.st/highlightjs/6.1/highlight.min.js"></script>
@@ -104,15 +106,3 @@
       .load();
     </script>
 */
-
-
-
-
-
-
-
-
-
-
-
-

@@ -16,9 +16,7 @@
         <textarea rows="5" class="input-xlarge"  id="textarea-content"></textarea>
         <p class="help-block">Specify the content of the announcement here using Markdown syntax. Reference <a href="http://daringfireball.net/projects/markdown/syntax">Mardown</a> for details.</p>
     </div>
-    <div id="editor-wrapper">
-        <p>Div for Testing EpicEditor</p>   
-    </div>
+    
 </div>
 
 
@@ -47,3 +45,9 @@
     @Html.ValidationMessageFor(model => model.IsEditable)
 </div>
 
+
+<div id="editor-wrapper">
+    <h5>Epic Editor</h5>
+    <p>Div 'editor-window' for Testing EpicEditor follow this line</p>
+    <div id="editor-window"></div>
+</div>
