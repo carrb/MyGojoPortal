@@ -1,4 +1,6 @@
-﻿using System.Reflection;
+﻿using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
 using System.Web;
 using System.Web.Mvc;
 
@@ -52,6 +54,37 @@ namespace MyGojo.Web
         {
             logger.Error(Server.GetLastError());
         }
+
+
+        protected List<string> UserGroupMembership()
+        {
+            return HttpContext.Current.Request.LogonUserIdentity != null 
+                ? HttpContext.Current.Request.LogonUserIdentity.Groups.Select(@group => @group.Translate(typeof(System.Security.Principal.NTAccount)).ToString()).ToList() 
+                : null;
+
+        }
+
+        /*
+         * List<string> groupsList = Groups();
+         * 
+         * foreach (var group in groupsList)
+            {
+                if (group == "GOJO-NET\\myGOJO_EU")
+                    // do something
+
+                if (group == "GOJO-NET\\myGOJO_AS")
+                    // do something
+
+                if (group == "GOJO-NET\\myGOJO_AU")
+                    // do something
+
+                if (group == "GOJO-NET\\myGOJO_LA")
+                    // do something
+
+                if (group == "GOJO-NET\\myGOJO_CN")
+                    // do something
+            }
+         */
 
 
         protected void BootstrapContainer()

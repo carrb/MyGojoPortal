@@ -29,6 +29,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DeployIisAppPath>Default Web Site/MyGojo.Web</DeployIisAppPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -50,6 +51,9 @@
     <Reference Include="Autofac.Integration.Mvc, Version=2.6.2.859, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Autofac.Mvc4.2.6.2.859\lib\NET40\Autofac.Integration.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Integration.WebApi">
+      <HintPath>..\packages\Autofac.WebApi.2.6.2.859\lib\NET40\Autofac.Integration.WebApi.dll</HintPath>
     </Reference>
     <Reference Include="dotless.Core">
       <HintPath>..\packages\dotless.1.3.0.3\lib\dotless.Core.dll</HintPath>
@@ -261,13 +265,17 @@
     <Content Include="Content\font\fontawesome-webfont.svgz" />
     <Content Include="Content\font\fontawesome-webfont.ttf" />
     <Content Include="Content\font\fontawesome-webfont.woff" />
-    <Content Include="Content\Less\overrides.less" />
+    <Content Include="Content\Less\mygojo.less" />
     <None Include="Scripts\jquery-1.7.2.intellisense.js">
       <DependentUpon>jquery-1.7.2.js</DependentUpon>
     </None>
     <Content Include="humans.txt" />
     <Content Include="robots.txt" />
     <Content Include="Scripts\app.js" />
+    <Content Include="Scripts\ba-debug.js" />
+    <Content Include="Scripts\ba-debug.min.js">
+      <DependentUpon>ba-debug.js</DependentUpon>
+    </Content>
     <Content Include="Scripts\backbone-min.js" />
     <Content Include="Scripts\backbone.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -276,6 +284,7 @@
     </Content>
     <Content Include="Content\CSS\prettify.css" />
     <Content Include="Scripts\epiceditor.js" />
+    <Content Include="Scripts\modernizr.js" />
     <Content Include="Scripts\mygojo.js" />
     <Content Include="Scripts\prettify.js" />
     <Content Include="Scripts\imgSizer.js" />
@@ -305,20 +314,26 @@
       <DependentUpon>jquery.validate.unobtrusive.js</DependentUpon>
     </Content>
     <Content Include="Scripts\json2.js" />
-    <Content Include="Scripts\modernizr-2.5.3.js" />
     <Content Include="Scripts\plugins.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js">
+      <DependentUpon>respond.js</DependentUpon>
+    </Content>
     <Content Include="Scripts\selectivizr-min.js" />
     <Content Include="Scripts\sequence.jquery.js" />
     <Content Include="Scripts\underscore-min.js" />
     <Content Include="Scripts\underscore.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Scripts\_references.js" />
     <Content Include="Images\accent.png" />
@@ -359,6 +374,8 @@
     <Content Include="Views\AdminAnnouncements\Index.cshtml" />
     <Content Include="Views\AdminAnnouncements\Create.cshtml" />
     <Content Include="Views\AdminAnnouncements\_CreateOrEdit.cshtml" />
+    <Content Include="Views\Shared\_HeaderBarQuickLinks.cshtml" />
+    <Content Include="Views\Shared\_DropDownNav.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

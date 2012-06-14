@@ -11,6 +11,9 @@ namespace MyGojo.Web.Infrastructure.Bundles
         {
             BundleCollection bundles = BundleTable.Bundles;
 
+
+
+            /* CSS files */
             bundles.Add(new StyleBundle("~/Content/css").Include(
                         "~/Content/site.css",
                         "~/Content/CSS/bootstrap.min.css",
@@ -35,7 +38,15 @@ namespace MyGojo.Web.Infrastructure.Bundles
                         "~/Content/themes/base/jquery.ui.theme.css"));
 
 
+            /* LESS files */
+            var lessBundle = new Bundle("~/bundles/less").IncludeDirectory("~/Content/Less", "*.less");
+            lessBundle.Transforms.Add(new LessTransform());
+            lessBundle.Transforms.Add(new CssMinify());
+            bundles.Add(lessBundle);
 
+
+
+            /* Javascript files */
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                        "~/Scripts/jquery-1.7.2.js"));
 
@@ -43,7 +54,7 @@ namespace MyGojo.Web.Infrastructure.Bundles
                         "~/Scripts/jquery-ui-1.8.20.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
-                        "~/Scripts/jquery.unobtrusive*",
+                        "~/Scripts/jquery.unobtrusive.js",
                         "~/Scripts/jquery.validate.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(

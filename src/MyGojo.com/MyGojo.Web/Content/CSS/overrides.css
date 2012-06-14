@@ -23,7 +23,7 @@
 
 body, p, textarea, .navbar-search .search-query { font-family: "Segoe UI", Candara, "Lucida Grande", "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", Verdana, "Verdana Ref", sans-serif; *font-size:small;}
 
-/* see:  blog.kenneth.io/blog/ 
+ /* see:  blog.kenneth.io/blog/ */ 
 p { -ms-word-break: break-all;
         word-break: break-all;
 
@@ -34,7 +34,7 @@ p { -ms-word-break: break-all;
       -moz-hyphens: auto;
            hyphens: auto;
 }
- */
+
 /* Inspiration:  http://paulrobertlloyd.com/ */
 
 
@@ -73,6 +73,7 @@ p { -ms-word-break: break-all;
 article.entry summary footer *, article.entry comment footer * { border-bottom: 0 none;display: block;margin-right: 0; }
 article.entry footer time { text-transform: uppercase;font-size: 11px;line-height:18px; }
 footer time { color: #888888; }
+
 
 
 /* Overrides - bootstrap.css */

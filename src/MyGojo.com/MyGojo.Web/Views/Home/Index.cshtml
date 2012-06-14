@@ -6,35 +6,23 @@
 
 <div class="row-fluid">
     <div class="span2">
-		<div class="well sidebar-nav">
-           @* @Html.Partial("_FakeWorkspacesList") *@
-            @Html.Partial("_MyWorkspaces")
-		</div><!--/.well -->
-	</div><!--/span-->
+        <div class="well sidebar-nav">
+            @Html.Partial("_QuickLinks")    
+        </div>
+        <div class="well sidebar-nav">
+                @* @Html.Partial("_FakeWorkspacesList") *@
+                @Html.Partial("_MyWorkspaces")
+        </div><!--/.well -->
+    </div><!--/span-->
 
     <div class="span7">
         <div class="hero-unit">
             <div class="row-fluid">
                 <div class="span12">
                     <h1 class="homepage">MyGOJO</h1>
-                        <div id="myCarousel" class="carousel slide">
-                            <!-- Carousel items -->
-                            <div class="carousel-inner">
-                                <div class="active item">
-                                    <img alt="" src="~/Content/Images/gojo-inside-library.jpg">
-                                </div>
-                                <div class="item">
-                                    <img alt="" src="~/Content/Images/gojo-inside-room.jpg">
-                                 </div>
-                                <div class="item">
-                                    <img alt="" src="~/Content/Images/gojo-inside-room2.jpg">
-                                </div>
-                                <div class="item">
-                                    <img alt="" src="~/Content/Images/gojo-inside-bathroom.jpg">
-                                </div>
-                            </div>
-                        </div>
-                        
+                    <p>This is a mockup for new MyGojo portal site and/or informational links. It includes a large callout called the hero unit and supporting pieces of content.</p>
+                    
+                    <p class="normal">Diagnostic: <strong>@ViewBag.Message</strong></p>    
                 </div>
             </div>
         </div>  
@@ -43,10 +31,9 @@
             <div class="span6">
                 <div class="alert alert-info">
                     <h4>Employee Directory and Search</h4>
-                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh. Por scientie, musica, sport etc.</p>
+                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.</p>
                     <div class="alert-actions">
                         <a href="#" class="btn small" id="demobtn">Search Form</a>
-                        <a href="#" class="btn small">Workgroups Guide</a>
                         <a href="#" class="btn small">Organization Chart</a>
                     </div>
                 </div>
@@ -55,10 +42,9 @@
             <div class="span6">
                 <div class="alert alert-info">
                     <h4>Help</h4>
-                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh. Por scientie, musica, sport etc.</p>
+                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.</p>
                     <div class="alert-actions">
                         <a href="#" class="btn small">Help Desk</a>
-                        <a href="#" class="btn small">Loaner Equipment</a>
                         <a href="#" class="btn small">Tips and FAQs</a>
                     </div>
                 </div>
@@ -75,7 +61,7 @@
     <div class="span3">
         <div class="hero-side">
             <section>   
-                <h1>Announcements</h1>
+                <h3>Announcements</h3>
                 <article class="entry summary">
                     <h2><a href="#">Best Time To Change 401k</a></h2>
                     <footer>
@@ -99,7 +85,7 @@
                 </article>
             </section>
             <section>
-                <h1>Bulletin Board</h1>
+                <h2>Bulletin Board</h2>
                 <article class="entry summary">
                     <h2><a href="http://content.mygojo.com/ENews/ENewsGtv/index.asp">GTV News</a></h2>
                     <footer>
