@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using DreamSongs.MongoRepository;
+using MongoDB.Bson;
 using MyGojo.Data.Model;
 using Utility.Logging;
 
@@ -54,11 +55,36 @@ namespace MyGojo.Web.Controllers
 
 
         //
+        // GET: /AdminAnnouncements/Details/5
+
+        public ViewResult Details(ObjectId id)
+        {
+            return View(_repository.GetById(id.ToString()));
+        }
+
+
+        //
         // GET: /AdminAnnouncements/Create
 
         public ActionResult Create()
         {
             return View();
+        }
+
+        //
+        // POST: /AdminAnnouncements/Create
+
+        [HttpPost]
+        public ActionResult Create(Announcement announcement)
+        {
+            if (!ModelState.IsValid) return View();
+
+           // _repository.InsertOrUpdate(post);
+
+            return RedirectToAction("Index");
+
+
+
         }
 
     }

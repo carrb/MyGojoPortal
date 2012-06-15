@@ -406,6 +406,7 @@
     <Content Include="Views\Shared\_HeaderBarQuickLinks.cshtml" />
     <Content Include="Views\Shared\_DropDownNav.cshtml" />
     <Content Include="Views\Home\JavascriptTest.cshtml" />
+    <Content Include="Views\AdminAnnouncements\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
