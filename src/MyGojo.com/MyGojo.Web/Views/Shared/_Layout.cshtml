@@ -4,8 +4,6 @@
 <!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
-    <meta charset="utf-8">
-
     <meta charset="utf-8" />
     <title>@ViewBag.Title</title>
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
@@ -20,6 +18,7 @@
     <link type="text/css" rel="stylesheet" href="~/Content/CSS/font-awesome.css" />
     <link type="text/css" rel="stylesheet" href="~/Content/CSS/jquery.jgrowl.css" />
     <link type="text/css" rel="stylesheet" href="~/Content/CSS/prettify.css" />
+    <link type="text/css" rel="stylesheet" href="~/Content/CSS/redactor.css" />
     <link type="text/css" rel="stylesheet" href="~/Content/CSS/overrides.css" />
     
    @* @Styles.Render("~/bundles/less");*@
@@ -83,7 +82,7 @@
     <script type="text/javascript" src="~/Scripts/backbone-min.js"></script>
     <script type="text/javascript" src="~/Scripts/jquery.jgrowl.min.js"></script>
     <script type="text/javascript" src="~/Scripts/prettify.js"></script>
-    @*<script type="text/javascript" src="~/Scripts/epiceditor.js"></script>*@
+    <script type="text/javascript" src="~/Scripts/redactor.min.js"></script>
     <script type="text/javascript" src="~/Scripts/plugins.js"></script>
     <script type="text/javascript" src="~/Scripts/app.js"></script>
     
@@ -92,7 +91,7 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/extra")
      *@
-    @RenderSection("scripts", required: false)
+    @RenderSection("Scripts", required: false)
     
     <!-- A little ie7- magic -->
     <script type="text/javascript"> $(function () { if ($.browser.msie && parseInt($.browser.version, 10) === 6) { $('.row div[class^="span"]:last-child').addClass("last-child"); $('[class="span"]').addClass("margin-left-20"); $(':button[class="btn"], :reset[class="btn"], :submit[class="btn"], input[type="button"]').addClass("button-reset"); $(":checkbox").addClass("input-checkbox"); $('[class^="icon-"], [class=" icon-"]').addClass("icon-sprite"); $(".pagination li:first-child a").addClass("pagination-first-child") } }) </script>

@@ -11,44 +11,39 @@
 </div>
 
 <div class="control-group">
-  <label class="control-label" for="textarea-content" >Content</label>
+   <label class="control-label" for="redactor-content" >Content</label>
     <div class="controls">
-        <textarea rows="5" class="input-xlarge"  id="textarea-content"></textarea>
-        <p class="help-block">Specify the content of the announcement here using Markdown syntax. Reference <a href="http://daringfireball.net/projects/markdown/syntax">Mardown</a> for details.</p>
+        <textarea rows="5" class="input-xlarge"  id="redactor-content" name="redactor"></textarea>
     </div>
-    
+</div>
+
+<div class="control-group">    @*  If error add error to class *@
+    <label class="control-label" for="input-priority">Priority</label>
+    <div class="controls">
+        <input type="text" class="input-mini" id="input-priority" disabled="" />
+    </div>
+</div>
+
+<div class="control-group">
+    <label class="control-label" for="checkbox-IsVisible">Workspace Visible</label>
+    <div class="controls">
+        <label class="checkbox">
+            <input id="checkbox-IsVisible" type="checkbox" disabled=""  checked value="true">
+            Yes
+        </label>
+    </div>
+</div>
+
+<div class="control-group">
+    <label class="control-label" for="checkbox-IsEditable">Workspace Editable</label>
+    <div class="controls">
+        <label class="checkbox">
+            <input id="checkbox-IsEditable" type="checkbox" disabled=""  checked value="true">
+                Yes
+        </label>
+    </div>
 </div>
 
 
 
-<div class="editor-label">
-    @Html.LabelFor(model => model.Priority)
-</div>
-<div class="editor-field">
-    @Html.EditorFor(model => model.Priority)
-    @Html.ValidationMessageFor(model => model.Priority)
-</div>
 
-<div class="editor-label">
-    @Html.LabelFor(model => model.IsVisible)
-</div>
-<div class="editor-field">
-    @Html.EditorFor(model => model.IsVisible)
-    @Html.ValidationMessageFor(model => model.IsVisible)
-</div>
-
-<div class="editor-label">
-    @Html.LabelFor(model => model.IsEditable)
-</div>
-<div class="editor-field">
-    @Html.EditorFor(model => model.IsEditable)
-    @Html.ValidationMessageFor(model => model.IsEditable)
-</div>
-
-@*
-<div id="editor-wrapper">
-    <h5>Epic Editor</h5>
-    <p>Div 'editor-window' for Testing EpicEditor follow this line</p>
-    <div id="editor-window"></div>
-</div>
-*@

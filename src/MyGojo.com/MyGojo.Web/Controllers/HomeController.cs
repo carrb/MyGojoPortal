@@ -105,6 +105,13 @@ namespace MyGojo.Web.Controllers
             return View();
         }
 
+        /// GET: /Tests/JavascriptTest
+
+        public ActionResult JavascriptTest()
+        {
+            return View();
+        }
+
 
 
 

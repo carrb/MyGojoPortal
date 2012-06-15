@@ -41,7 +41,13 @@ $(document).ready(function () {
             position: "top-left"
             /* top-left top-right bottom-left bottom-right center */
         });
+        
+        
+        
+       
     });
+    
+    $('#redactor-content').redactor();
 
     // Tooltips with Url for Workspaces
     //$('#my-workspaces').tooltip({

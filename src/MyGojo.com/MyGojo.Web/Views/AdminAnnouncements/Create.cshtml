@@ -1,32 +1,44 @@
 ﻿@model MyGojo.Data.Model.Announcement 
 
 @{
-    ViewBag.Title = "Administration - Announcements - Create";
+    ViewBag.Title = "Announcement - Create/Edit";
 }
 
 <div class="container-fluid">
-    <div class="span3">
-        <div class="well sidebar-nav">
-            <h4>@ViewBag.Title</h4>
-            <p class="normal">Diagnostic: @ViewBag.Message</p>
+    <div class="row-fluid">
+        <div class="span2">
+            <div class="sidebar-nav">
+                <h3>Create or Edit</h3>
+                <p>Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica, li pronunciation e li plu commun vocabules.</p>
+                <p>Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica, li pronunciation e li plu commun vocabules.</p>
+                <p>
+                    @Html.ActionLink("Back to List", "Index")
+                </p>
+            </div>
         </div>
-    </div>
     
-    <div class="span9">
-        @using (Html.BeginForm()) {
-        	@Html.ValidationSummary(true)
-        	<fieldset>
-        		<legend>Announcement</legend>
+        <div class="span8">
+            <form class="well form-horizontal">
+                <fieldset>
+                    <legend>Announcement</legend>
+                    @Html.Partial("_CreateOrEdit", Model)
         
-        		@Html.Partial("_CreateOrEdit", Model)
+                    <div class="form-actions">
+                        <button class="btn btn-success" type="submit">Save changes</button>
+                        <button class="btn">Cancel</button>
+                    </div>
+                </fieldset>
+             </form>
+       </div>   
         
-        		<p>
-        			<input type="submit" value="Create" />
-        		</p>
-        	</fieldset>
-        }
-        <div>
-            @Html.ActionLink("Back to List", "Index")
+        <div class="span2">
+            <p class="normal">Status Information: @ViewBag.Message</p>
+            
         </div>
-    </div>   
-</div><!--/.fluid-container-->
+    </div><!-- row-fluid -->
+</div><!-- container-fluid -->
+
+@section Scripts
+{
+    <script type="text/javascript" src="~/Scripts/_CreateOrEdit.js"></script>
+}

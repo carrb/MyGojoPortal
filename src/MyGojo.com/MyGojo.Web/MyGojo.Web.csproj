@@ -197,6 +197,7 @@
     <Content Include="Content\Images\gojo-inside-room2.jpg" />
     <Content Include="Content\Images\GojoLogo-Header.png" />
     <Content Include="Content\Images\GojoLogoThick-Small.png" />
+    <Content Include="Content\Images\icons-redactor.png" />
     <Content Include="Content\Images\Link-Icon-Excel.png" />
     <Content Include="Content\Images\Link-Icon-External.png" />
     <Content Include="Content\Images\Link-Icon-Mail.png" />
@@ -283,7 +284,28 @@
       <DependentUpon>bootstrap.js</DependentUpon>
     </Content>
     <Content Include="Content\CSS\prettify.css" />
-    <Content Include="Scripts\epiceditor.js" />
+    <Content Include="Scripts\css\docstyle.css" />
+    <Content Include="Scripts\_CreateOrEdit.js" />
+    <Content Include="Scripts\css\style.css" />
+    <Content Include="Scripts\langs\bg.js" />
+    <Content Include="Scripts\langs\by.js" />
+    <Content Include="Scripts\langs\cs.js" />
+    <Content Include="Scripts\langs\de.js" />
+    <Content Include="Scripts\langs\en.js" />
+    <Content Include="Scripts\langs\es.js" />
+    <Content Include="Scripts\langs\fr.js" />
+    <Content Include="Scripts\langs\hu.js" />
+    <Content Include="Scripts\langs\it.js" />
+    <Content Include="Scripts\langs\ja.js" />
+    <Content Include="Scripts\langs\lv.js" />
+    <Content Include="Scripts\langs\nl.js" />
+    <Content Include="Scripts\langs\pl.js" />
+    <Content Include="Scripts\langs\pt_br.js" />
+    <Content Include="Scripts\langs\ru.js" />
+    <Content Include="Scripts\langs\sq.js" />
+    <Content Include="Scripts\langs\tr.js" />
+    <Content Include="Scripts\langs\ua.js" />
+    <Content Include="Scripts\langs\zh_cn.js" />
     <Content Include="Scripts\modernizr.js" />
     <Content Include="Scripts\mygojo.js" />
     <Content Include="Scripts\prettify.js" />
@@ -315,12 +337,19 @@
     </Content>
     <Content Include="Scripts\json2.js" />
     <Content Include="Scripts\plugins.js" />
+    <Content Include="Content\CSS\redactor.css" />
+    <Content Include="Scripts\redactor.js" />
+    <Content Include="Scripts\redactor.min.js">
+      <DependentUpon>redactor.js</DependentUpon>
+    </Content>
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js">
       <DependentUpon>respond.js</DependentUpon>
     </Content>
     <Content Include="Scripts\selectivizr-min.js" />
     <Content Include="Scripts\sequence.jquery.js" />
+    <Content Include="Scripts\toolbars\default.js" />
+    <Content Include="Scripts\toolbars\mini.js" />
     <Content Include="Scripts\underscore-min.js" />
     <Content Include="Scripts\underscore.js" />
     <Content Include="Web.config">
@@ -376,6 +405,7 @@
     <Content Include="Views\AdminAnnouncements\_CreateOrEdit.cshtml" />
     <Content Include="Views\Shared\_HeaderBarQuickLinks.cshtml" />
     <Content Include="Views\Shared\_DropDownNav.cshtml" />
+    <Content Include="Views\Home\JavascriptTest.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
