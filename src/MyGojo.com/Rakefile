@@ -1,0 +1,29 @@
+require 'albacore'
+require 'version_bumper'
+
+
+Albacore.configure do |config|
+   config.msbuild.targets = [ :Clean, :Build]
+end
+
+task :default => [:msbuild, :output]
+desc "Builds the solution using the MSBuild project files"
+msbuild :msbuild => [:assemblyinfo] do |msb|
+   msb.properties = { :configuration => :Debug }
+   msb.solution = "MyGojo.sln"
+end
+
+desc "Updates AssemblyInfo version number"
+assemblyinfo :assemblyinfo do |asm|
+   asm.version = bumper_version.to_s
+   asm.file_version = bumper_version.to_s
+   asm.company_name = "GOJO Industries, Inc."
+   asm.product_name = "MyGojo"
+   asm.copyright = "(c) 2012 - GOJO Industries, Inc."
+   asm.output_file = MyGojo.Web/Properties/AssemblyInfo.cs"
+end
+
+
+
+
+

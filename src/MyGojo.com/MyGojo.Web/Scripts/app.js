@@ -29,7 +29,10 @@ MyGojoApp = (function ($) {
 
 
 $(document).ready(function () {
+    $("body").queryLoader2();
+
     MyGojoApp.init();
+    
     
     $('#demobtn').click(function () {
         debug.log("Clicked jGrowl enabled button.");
