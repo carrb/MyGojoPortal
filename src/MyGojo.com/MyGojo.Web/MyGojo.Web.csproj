@@ -164,6 +164,7 @@
   <ItemGroup>
     <Compile Include="Controllers\AdminAnnouncementsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\SiteLinksController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -285,6 +286,7 @@
     </Content>
     <Content Include="Content\CSS\prettify.css" />
     <Content Include="Scripts\css\docstyle.css" />
+    <Content Include="Scripts\jquery.queryloader2.js" />
     <Content Include="Scripts\_CreateOrEdit.js" />
     <Content Include="Scripts\css\style.css" />
     <Content Include="Scripts\langs\bg.js" />
