@@ -2,21 +2,22 @@
 using System.Linq;
 using System.Reflection;
 using System.Web;
+using System.Web.Http;
 using System.Web.Mvc;
 
 using Autofac;
 using Autofac.Integration.Mvc;
 using Autofac.Integration.WebApi;
 using DreamSongs.MongoRepository;
+
 using Gojo.Core.Logging;
 using MyGojo.Data.Model;
-using MyGojo.Web.Controllers;
 using MyGojo.Web.Infrastructure.Bundles;
 using MyGojo.Web.Infrastructure.Filters;
 using MyGojo.Web.Infrastructure.Routing;
 using MyGojo.Web.Infrastructure.ViewGeneration;
 using MyGojo.Web.Infrastructure.WebApi;
-using NLog;
+
 using Utility.Logging.NLog.Autofac;
 
 
@@ -91,33 +92,31 @@ namespace MyGojo.Web
 
         protected void BootstrapContainer()
         {
-            // For WebAPI See: http://alexmg.com/category/Autofac.aspx
+            // For WebAPI See: http://alexmg.com/post/2012/06/07/Autofac-262859-and-ASPNET-MVC-4-RC-Integrations-Released.aspx
 
             var builder = new ContainerBuilder();
 
-
-            // Need to remove this and manually do the logging implementation and injection -- unless I can figure out how to do with WebAPI !?!?
             builder.RegisterModule<NLogLoggerAutofacModule>();
 
 
+            // register API controllers using assembly scanning
+            builder.RegisterApiControllers(Assembly.GetExecutingAssembly());
+
+            builder.RegisterControllers(Assembly.GetExecutingAssembly());
+            builder.RegisterModelBinders(Assembly.GetExecutingAssembly());
+            
+            
+            builder.RegisterType<MongoRepository<UserInfo>>().As<MongoRepository<UserInfo>>().InstancePerApiRequest();
 
             builder.RegisterType<MongoRepository<UserInfo>>().As<MongoRepository<UserInfo>>().InstancePerHttpRequest();
             builder.RegisterType<MongoRepository<SiteInfo>>().As<MongoRepository<SiteInfo>>().InstancePerHttpRequest();
             builder.RegisterType<MongoRepository<Announcement>>().As<MongoRepository<Announcement>>().InstancePerHttpRequest();
 
-            builder.RegisterType<MongoRepository<UserInfo>>().As<MongoRepository<UserInfo>>().InstancePerApiRequest();
-            // builder.Register<ILogger>(c => new Logger()).InstancePerApiRequest();
-            // builder.Register(c => new NLogLoggerAutofacModule()).As<ILogger>().InstancePerApiRequest();
-
-            builder.RegisterApiControllers(Assembly.GetExecutingAssembly());
-            builder.RegisterControllers(Assembly.GetExecutingAssembly());
-            builder.RegisterModelBinders(Assembly.GetExecutingAssembly());
-
-            
-            
 
             Container = builder.Build();
+
             DependencyResolver.SetResolver(new AutofacDependencyResolver(Container));
+            GlobalConfiguration.Configuration.DependencyResolver = new AutofacWebApiDependencyResolver(Container);
         }
     }
 }

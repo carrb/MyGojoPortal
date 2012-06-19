@@ -6,24 +6,18 @@ using System.Net.Http;
 using System.Text.RegularExpressions;
 using System.Web.Http;
 using DreamSongs.MongoRepository;
-using Gojo.Core.Logging;
+
 using MyGojo.Data.Model;
+using Utility.Logging;
 
 namespace MyGojo.Web.Controllers
 {
-    // See: http://alexmg.com/post/2012/06/07/Autofac-262859-and-ASPNET-MVC-4-RC-Integrations-Released.aspx 
-
     // See: http://www.asp.net/web-api/overview/getting-started-with-aspnet-web-api/tutorial-your-first-web-api
     // See: http://weblogs.asp.net/fredriknormen/archive/2012/06/11/asp-net-web-api-exception-handling.aspx
     public class SiteLinksController : ApiController
     {
         private readonly ILogger _logger;
         private readonly MongoRepository<UserInfo> _repository; 
-
-        public SiteLinksController()
-        {
-            // default constructor
-        }
 
         public SiteLinksController(MongoRepository<UserInfo> repository, ILogger logger)
         {
