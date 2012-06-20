@@ -27,7 +27,7 @@ namespace MyGojo.Web.Controllers
         }
 
         
-        // GET /api/UserSites
+        // GET /api/SiteLinks/
         // 
 
         public IEnumerable<SiteInfo> Get()
@@ -40,11 +40,50 @@ namespace MyGojo.Web.Controllers
             {
                 var foundUser = _repository.GetSingle(u => u.AdLogin == currentUserAdLogin);
 
+                /*
+                Better?  No need for IsolateLogin?  May need to trim GOJO-NET\  ?
+                 * 
+                var foundUser = _repository.GetSingle((u) => string.Equals(u.AdLogin, currentUserAdLogin, StringComparison.OrdinalIgnoreCase));
+                 
+                 */
+               
+
                 if (foundUser == null || foundUser.Sites.Count == 0)
                 {
-                    return new[] { new SiteInfo { Title = "No Workspace Membership", Url = "#" } };
+                    var resp = new HttpResponseMessage(HttpStatusCode.NotFound);
+                    throw new HttpResponseException(resp);
+                    //return new[] { new SiteInfo { Title = "No Workspace Membership", Url = "#" } };
                 }
 
+                return foundUser.Sites.OrderBy(s => s.Title);
+            }
+            catch (Exception ex)
+            {
+                _logger.Info(ex.Message);
+                _logger.Info(ex.GetType().ToString());
+                return new[] { new SiteInfo { Title = "No Workspace Membership", Url = "#" } };
+            }
+        }
+
+
+        // GET /api/SiteLinks/?login=login
+        //
+        public IEnumerable<SiteInfo> GetSiteLinksByLogin(string adLogin)
+        {
+            _logger.Info("Entering GetSiteLinksByLogin for: " + adLogin);
+
+            var login = IsolateLogin(adLogin);
+
+            try
+            {
+                var foundUser = _repository.GetSingle(u => u.AdLogin == login);
+
+                if (foundUser == null || foundUser.Sites.Count == 0)
+                {
+                    var resp = new HttpResponseMessage(HttpStatusCode.NotFound);
+                    throw new HttpResponseException(resp);
+                    //return new[] { new SiteInfo { Title = "No Workspace Membership", Url = "#" } };
+                }
 
                 return foundUser.Sites.OrderBy(s => s.Title);
             }
