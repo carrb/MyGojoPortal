@@ -19,15 +19,31 @@ MyGojoApp = (function ($) {
         console.info("logStatus called.");
     };
 
-    loadWorkspaces = function() {
+    //--------------------------------------------------------------------------
+    findSiteLinks = function() {
+        var id = $('#prodId').val();
+        $.getJSON("api/SiteLinks/?adLogin=" + id,
+            function(data) {
+                var str = data.Name + ': $' + data.Price;
+                $('#product').html(str);
+            })
+            .fail(
+                function(jqXHR, textStatus, err) {
+                    $('#product').html('Error: ' + err);
+                });
+    };
+    //--------------------------------------------------------------------------
+
+
+    loadWorkspaces = function(adLogin) {
         debug.log("Loading workspaces...");
 
+    /*
         var jqxhr = $.ajax({
             type: "GET",
             contentType: "application/json; charset=utf-8",
             dataType: "json",
-            data: "{}",
-            url: "api/SiteLinks" + '?' + Math.round(new Date().getTime()),
+            url: "api/SiteLinks/?adLogin=" + adLogin,
 
             beforeSend: function(xhr) {
                 debug.log("beforeSend...");
@@ -38,6 +54,8 @@ MyGojoApp = (function ($) {
 
 
             var siteLinks = $.parseJSON(jqxhr.responseText);
+            
+            debug.log(siteLinks);
             
             for (var index in siteLinks) {
                 if (siteLinks.hasOwnProperty(index)) {
@@ -61,28 +79,34 @@ MyGojoApp = (function ($) {
             debug.log("complete.");
         });
         
-        
+        */
 
 
-        /*
-        $.getJSON("api/SiteLinks" + '?' + Math.round(new Date().getTime()), function (data) {
+       
+        $.getJSON("api/SiteLinks/" + "?adLogin=" + adLogin,      /*'?' + Math.round(new Date().getTime()),*/ function (data) {
             // on success - 'data' contains the list of SiteLinks
             $.each(data, function (key, val) {
+                
+                listSiteLinks.push("<li><a href=" + val.Url + "rel=\"tooltip\" data-original-title=" + val.url + ">" + val.title + "</a></li>");
+
+                /*
                 // format the text to display
                 var str = "<a href=\"val.Url\" rel=\"tooltip\" data-original-title=\"val.Url\">" + val.Title + "</a>";
 
                 // add list item for the SiteLink
                 $('<li/>', { html: str }).appendTo($('#my-workspaces-list'));
+                */
             });
         });
-        */
+       
     
     };
 
     return {
         init: init,
         logStatus: logStatus,
-        loadWorkspaces: loadWorkspaces
+        loadWorkspaces: loadWorkspaces,
+        findSiteLinks: findSiteLinks
 
         //init: function () {
         //    var view = new View();
@@ -96,7 +120,11 @@ $(document).ready(function () {
     $("body").queryLoader2();
 
     MyGojoApp.init();
-    MyGojoApp.loadWorkspaces();
+
+    var id = $("#user-identity-name").text();
+    debug.log("User Identity: " + id);
+
+    MyGojoApp.loadWorkspaces(id);
     
     
     $('#demobtn').click(function () {
