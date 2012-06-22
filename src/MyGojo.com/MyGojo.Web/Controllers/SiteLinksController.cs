@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Text.RegularExpressions;
 using System.Web.Http;
 using DreamSongs.MongoRepository;
@@ -33,7 +31,6 @@ namespace MyGojo.Web.Controllers
         public IEnumerable<SiteInfo> Get()
         {
             _logger.Info("Entering Get method...");
-
             var currentUserAdLogin = IsolateLogin(User.Identity.Name);
 
             try
@@ -44,7 +41,6 @@ namespace MyGojo.Web.Controllers
                 {
                     return new[] { new SiteInfo { Title = "No Workspace Membership", Url = "#" } };
                 }
-
 
                 return foundUser.Sites.OrderBy(s => s.Title);
             }
