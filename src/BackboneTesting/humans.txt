@@ -3,10 +3,10 @@
 
 
 /* TEAM */
-  <your title>: <your name>
+  Senior Developer: Scott Wade
   Site:
-  Twitter:
-  Location:
+  Twitter: @scottwade
+  Location: Akron/Canton, Ohio
 
 /* THANKS */
   Names (& URL):
@@ -14,7 +14,7 @@
 /* SITE */
   Standards: HTML5, CSS3
   Components: Modernizr, jQuery
-  Software:
+  Software: Node.js, Backbone.js, Mocha and more...
 
 
 
