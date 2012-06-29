@@ -21,9 +21,23 @@
 
 */
 
-body, p, textarea, .navbar-search .search-query { font-family: "Segoe UI", Candara, "Lucida Grande", "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", Verdana, "Verdana Ref", sans-serif; *font-size:small;}
+body, p, textarea, .navbar-search .search-query {
+     font-family: "Segoe UI", Candara, "Lucida Grande", "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", Verdana, "Verdana Ref", sans-serif; *font-size:small;
+   
+    /*
+    background-image:  url("../Images/background.png");
+    background-attachment: scroll;
+    background-repeat: repeat;
+    background-position-x: 0%;
+    background-position-y: 0%;
+    background-size: auto;
+    background-origin: padding-box;
+    background-clip: border-box;
+    background-color: transparent;
+    */
+}
 
- /* see:  blog.kenneth.io/blog/ */ 
+ /* see:  blog.kenneth.io/blog/ 
 p { -ms-word-break: break-all;
         word-break: break-all;
 
@@ -34,7 +48,7 @@ p { -ms-word-break: break-all;
       -moz-hyphens: auto;
            hyphens: auto;
 }
-
+*/ 
 /* Inspiration:  http://paulrobertlloyd.com/ */
 
 
