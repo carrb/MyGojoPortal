@@ -5,35 +5,18 @@
     Rev:        0.1
 */
 
-MyGojoApp = (function ($) {
-    // Initialization
-    init = function () {
-        console.info("MyGojoApp: object instantiated and initialized!");
-    },
 
-    // Methods
-    logStatus = function () {
-        console.info("logStatus called.");
-    };
+// Create Ember application namespace
+var MyGojoApp = Em.Application.create();
 
-    return {
-        init: init,
-        logStatus: logStatus
 
-        //init: function () {
-        //    var view = new View();
-        //    $("#some-div").html(view.render().el);
-        //}
-    };
-})(jQuery);
 
+
+/* Legacy unstructured code line by line in document ready function!  */
 
 $(document).ready(function () {
     $("body").queryLoader2();
 
-    MyGojoApp.init();
-    
-    
     $('#demobtn').click(function () {
         debug.log("Clicked jGrowl enabled button.");
     
@@ -44,10 +27,6 @@ $(document).ready(function () {
             position: "top-left"
             /* top-left top-right bottom-left bottom-right center */
         });
-        
-        
-        
-       
     });
     
     $('#redactor-content').redactor();

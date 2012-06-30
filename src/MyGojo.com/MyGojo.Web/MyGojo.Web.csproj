@@ -292,7 +292,12 @@
     </Content>
     <Content Include="Content\CSS\prettify.css" />
     <Content Include="Scripts\css\docstyle.css" />
+    <Content Include="Scripts\ember-0.9.8.1.js" />
+    <Content Include="Scripts\ember-0.9.8.1.min.js">
+      <DependentUpon>ember-0.9.8.1.js</DependentUpon>
+    </Content>
     <Content Include="Scripts\jquery.queryloader2.js" />
+    <Content Include="Scripts\require.js" />
     <Content Include="Scripts\_CreateOrEdit.js" />
     <Content Include="Scripts\css\style.css" />
     <Content Include="Scripts\langs\bg.js" />
