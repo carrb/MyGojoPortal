@@ -12,6 +12,12 @@ namespace MyGojo.Web.Controllers
 {
     // See: http://www.asp.net/web-api/overview/getting-started-with-aspnet-web-api/tutorial-your-first-web-api
     // See: http://weblogs.asp.net/fredriknormen/archive/2012/06/11/asp-net-web-api-exception-handling.aspx
+    //      http://blogs.msdn.com/b/youssefm/archive/2012/06/28/error-handling-in-asp-net-webapi.aspx
+    //      http://weblogs.asp.net/fredriknormen/archive/2012/06/28/using-razor-together-with-asp-net-web-api.aspx
+    //      http://weblogs.asp.net/fredriknormen/archive/2012/06/09/log-message-request-and-response-in-asp-net-webapi.aspx
+    //
+    //
+
     public class SiteLinksController : ApiController
     {
         private readonly ILogger _logger;
