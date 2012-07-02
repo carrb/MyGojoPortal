@@ -32,7 +32,6 @@
 
     <!--[if (lt IE 9) & (!IEMobile)]>
         <script src="~/Scripts/selectivizr-min.js"></script>
-        <script src="~/Scripts/json2.js"></script>
         <script src="~/Scripts/imgSizer.js"></script>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -79,7 +78,7 @@
     <script type="text/javascript" src="~/Scripts/jquery-1.8b1.js"></script>
     <script type="text/javascript" src="~/Scripts/jquery-ui-1.8.20.min.js"></script>
     <script type="text/javascript" src="~/Scripts/bootstrap.min.js"></script>
-    <script type="text/javascript" src="~/Scripts/ember-0.9.8.1.js"></script>
+    @*<script type="text/javascript" src="~/Scripts/ember-0.9.8.1.js"></script>*@
     <script type="text/javascript" src="~/Scripts/jquery.jgrowl.min.js"></script>
     @* See: http://www.netmagazine.com/tutorials/make-stylish-preloader-svg *@
     <script type="text/javascript" src="~/Scripts/jquery.queryloader2.js"></script>  
@@ -95,8 +94,9 @@
      *@
     @RenderSection("Scripts", required: false)
     
+@*
     <!-- A little ie7- magic -->
     <script type="text/javascript"> $(function () { if ($.browser.msie && parseInt($.browser.version, 10) === 6) { $('.row div[class^="span"]:last-child').addClass("last-child"); $('[class="span"]').addClass("margin-left-20"); $(':button[class="btn"], :reset[class="btn"], :submit[class="btn"], input[type="button"]').addClass("button-reset"); $(":checkbox").addClass("input-checkbox"); $('[class^="icon-"], [class=" icon-"]').addClass("icon-sprite"); $(".pagination li:first-child a").addClass("pagination-first-child") } }) </script>
-
+*@
 </body>
 </html>

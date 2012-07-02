@@ -1,33 +1,41 @@
-﻿using System;
+using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
-using System.Web.Mvc;
+using System.Web.Http;
 using DreamSongs.MongoRepository;
 using MyGojo.Data.Model;
 using Utility.Logging;
 
-namespace MyGojo.Web.Controllers
+namespace MyGojo.Web.Api
 {
-    public class HomeController : Controller
+    // See: http://www.asp.net/web-api/overview/getting-started-with-aspnet-web-api/tutorial-your-first-web-api
+    // See: http://weblogs.asp.net/fredriknormen/archive/2012/06/11/asp-net-web-api-exception-handling.aspx
+    //      http://blogs.msdn.com/b/youssefm/archive/2012/06/28/error-handling-in-asp-net-webapi.aspx
+    //      http://weblogs.asp.net/fredriknormen/archive/2012/06/28/using-razor-together-with-asp-net-web-api.aspx
+    //      http://weblogs.asp.net/fredriknormen/archive/2012/06/09/log-message-request-and-response-in-asp-net-webapi.aspx
+    //
+    //
+
+    public class SiteLinksController : ApiController
     {
         private readonly ILogger _logger;
         private readonly MongoRepository<UserInfo> _repository; 
 
-
-        public HomeController(MongoRepository<UserInfo> repository, ILogger logger)
+        public SiteLinksController(MongoRepository<UserInfo> repository, ILogger logger)
         {
             _logger = logger;
             _repository = repository;
-            _logger.Info("HomeController created...this logger was injected!");
+            _logger.Info("UserSitesController created...this logger was injected!");    
         }
 
+        
+        // GET /api/UserSites
+        // 
 
-        public ActionResult Index()
+        public IEnumerable<SiteInfo> Get()
         {
-            _logger.Info("Entering Index ActionMethod...");
-
-            ViewBag.Message = "";
-
+            _logger.Info("Entering Get method...");
             var currentUserAdLogin = IsolateLogin(User.Identity.Name);
 
             try
@@ -36,19 +44,22 @@ namespace MyGojo.Web.Controllers
 
                 if (foundUser == null || foundUser.Sites.Count == 0)
                 {
-                    return View(new[] { new SiteInfo { Title = "No Workspace Membership", Url = "#" } });
+                    return new[] { new SiteInfo { Title = "No Workspace Membership", Url = "#" } };
                 }
-                
-                ViewBag.Message = "Sites found for " + currentUserAdLogin;
-                return View(foundUser.Sites.OrderBy(s => s.Title));
+
+                return foundUser.Sites.OrderBy(s => s.Title);
             }
             catch (Exception ex)
             {
                 _logger.Info(ex.Message);
                 _logger.Info(ex.GetType().ToString());
-                return View(new[] { new SiteInfo { Title = "No Workspace Membership", Url = "#" } });
+                return new[] { new SiteInfo { Title = "No Workspace Membership", Url = "#" } };
             }
         }
+
+
+
+
 
 
         private string IsolateLogin(string login)
@@ -76,48 +87,6 @@ namespace MyGojo.Web.Controllers
 
             return login;
         }
-
-
-
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your app description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
-
-
-        /// GET: /Tests/StyleTest
-
-        public ActionResult StyleTest()
-        {
-            return View();
-        }
-
-        /// GET: /Tests/StyleTestII
-
-        public ActionResult StyleTestII()
-        {
-            return View();
-        }
-
-        /// GET: /Tests/JavascriptTest
-
-        public ActionResult JavascriptTest()
-        {
-            return View();
-        }
-
-
-
-
 
     }
 }

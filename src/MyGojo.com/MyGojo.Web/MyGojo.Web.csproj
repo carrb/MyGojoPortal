@@ -164,9 +164,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Api\SiteLinksController.cs" />
     <Compile Include="Controllers\AdminAnnouncementsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\SiteLinksController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -293,6 +293,7 @@
     <Content Include="Scripts\ember-0.9.8.1.min.js">
       <DependentUpon>ember-0.9.8.1.js</DependentUpon>
     </Content>
+    <Content Include="Scripts\jquery-1.8b1.js" />
     <Content Include="Scripts\jquery.queryloader2.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.min.js">

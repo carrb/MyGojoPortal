@@ -1,5 +1,12 @@
 ﻿<ul class="nav nav-list">
     <li class="nav-header"><h4><i class="icon-share icon-large"></i> Quick Links</h4></li>
+
+    @{
+        if (@User.Identity.Name == "GARCIA\\wades")
+         {
+            <li><a href="~/AdminAnnouncements/">Administration</a></li>  
+         }
+    }
     <li><a href="http://akr-kronprodapp.gojo.net/wfc/logon">Kronos</a></li>
     <li><a href="http://www.mygojo.com/sites/techknow/Pages/default.aspx">TechKnow</a></li>
     <li><a href="http://akr-webapps/mssite/index.aspx">Marketing Services</a></li>

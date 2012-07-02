@@ -7,7 +7,7 @@
 
 
 // Create Ember application namespace
-var MyGojoApp = Em.Application.create();
+// var MyGojoApp = Em.Application.create();
 
 
 
