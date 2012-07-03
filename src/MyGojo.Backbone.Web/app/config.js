@@ -9,7 +9,7 @@ require.config({
     plugins: "../assets/js/plugins",
 
     // Libraries
-    jquery: "../assets/js/libs/jquery",
+    jquery: "../assets/js/libs/jquery-1.8b1",
     underscore: "../assets/js/libs/underscore",
     backbone: "../assets/js/libs/backbone",
     mocha: "../test/mocha/mocha",
