@@ -5,7 +5,7 @@
 //      https://developer.mozilla.org/en/JavaScript
 
 require([
-    'modules/bookshelf', 'badebug'
+    'modules/bookshelf', 'badebug', 'jquery'
 ], function(bookshelf) {
     bookshelf.listBooks();
 });
