@@ -101,13 +101,12 @@
     <Compile Include="Storage\LocalStorage.cs" />
     <Compile Include="Storage\SessionStorage.cs" />
     <Compile Include="Storage\Store.cs" />
+    <Compile Include="TextTools\UserLoginDomainStripper.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Data\Tree\SimpleTreeClassDiagram.cd" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="String\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
