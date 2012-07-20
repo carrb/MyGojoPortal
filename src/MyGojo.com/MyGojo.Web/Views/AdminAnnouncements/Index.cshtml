@@ -37,52 +37,62 @@
                         IsEditable
                     </th>
                 </tr>
-                @foreach (var item in Model) {
-                    <tr>
-                        <td>
-                            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-                            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-                            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-                        </td>
-                        <td>
-                            @item.Title
-                        </td>
-                        <td>
-                            @item.Content
-                        </td>
-                        <td>
-                            @item.Content
-                        </td>
-					
-                        <td>
-                            @item.Priority
-                        </td>
-                        <td>
-                            @item.IsVisible
-                        </td>
-                        <td>
-                            @item.IsEditable
-                        </td>
-                    
-                    
-                        @*  Reminder of how to do empty fields...
-					<td>
-						@(item.Comments == null ? "None" : item.Comments.Count.ToString())
-					</td>
-					<td>
-						@(item.Tags == null ? "None" : item.Tags.Count.ToString())
-					</td>
-                    
-                    And formatting
-                    <td>
-						@String.Format("{0:g}", item.CreatedAt)
-					</td>
-                    <td>
-                        @String.Format("{0:g}", item.ModifiedAt)
-                    </td>
-                    *@
-                    </tr>
+
+                @if (Model == null)
+                {
+                    <tr></tr>
                 }
+                else
+                {
+                    foreach (var item in Model) {
+                        <tr>
+                            <td>
+                                @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+                                @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+                                @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+                            </td>
+                            <td>
+                                @item.Title
+                            </td>
+                            <td>
+                                @item.Content
+                            </td>
+                            <td>
+                                @item.Content
+                            </td>
+					    
+                            <td>
+                                @item.Priority
+                            </td>
+                            <td>
+                                @item.IsVisible
+                            </td>
+                            <td>
+                                @item.IsEditable
+                            </td>
+                        
+                        
+                            @*  Reminder of how to do empty fields...
+					        <td>
+					        	@(item.Comments == null ? "None" : item.Comments.Count.ToString())
+					        </td>
+					        <td>
+					        	@(item.Tags == null ? "None" : item.Tags.Count.ToString())
+					        </td>
+                            
+                            And formatting
+                            <td>
+					        	@String.Format("{0:g}", item.CreatedAt)
+					        </td>
+                            <td>
+                                @String.Format("{0:g}", item.ModifiedAt)
+                            </td>
+                            *@
+
+                        </tr>
+                    }    
+                }
+                
             </table>
         </article>
 

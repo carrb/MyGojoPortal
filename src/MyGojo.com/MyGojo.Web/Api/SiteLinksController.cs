@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using System.Web.Http;
 using DreamSongs.MongoRepository;
+using Gojo.Core.TextTools;
 using MyGojo.Data.Model;
 using Utility.Logging;
 
@@ -36,7 +37,7 @@ namespace MyGojo.Web.Api
         public IEnumerable<SiteInfo> Get()
         {
             _logger.Info("Entering Get method...");
-            var currentUserAdLogin = IsolateLogin(User.Identity.Name);
+            var currentUserAdLogin = UserLoginDomainStripper.RemoveDomain(User.Identity.Name);
 
             try
             {
@@ -58,35 +59,6 @@ namespace MyGojo.Web.Api
         }
 
 
-
-
-
-
-        private string IsolateLogin(string login)
-        {
-            try
-            {
-                Regex regexpr = new Regex(@"GOJO-NET\\(\w+)", RegexOptions.Singleline, TimeSpan.FromMilliseconds(1));
-
-                Match mtch = regexpr.Match(login);
-
-                Console.WriteLine("{0}", mtch.Groups[1]);
-
-                if (mtch.Success)
-                    return (@"GOJO-NET\" + mtch.Groups[1].ToString().ToLowerInvariant());
-                return login;
-            }
-            catch (RegexMatchTimeoutException ex)
-            {
-                //Console.WriteLine("Regex Timeout for {1} after {2} elapsed. Tried pattern {0}", ex.Pattern, ex.Message, ex.MatchTimeout);
-            }
-            catch (ArgumentOutOfRangeException ex)
-            {
-                //Console.WriteLine(ex.ToString());
-            }
-
-            return login;
-        }
 
     }
 }

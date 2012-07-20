@@ -186,6 +186,10 @@
     <Compile Include="Infrastructure\ViewGeneration\ViewGeneration.cs" />
     <Compile Include="Infrastructure\WebApi\WebAPI.cs" />
     <Compile Include="Infrastructure\WebApi\JsonNetFormatter.cs" />
+    <Compile Include="Orchestrators\AdminAnnouncementsOrchestrator.cs" />
+    <Compile Include="Orchestrators\HomeOrchestrator.cs" />
+    <Compile Include="Orchestrators\IAdminAnnouncementsOrchestrator.cs" />
+    <Compile Include="Orchestrators\IHomeOrchestrator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

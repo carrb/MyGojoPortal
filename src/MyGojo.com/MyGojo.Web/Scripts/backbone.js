@@ -295,7 +295,7 @@
 
         // If the new and previous value differ, record the change.  If not,
         // then remove changes for this attribute.
-        if (!_.isEqual(prev[attr], val) || (_.has(now, attr) != _.has(prev, attr))) {
+        if (!_.isEqual(prev[attr], val) || (_.has(now, attr) !== _.has(prev, attr))) {
           this.changed[attr] = val;
           if (!options.silent) this._pending[attr] = true;
         } else {
@@ -343,7 +343,7 @@
     // If the server returns an attributes hash that differs, the model's
     // state will be `set` again.
     save: function(key, value, options) {
-      var attrs, current;
+      var attrs, current, done;
 
       // Handle both `("key", value)` and `({key: value})` -style calls.
       if (_.isObject(key) || key == null) {
@@ -375,11 +375,9 @@
       var model = this;
       var success = options.success;
       options.success = function(resp, status, xhr) {
+        done = true;
         var serverAttrs = model.parse(resp, xhr);
-        if (options.wait) {
-          delete options.wait;
-          serverAttrs = _.extend(attrs || {}, serverAttrs);
-        }
+        if (options.wait) serverAttrs = _.extend(attrs || {}, serverAttrs);
         if (!model.set(serverAttrs, options)) return false;
         if (success) success(model, resp, options);
         model.trigger('sync', model, resp, options);
@@ -388,7 +386,14 @@
       // Finish configuring and sending the Ajax request.
       options.error = Backbone.wrapError(options.error, model, options);
       var xhr = this.sync(this.isNew() ? 'create' : 'update', this, options);
-      if (options.wait) this.clear(silentOptions).set(current, silentOptions);
+
+      // When using `wait`, reset attributes to original values unless
+      // `success` has been called already.
+      if (!done && options.wait) {
+        this.clear(silentOptions);
+        this.set(current, silentOptions);
+      }
+
       return xhr;
     },
 
@@ -427,7 +432,7 @@
     url: function() {
       var base = getValue(this, 'urlRoot') || getValue(this.collection, 'url') || urlError();
       if (this.isNew()) return base;
-      return base + (base.charAt(base.length - 1) == '/' ? '' : '/') + encodeURIComponent(this.id);
+      return base + (base.charAt(base.length - 1) === '/' ? '' : '/') + encodeURIComponent(this.id);
     },
 
     // **parse** converts a response into the hash of attributes to be `set` on
@@ -550,7 +555,7 @@
   var Collection = Backbone.Collection = function(models, options) {
     options || (options = {});
     if (options.model) this.model = options.model;
-    if (options.comparator !== undefined) this.comparator = options.comparator;
+    if (options.comparator !== void 0) this.comparator = options.comparator;
     this._reset();
     this.initialize.apply(this, arguments);
     if (models) this.reset(models, {silent: true, parse: options.parse});
@@ -619,16 +624,16 @@
       this.length += length;
       index = options.at != null ? options.at : this.models.length;
       splice.apply(this.models, [index, 0].concat(models));
-      if (this.comparator && options.at == null) this.sort({silent: true});
 
       // Merge in duplicate models.
       if (options.merge) {
         for (i = 0, length = dups.length; i < length; i++) {
-          if (model = this._byId[dups[i].id]) {
-            model.set(dups[i], options);
-          }
+          if (model = this._byId[dups[i].id]) model.set(dups[i], options);
         }
       }
+
+      // Sort the collection if appropriate.
+      if (this.comparator && options.at == null) this.sort({silent: true});
 
       if (options.silent) return this;
       for (i = 0, length = this.models.length; i < length; i++) {
@@ -730,7 +735,7 @@
       options || (options = {});
       if (!this.comparator) throw new Error('Cannot sort a set without a comparator');
       var boundComparator = _.bind(this.comparator, this);
-      if (this.comparator.length == 1) {
+      if (this.comparator.length === 1) {
         this.models = this.sortBy(boundComparator);
       } else {
         this.models.sort(boundComparator);
@@ -764,7 +769,7 @@
     // models to the collection instead of resetting.
     fetch: function(options) {
       options = options ? _.clone(options) : {};
-      if (options.parse === undefined) options.parse = true;
+      if (options.parse === void 0) options.parse = true;
       var collection = this;
       var success = options.success;
       options.success = function(resp, status, xhr) {
@@ -835,9 +840,7 @@
 
     // Internal method to remove a model's ties to a collection.
     _removeReference: function(model) {
-      if (this == model.collection) {
-        delete model.collection;
-      }
+      if (this === model.collection) delete model.collection;
       model.off('all', this._onModelEvent, this);
     },
 
@@ -846,10 +849,8 @@
     // events simply proxy through. "add" and "remove" events that originate
     // in other collections are ignored.
     _onModelEvent: function(event, model, collection, options) {
-      if ((event == 'add' || event == 'remove') && collection != this) return;
-      if (event == 'destroy') {
-        this.remove(model, options);
-      }
+      if ((event === 'add' || event === 'remove') && collection !== this) return;
+      if (event === 'destroy') this.remove(model, options);
       if (model && event === 'change:' + model.idAttribute) {
         delete this._byId[model.previous(model.idAttribute)];
         if (model.id != null) this._byId[model.id] = model;
@@ -1041,7 +1042,7 @@
       // opened by a non-pushState browser.
       this.fragment = fragment;
       var loc = this.location;
-      var atRoot  = (loc.pathname == this.options.root) && !loc.search;
+      var atRoot  = (loc.pathname === this.options.root) && !loc.search;
 
       // If we've started off with a route from a `pushState`-enabled browser,
       // but we're currently in a browser that doesn't support it...
@@ -1058,9 +1059,7 @@
         this.history.replaceState({}, document.title, loc.protocol + '//' + loc.host + this.options.root + this.fragment);
       }
 
-      if (!this.options.silent) {
-        return this.loadUrl();
-      }
+      if (!this.options.silent) return this.loadUrl();
     },
 
     // Disable Backbone.history, perhaps temporarily. Not useful in a real app,
@@ -1081,10 +1080,10 @@
     // calls `loadUrl`, normalizing across the hidden iframe.
     checkUrl: function(e) {
       var current = this.getFragment();
-      if (current == this.fragment && this.iframe) {
+      if (current === this.fragment && this.iframe) {
         current = this.getFragment(this.getHash(this.iframe));
       }
-      if (current == this.fragment) return false;
+      if (current === this.fragment) return false;
       if (this.iframe) this.navigate(current);
       this.loadUrl() || this.loadUrl(this.getHash());
     },
@@ -1114,9 +1113,9 @@
       if (!History.started) return false;
       if (!options || options === true) options = {trigger: options};
       var frag = (fragment || '').replace(routeStripper, '');
-      if (this.fragment == frag) return;
+      if (this.fragment === frag) return;
       this.fragment = frag;
-      var url = (frag.indexOf(this.options.root) != 0 ? this.options.root : '') + frag;
+      var url = (frag.indexOf(this.options.root) !== 0 ? this.options.root : '') + frag;
 
       // If pushState is available, we use it to set the fragment as a real URL.
       if (this._hasPushState) {
@@ -1126,7 +1125,7 @@
       // fragment to store history.
       } else if (this._wantsHashChange) {
         this._updateHash(this.location, frag, options.replace);
-        if (this.iframe && (frag != this.getFragment(this.getHash(this.iframe)))) {
+        if (this.iframe && (frag !== this.getFragment(this.getHash(this.iframe)))) {
           // Opening and closing the iframe tricks IE7 and earlier to push a
           // history entry on hash-tag change.  When replace is true, we don't
           // want this.
@@ -1151,6 +1150,7 @@
         location.hash = fragment;
       }
     }
+
   });
 
   // Backbone.View
@@ -1192,13 +1192,6 @@
     // to populate its element (`this.el`), with the appropriate HTML. The
     // convention is for **render** to always return `this`.
     render: function() {
-      return this;
-    },
-
-    // **destroy** should clean up any references created by this view,
-    // preventing memory leaks.  The convention is for **destroy** to always
-    // return `this`.
-    destroy: function() {
       return this;
     },
 
@@ -1303,9 +1296,7 @@
 
   // The self-propagating extend function that Backbone classes use.
   var extend = function(protoProps, classProps) {
-    var child = inherits(this, protoProps, classProps);
-    child.extend = this.extend;
-    return child;
+    return inherits(this, protoProps, classProps);
   };
 
   // Set up inheritance for the model, collection, and view.
@@ -1352,7 +1343,7 @@
     }
 
     // Ensure that we have the appropriate request data.
-    if (!options.data && model && (method == 'create' || method == 'update')) {
+    if (!options.data && model && (method === 'create' || method === 'update')) {
       params.contentType = 'application/json';
       params.data = JSON.stringify(model);
     }

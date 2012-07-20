@@ -17,7 +17,7 @@ using MyGojo.Web.Infrastructure.Filters;
 using MyGojo.Web.Infrastructure.Routing;
 using MyGojo.Web.Infrastructure.ViewGeneration;
 using MyGojo.Web.Infrastructure.WebApi;
-
+using MyGojo.Web.Orchestrators;
 using Utility.Logging.NLog.Autofac;
 
 
@@ -104,7 +104,10 @@ namespace MyGojo.Web
 
             builder.RegisterControllers(Assembly.GetExecutingAssembly());
             builder.RegisterModelBinders(Assembly.GetExecutingAssembly());
-            
+
+
+            builder.RegisterType<HomeOrchestrator>().As<IHomeOrchestrator>().InstancePerHttpRequest();
+            builder.RegisterType<AdminAnnouncementsOrchestrator>().As<IAdminAnnouncementsOrchestrator>().InstancePerHttpRequest();
             
             builder.RegisterType<MongoRepository<UserInfo>>().As<MongoRepository<UserInfo>>().InstancePerApiRequest();
 
