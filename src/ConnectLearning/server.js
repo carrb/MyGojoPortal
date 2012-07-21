@@ -15,6 +15,7 @@
 var http = require('http');
 var connect = require('connect');
 var nconf = require('nconf');
+var require = require('./middleware/connect-router');
 
 
 /**
@@ -69,10 +70,14 @@ var app = connect()
     .use(logger)
     //.use(require('./middleware/locals'))
     .use('/admin', require('./middleware/crude-auth'))
-    .use('/admin', require('./middleware/crude-admin'));
+    .use('/admin', require('./middleware/crude-admin'))
+
+    //.use(routeThis(require('./routes/user')))
+    //.use(routeThis(require('./routes/admin')))
+    .listen(3000);
 
 
     
     //.use(echoHello);
 
-http.createServer(app).listen(3000);
+//http.createServer(app).listen(3000);
