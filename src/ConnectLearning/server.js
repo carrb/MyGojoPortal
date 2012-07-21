@@ -15,7 +15,7 @@
 var http = require('http');
 var connect = require('connect');
 var nconf = require('nconf');
-var require = require('./middleware/connect-router');
+var route = require('./middleware/connect-router');
 
 
 /**
@@ -45,12 +45,12 @@ function logger(req, res, next) {
 
 
 /**
- * ERROR MANAGEMENT
- * -------------------------------------------------------------------------------------------------
- * error management - instead of using standard express / connect error management, we are going
- * to show a custom 404 / 500 error using jade and the middleware errorHandler (see ./middleware/errorHandler.js)
- **/
-
+* ERROR MANAGEMENT
+* -------------------------------------------------------------------------------------------------
+* error management - instead of using standard express / connect error management, we are going
+* to show a custom 404 / 500 error using jade and the middleware errorHandler (see ./middleware/errorHandler.js)
+**/
+var errorOptions = { dumpExceptions: true, showStack: true }
 
 
 
@@ -68,6 +68,7 @@ function logger(req, res, next) {
  **/
 var app = connect()
     .use(logger)
+    //.use(require('./middleware/errorHandler')(errorOptions))
     //.use(require('./middleware/locals'))
     .use('/admin', require('./middleware/crude-auth'))
     .use('/admin', require('./middleware/crude-admin'))
