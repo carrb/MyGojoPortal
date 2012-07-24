@@ -7,20 +7,22 @@ namespace SiteLinksCollector.Processors
 {
     public class RecursiveSiteProcessor : IRecursiveSiteProcessor
     {
-        private Logger logger = LogManager.GetCurrentClassLogger();
+        private readonly Logger logger = LogManager.GetCurrentClassLogger();
 
 
-        ///  Constructor
-        public RecursiveSiteProcessor(string siteCollectionUrl)
+
+        public void ProcessSiteCollection(string siteCollectionUrl)
         {
-          logger.Info("RecursiveSiteProcessor working...");
-          WalkSiteTree(siteCollectionUrl);
-          logger.Info(".............processing complete.");
+            logger.Info("RecursiveSiteProcessor working...");
+            WalkSiteTree(siteCollectionUrl);
+            logger.Info(".............processing complete.");    
         }
         
 
-        public void WalkSiteTree(string siteUrl)
+        public bool WalkSiteTree(string siteUrl)
         {
+            if (String.IsNullOrEmpty(siteUrl)) return false;
+
             Console.WriteLine("Working on ----------------------> " + siteUrl);
 
             try
@@ -46,7 +48,7 @@ namespace SiteLinksCollector.Processors
                       currentSite.Users = permProcessor.GetSitePermissions();
                   }
 
-                  if (subSites.Count < 1) return;
+                  if (subSites.Count < 1) return false;
                   
                   foreach (var subsite in subSites)
                   {
@@ -57,7 +59,10 @@ namespace SiteLinksCollector.Processors
             catch (Exception ex)
             {
                 logger.Error("Error creating ClientContext and getting SubSites: {0}", ex.Message);
+                return false;
             }
+
+            return true;
         }
 
     }

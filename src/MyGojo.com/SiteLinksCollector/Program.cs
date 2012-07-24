@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -36,7 +37,8 @@ namespace SiteLinksCollector
             foreach (var siteColl in siteCollectionsToProcess)
             {
                 Console.WriteLine("Creating processor to collect sites in site collection {0} at: {1}", siteColl.Key, siteColl.Value);
-                var siteProcessor = new RecursiveSiteProcessor(siteColl.Value);
+                var siteProcessor = new RecursiveSiteProcessor();
+                siteProcessor.ProcessSiteCollection(siteColl.Value);
 
                 Console.WriteLine("Collected " + App.CollectedSites.Count + " sites in the SharePoint site collections given.");
             }
@@ -52,6 +54,18 @@ namespace SiteLinksCollector
 
             Console.WriteLine("Enter any key to exit.");
             Console.ReadLine();
+        }
+
+
+        static Dictionary<string, string> GetSiteCollectionsFromConfig()
+        {
+            var siteCollections = new Dictionary<string, string>
+                {
+                    {"siteCollection01", ConfigurationManager.AppSettings["siteCollection01"]},
+                    {"siteCollection02", ConfigurationManager.AppSettings["siteCollection02"]}
+                };
+
+            return siteCollections;
         }
     }
 }

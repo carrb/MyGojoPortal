@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -38,10 +39,20 @@ namespace SiteLinksCollector
             CollectedUsers = new Dictionary<string, UserInfo>(StringComparer.OrdinalIgnoreCase);
         }
 
+
+
+
         // Should Refactor at some point to pull values in from app.config
         private static Dictionary<string, string> LoadSiteCollectionsToProcess()
         {
             Dictionary<string, string> siteCollections = new Dictionary<string, string>
+                {
+                    {"siteCollection01", ConfigurationManager.AppSettings["siteCollection01"]},
+                    {"siteCollection02", ConfigurationManager.AppSettings["siteCollection02"]}
+                };
+
+            #region oldCode
+            /*
                                                              {
                                                                 {"myGOJO", "http://akr-spstage1"},
                                                         //         {"MySite Host", "http://akr-spstage1/mysite"},
@@ -55,7 +66,7 @@ namespace SiteLinksCollector
                                                                  {"HR Safety and Environmental","http://akr-spstage1/sites/hrsafetyenv"},
                                                                  {"Home - Marketing Services","http://akr-spstage1/sites/MarketingServices"}
                                                              };
-
+            */
             // To Do: Utilize/Create a app.config section for these.
 
             // _siteCollections.Add("Dispenser Reporting", "http://akr-spstage1/isignol");
@@ -63,6 +74,7 @@ namespace SiteLinksCollector
             // _siteCollections.Add("WOW OS", "http://akr-spstage1/wowos");  --Problems with access
             // _siteCollections.Add("Ultimate Hand Hygeine Plan", "http://akr-spstage1/uhhp");
             // _siteCollections.Add("Home - No Name", "http://akr-spstage1/bi");   
+            #endregion
 
             return siteCollections;
         }
